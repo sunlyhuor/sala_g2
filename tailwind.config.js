@@ -62,6 +62,9 @@ module.exports = {
           lineHeight:'24px',
           fontWeight:'400'
         }
+      ],
+      'icon':[
+        '25px'
       ]
       
     },
@@ -72,7 +75,11 @@ module.exports = {
         ]
       },
       width:{
-        'container':'1200px'
+        'container':'1200px',
+        'card':'600px'
+      },
+      height:{
+        'card':'320px'
       },
       fontFamily:{
         'Noto Serif Khmer':['Noto serif khmer']
