@@ -538,8 +538,144 @@ html{
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 976px) {
+  .container {
+    max-width: 976px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mt-top-content {
+  margin-top: 6rem;
+}
+
+.mt-top-title {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-card {
+  height: 320px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-\[252px\] {
+  width: 252px;
+}
+
+.w-card {
+  width: 600px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-11 {
+  width: 2.75rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.rounded-radius {
+  border-radius: 15px;
+}
+
+.rounded-l-radius {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.text-center {
+  text-align: center;
+}
+
 .text-header2 {
   font-size: 64px;
   line-height: 96px;
   font-weight: 600;
+}
+
+.text-icon {
+  font-size: 25px;
+}
+
+.text-miniTitle {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
 }
