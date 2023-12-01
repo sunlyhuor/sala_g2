@@ -11,12 +11,12 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'primary': '#1e1b4b',
-      'secondary': '#fcd34d',
+      'primary': '#0f172a',
+      'secondary': '#facc15',
       'Onsecondary':'#fef08a',
       'Onprimary':'#f4f4f5',
       'Accent':'#7dd3fc',
-      'background':'#f9fafb',
+      'background':'#f5f5f4',
     },
     fontSize:{
       'header1': ['96px', {
