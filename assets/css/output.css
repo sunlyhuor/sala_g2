@@ -654,6 +654,10 @@ html{
   top: 13rem;
 }
 
+.top-60 {
+  top: 15rem;
+}
+
 .m-auto {
   margin: auto;
 }
