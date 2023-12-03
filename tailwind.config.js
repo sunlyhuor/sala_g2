@@ -13,7 +13,7 @@ module.exports = {
       current: 'currentColor',
       'primary': '#0f172a',
       'secondary': '#facc15',
-      'Onsecondary':'#fef08a',
+      'Onsecondary':'#01122E',
       'Onprimary':'#f4f4f5',
       'Accent':'#7dd3fc',
       'background':'#f5f5f4',
@@ -71,7 +71,7 @@ module.exports = {
     extend: {
       padding:{
         'btn':[
-          '55px 20px'
+          '20px 55px'
         ]
       },
       width:{
@@ -85,7 +85,8 @@ module.exports = {
         'Noto Serif Khmer':['Noto serif khmer']
       },
       borderRadius:{
-        'radius':'15px' 
+        'radius':'15px' ,
+        'sm-radius':'5px'
       },
       margin:{
         'top-content':'6rem',
