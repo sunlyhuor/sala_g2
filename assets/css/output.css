@@ -658,6 +658,10 @@ html{
   top: 15rem;
 }
 
+.z-\[100\] {
+  z-index: 100;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -709,8 +713,16 @@ html{
   margin-top: 2rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-48 {
@@ -958,6 +970,10 @@ html{
   padding: 2rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .text-body {
   font-size: 16px;
   line-height: 24px;
@@ -984,6 +1000,10 @@ html{
   font-size: 36px;
   line-height: 54px;
   font-weight: 500;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .font-bold {
@@ -1015,6 +1035,23 @@ html{
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.placeholder\:text-\[14px\]::-moz-placeholder {
+  font-size: 14px;
+}
+
+.placeholder\:text-\[14px\]::placeholder {
+  font-size: 14px;
+}
+
+.hover\:border-b:hover {
+  border-bottom-width: 1px;
+}
+
+.hover\:border-b-secondary:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
 .hover\:text-secondary:hover {
@@ -1091,6 +1128,10 @@ html{
   .md\:rounded-\[200px\] {
     border-radius: 200px;
   }
+
+  .md\:p-3 {
+    padding: 0.75rem;
+  }
 }
 
 @media (min-width: 976px) {
@@ -1109,6 +1150,14 @@ html{
     margin-right: 16rem;
   }
 
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-\[200px\] {
     height: 200px;
   }
@@ -1121,6 +1170,10 @@ html{
     width: 150px;
   }
 
+  .lg\:gap-\[10px\] {
+    gap: 10px;
+  }
+
   .lg\:rounded-\[200px\] {
     border-radius: 200px;
   }
@@ -1128,5 +1181,11 @@ html{
   .lg\:rounded-t-\[200px\] {
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
+  }
+
+  .lg\:text-nav {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
   }
 }
