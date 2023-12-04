@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <title>profile</title>
+</head>
+<body>
+
+    <main class="h-screen">
+        <section class="mt-top-title">
+            <div class="w-full relative">
+                <img class="w-[1288px] h-[300px] rounded-t-radius m-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJl5qopbkq1h1cT2QtY8D-muH-9w0wCvn_6Q&usqp=CAU" alt="">
+            </div>
+            <div class="">
+                <img class="lg: w-[200px] lg:h-[200px] lg:rounded-[200px]  md:rounded-[200px] absolute       top-64 lg:mx-64  sm:mx-52 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UehSbAlRhTn9UeQf8bOSoC-Df35a5Ip3jPKFzft_JREaaGI7Oh5sxqRRr-g1L8kxtcY&usqp=CAU" alt="">
+            </div>
+        </section>
+        <section class="mt-top-title w-full">
+                <div class="w-[900px] float-right mx-32 flex justify-between">
+                        <div>
+                            <h3​ class="text-miniTitle mt-top-title">jomNum-ជុំនំទិច</h3​>
+                            <div class="flex w-[100px] justify-between">
+                                <p class="mt-2">អ្នកតាមដាន</p>
+                                <p class="mt-2">1ពាន់ នាក់</p>
+                            </div>
+                            <p class="mt-2">កូនខ្មែរមិនដែលខ្លាច</p>
+                        </div>
+                        <div class="flex items-center text-Onprimary">
+                            <button type="button" class="bg-primary rounded p-btn ">តាមដាន</button>
+                        </div>
+                </div>
+        </section>
+        <section class="mt-top-content float-left w-full m-auto">
+            <div class="w-[1288px] mx-auto">
+                <div class="flex rounded-radius border-gray-300 bg-primary text-Onprimary ">
+                    <button
+                        class="w-72 py-4 text-center font-medium text-gray-700 bg-gray-100 rounded-tl-lg focus:outline-none active:bg-gray-200"
+                        onclick="openTab(event, 'tab1')">មេរៀន</button>
+                    <button class=" text-center font-medium text-gray-700 bg-gray-100 rounded-tr-lg focus:outline-none"
+                        onclick="openTab(event, 'tab2')">បណ្ណាល័យ
+                    </button>
+                    <button class="w-72 text-center font-medium text-gray-700 bg-gray-100 rounded-tr-lg focus:outline-none"
+                        onclick="openTab(event, 'tab3')">អត្ថបទ
+                    </button>
+                </div>
+                <div id="tab1" class="tabcontent p-4">
+                    <h2 class="text-lg font-bold text-gray-800">Tab 1 Content</h2>
+                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel enim euismod,
+                        imperdiet felis vel, ultrices risus. Sed nec quam id elit fringilla blandit a a risus.</p>
+                </div>
+                <div id="tab2" class="tabcontent p-4 hidden">
+                    <h2 class="text-lg font-bold text-gray-800">Tab 2 Content</h2>
+                    <p class="mt-2 text-gray-700">Duis lobortis velit tellus, eget luctus tellus facilisis eget. Maecenas non massa
+                        varius, molestie lorem eget, molestie nisi. Suspendisse potenti.</p>
+                </div>
+                <div id="tab3" class="tabcontent p-4 hidden">
+                    <h2 class="text-lg font-bold text-gray-800">Tab 3 Content</h2>
+                    <p class="mt-2 text-gray-700">Duis lobortis velit tellus, eget luctus tellus facilisis eget. Maecenas non massa
+                        varius, molestie lorem eget, molestie nisi. Suspendisse potenti.</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+</body>
+<script src="/assets/js/tab.js"></script>
+<script src="/assets/components/component.js"></script>
+<script src="/assets/js/nav.js"></script>
+</html>
