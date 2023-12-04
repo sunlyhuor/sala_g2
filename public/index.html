@@ -8,42 +8,127 @@
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/fontawsome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <script src="../assets/js/jquery.js"></script>
 </head>
     <body>
-        <header class="bg-primary p-2 text-Onprimary text-2 lg:text-nav" id="header">
-            <nav class="container mx-auto flex justify-between items-center">
-                <section class="space-x-6 flex  justify-center items-center">
-                  <div>
-                    <!-- Logo or Brand -->
-                    <a href="#" class="text-white text-lg font-bold">
-                      <img src="../assets/images/Sala-Logo.png" alt="" class="w-[70px]">
-                    </a>
-                  </div>
-                  <!--Search bar-->
-                  <div class="bg-Onprimary rounded-sm-radius flex items-center p-1">
-                      <i class="fa-solid fa-magnifying-glass text-Onsecondary p-1"></i>
-                      <input type="text" name="" class="outline-none w-full placeholder:text-[14px] text-Onsecondary text-body bg-Onprimary" placeholder="ស្វែងរក...">
-                  </div>
-                </section>
-                <!-- Navbar Links -->
-                <section class="space-x-4 flex items-center">
-                  <div class="hidden $+# bg-primary z-[100] lg:flex lg:gap-[10px]" id="hambergerLists">
-                    <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">សាលារៀន</a>
-                    <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">បណ្ណាល័យ</a>
-                    <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">មេរៀន</a>
-                    <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">អត្ថបទ</a>
-                    <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">អំពីយើង</a>
-                  </div>
-                  <div class="block lg:hidden" >
-                    <button id="btnHamberger" ><i class="fa-solid fa-bars text-[24px]"></i> </button>
-                  </div>
-                  <a href="#" class="bg-secondary rounded-sm-radius">
-                    <i class="fa-regular fa-user p-2  md:p-3 text-Onsecondary"></i>
-                  </a>
-                </section>
-          </nav>
-        </header>
+      <!-- Header -->
+      <header>
+        <nav class="bg-primary border-gray-200 lg:text-Onprimary text-NotoSerifKhmer">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
+            <section class="flex items-center gap-5" >
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
+                </a>
+                <div class="relative">
+                    <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 z-50 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>   
+                    </section>
+                    <input type="search" id="default-search" class="hidden md:block p-1 md:p-2 ps-10 text-sm w-full md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600" placeholder="ស្វែងរក..." required>
+                </div>
+            </section>
+              <section class="flex items-center gap-3 flex-row-reverse" >
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+              </button>
+              <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0 ">
+                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+              </a>
+              </section>
+              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+                <ul class="text-nav flex flex-col p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-0" aria-current="page">សាលារៀន</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-0">​បណ្ណាល័យ</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-0">មេរៀន</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-0">អត្ថបទ</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-0">អំពីយើង</a>
+                  </li>
+                  <li>
+                    
+                  </li>
+                </ul>
+              </section>
+              <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0 ">
+                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+              </a>
+              
+          </div>
+        </nav>
+      </header>
+      <!-- End Header -->
+
+      <!-- Slider -->
+      <main>
+
+        <section id="default-carousel" class="relative w-full" data-carousel="slide">
+          <!-- Carousel wrapper -->
+          <div class="relative lg:h-[60vh] md:h-[60vh] h-[50vh] overflow-hidden">
+              <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="https://image.slidesdocs.com/responsive-images/background/technology-clean-business-geometric-simple-blue-powerpoint-background_e3130f8dc2__960_540.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="https://wowslider.com/sliders/demo-5/data/images/reef.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="https://wowslider.com/sliders/demo-5/data/images/sweden.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://soliloquywp.com/wp-content/uploads/2013/05/action-backlit-beach-1046896-1200x450_c.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://wowslider.com/sliders/demo-5/data/images/reef.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              </div>
+          </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+        </section>
+
+    </main>
+
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="../assets/js/nav.js" ></script>
     <script src="../assets/js/nav.js"></script>
 </html>
