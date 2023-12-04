@@ -72,7 +72,7 @@ module.exports = {
     extend: {
       padding:{
         'btn':[
-          '20px 55px'
+          '10px 35px'
         ]
       },
       width:{
