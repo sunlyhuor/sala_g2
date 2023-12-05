@@ -4,12 +4,6 @@ module.exports = {
     "public/**/*.{html,js}"
   ],
   theme: {
-    screens:{
-      sm:'640px',
-      md:'768px',
-      lg:'976px',
-      xl:'1280px'
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
