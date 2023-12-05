@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog View Page</title>
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    <link rel="stylesheet" href="../../assets/css/input.css">
+    <link rel="stylesheet" href="../../assets/css/fontawsome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="../assets/js/jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+</head>
+<body>
+<header class="bg-primary p-2 text-Onprimary text-2 lg:text-nav" id="header">
+    <nav class="container mx-auto flex justify-between items-center">
+        <section class="space-x-6 flex  justify-center items-center">
+          <div>
+            <!-- Logo or Brand -->
+            <a href="#" class="text-white text-lg font-bold">
+              <img src="../../assets/images/Sala-Logo.png" alt="" class="w-[70px]">
+            </a>
+          </div>
+          <!--Search bar-->
+          <div class="bg-Onprimary rounded-sm-radius flex items-center p-1">
+              <i class="fa-solid fa-magnifying-glass text-Onsecondary p-1"></i>
+              <input type="text" name="" class="outline-none w-full placeholder:text-[14px] text-Onsecondary text-body bg-Onprimary" placeholder="ស្វែងរក...">
+          </div>
+        </section>
+        <!-- Navbar Links -->
+        <section class="space-x-4 flex items-center">
+          <div class="hidden $+# bg-primary z-[100] lg:flex lg:gap-[10px]" id="hambergerLists">
+            <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">សាលារៀន</a>
+            <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">បណ្ណាល័យ</a>
+            <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">មេរៀន</a>
+            <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">អត្ថបទ</a>
+            <a href="#" class="text-white hover:text-secondary hover:border-b hover:border-b-1 hover:border-b-secondary">អំពីយើង</a>
+          </div>
+          <div class="block lg:hidden" >
+            <button id="btnHamberger" ><i class="fa-solid fa-bars text-[24px]"></i> </button>
+          </div>
+          <a href="#" class="bg-secondary rounded-sm-radius">
+            <i class="fa-regular fa-user p-2  md:p-3 text-Onsecondary"></i>
+          </a>
+        </section>
+  </nav>
+</header>
+
+    <main class="container m-auto grid md:grid-cols-3 grid-cols-1" >
+        <!-- Content -->
+        <section class="w-8/12 col-span-2 p-2" >
+            <div class="rounded w-full bg-red-200" >
+                <img class="w-full rounded" src="../../assets/images/bookblog.jpg" alt="" />
+            </div>
+           
+        </section>
+        <!-- Recent -->
+        <section class="p-2 col-span-1"  > 
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <img class="object-covers w-5/12 h-5/12" src="../../assets/images/web404thyda.jpg" alt="">
+                  <div class="flex flex-col justify-between p-4 leading-normal">
+                      <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology</h5>
+                      <p class="mb-3 font-base text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  </div>
+              </a>
+              <a href="#" class="flex flex-col items-center bg-white rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-covers w-5/12 h-5/12" src="../../assets/images/web404thyda.jpg" alt="">
+                <div class="flex flex-col justify-between p-4 leading-normal">
+                    <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology</h5>
+                    <p class="mb-3 font-base text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                </div>
+            </a>
+            <a href="#" class="flex flex-col items-center bg-white rounded-lg  md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <img class="object-covers w-5/12 h-5/12" src="../../assets/images/web404thyda.jpg" alt="">
+              <div class="flex flex-col justify-between p-4 leading-normal">
+                  <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology</h5>
+                  <p class="mb-3 font-base text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+              </div>
+          </a>
+        </section>
+        <main class="container m-auto  ">
+          <!-- User Profile  -->
+          <section >
+            <button data-popover-target="popover-user-profile" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">User profile</button>
+    <div data-popover id="popover-user-profile" role="tooltip" class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+        <div class="p-3">
+            <div class="flex items-center justify-between mb-2">
+                <a href="#">
+                    <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
+                </a>
+                <div>
+                   
+                </div>
+          </section>
+        </main>
+    </main>
+</body>
+</html>
