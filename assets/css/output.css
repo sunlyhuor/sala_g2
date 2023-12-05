@@ -628,6 +628,10 @@ html{
   margin-top: 2rem;
 }
 
+.me-5 {
+  margin-inline-end: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -916,6 +920,30 @@ html{
 
 .ps-3 {
   padding-inline-start: 0.75rem;
+}
+
+.pe-3 {
+  padding-inline-end: 0.75rem;
+}
+
+.pe-5 {
+  padding-inline-end: 1.25rem;
+}
+
+.pe-6 {
+  padding-inline-end: 1.5rem;
+}
+
+.pe-10 {
+  padding-inline-end: 2.5rem;
+}
+
+.pe-8 {
+  padding-inline-end: 2rem;
+}
+
+.pe-7 {
+  padding-inline-end: 1.75rem;
 }
 
 .text-center {
