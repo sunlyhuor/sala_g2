@@ -1,13 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["public/**/*.{html,js}"],
+  content: [
+    "public/**/*.{html,js}"
+  ],
   theme: {
-    screens:{
-      sm:'640px',
-      md:'768px',
-      lg:'976px',
-      xl:'1280px'
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -83,7 +79,7 @@ module.exports = {
         'card':'320px'
       },
       fontFamily:{
-        'Noto Serif Khmer':['Noto serif khmer']
+        'NotoSerifKhmer':['Noto serif khmer']
       },
       borderRadius:{
         'radius':'15px' ,
@@ -95,5 +91,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+   
+  ],
 }
