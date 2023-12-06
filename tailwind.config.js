@@ -13,6 +13,7 @@ module.exports = {
       'Onprimary':'#f4f4f5',
       'Accent':'#7dd3fc',
       'background':'#f5f5f4',
+      'card':'#FFFFFF'
     },
     fontSize:{
       'header1': ['96px', {
@@ -67,7 +68,7 @@ module.exports = {
     extend: {
       padding:{
         'btn':[
-          '20px 55px'
+          '10px 35px'
         ]
       },
       width:{
