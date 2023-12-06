@@ -11,68 +11,138 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <script src="../assets/js/jquery.js"></script>
 </head>
-<body class="bg-background">
+<body class="bg-background font-NotoSerifKhmer">
     <!-- Header -->
     <header>
-        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
-          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
-              <section class="flex items-center gap-5">
-                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
-                  </a>
-                  <!-- Search Bar​ -->
-                  <div id="mainSearchBar" class="relative">
-                      <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
-                          <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                          </svg>   
-                      </section>  
-                      <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
-                  </div>
-                  <!--End Search Bar-->
-              </section>
-              <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
-                <!--Hambergur Icon-->
-                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-                </button>
-                <!--Hambergur Icon-->
-                <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
-                  <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+      <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
+            <section class="flex items-center gap-5">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
                 </a>
-              </section>
-              <!-- Link Menu-->
-              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-                <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
-                  <li>
-                    <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
-                  </li>
-                  <li>
-                    <a href="book/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
-                  </li>
-                  <li>
-                    <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
-                  </li>
-                  <li>
-                    <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
-                  </li>
-                  <li>
-                    <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
-                      <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-              <!--End Link Menu-->
-          </div>
-        </nav>
+                <!-- Search Bar​ -->
+                <div id="mainSearchBar" class="relative">
+                    <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>   
+                    </section>  
+                    <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
+                </div>
+                <!--End Search Bar-->
+            </section>
+            <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
+              <!--Hambergur Icon-->
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+              </button>
+              <!--Hambergur Icon-->
+              <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
+                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+              </a>
+            </section>
+            <!-- Link Menu-->
+            <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+              <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                <li>
+                  <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
+                </li>
+                <li>
+                  <a href="book/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+                </li>
+                <li>
+                  <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                </li>
+                <li>
+                  <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
+                </li>
+                <li>
+                  <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
+                </li>
+                <li>
+                  <a href="login.html" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                    <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!--End Link Menu-->
+        </div>
+      </nav>
     </header>
     <!-- End Header -->
+
+    <!--Form-->
+    <section class="mt-[7rem] mb-[2rem]">
+      <form class="relative max-w-4xl mx-auto bg-[#FFF] px-[3rem] md:px-[10rem] md:py-3 rounded-sm-radius">
+        <div class="mb-5">
+          <h1 class="bg-primary text-Onprimary p-1.5 rounded-sm-radius absolute top-0 left-0 ml-[3rem] md:ml-[10rem] -mt-4 md:-mt-4">កែតម្រូវព័ត៌មាន</h1>
+        </div>
+        <div class="mb-5 flex items-center">
+          <div>
+            <img src="https://yt3.googleusercontent.com/3S9E7LKduNuozHQ7Bd9qqjjhHRMrV0Cb-pKiNXwDvA2qjpJ4wu98rKKoCx1_6h_9BCEAM1P8eQ=s900-c-k-c0x00ffffff-no-rj" class=" w-[40px] lg:w-[60px] rounded-full" alt="Logo">
+          </div>
+          <div class="mx-2">
+            <h1 class="text-body font-semibold">អ៊ីង ដាវ៉ាន់</h1>
+            <p class="text-sm">កម្ពុជាត្រូវការអ្នក</p>
+          </div>
+        </div>
+        <!--Name-->
+        <div class="mb-5">
+          <label for="name" class="block mb-2 text-sm text-gray-900">
+            <span class="text-red-800">*</span>នាមខ្លួន និងនាមត្រកូល
+          </label>
+          <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2" required>
+        </div>
+        <!--Email Address-->
+        <div class="mb-5">
+          <label for="email" class="block mb-2 text-sm text-gray-900">
+            <span class="text-red-800">*</span>Email Address
+          </label>
+          <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2" required>
+        </div>
+        <!--School Name-->
+        <div class="mb-5">
+          <label for="school_name" class="block mb-2 text-sm font-medium text-gray-900">ឈ្មោះសាលារៀន</label>
+          <input type="text" id="school_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2" required>
+        </div>
+        <!--Gender-->
+        <div class="mb-5">
+          <label for="school_name" class="block mb-2 text-sm font-medium text-gray-900">ភេទ</label>
+          <div class="flex items-center mb-4">
+            <input id="default-radio-1" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500">
+            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900">ស្រី</label>
+          </div>
+          <div class="flex items-center">
+              <input id="default-radio-2" type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-50 focus:ring-2">
+              <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900">ប្រុស</label>
+          </div>
+        </div>
+        <!--DOB-->
+        <div class="mb-5">
+          <label for="day_of_birth" class="block mb-2 text-sm text-gray-900">
+           ថ្ងៃខែឆ្នាំកំណើត
+          </label>
+          <input type="date" id="day_of_birth" name="day_of_birth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+        </div>
+        <!-- Phone Number -->
+        <div class="mb-5">
+          <label for="phone_number" class="block mb-2 text-sm font-medium text-gray-900">លេខទូរស័ព្ទ</label>
+          <input type="tel" id="phone_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+        </div>
+        <!-- Bio -->
+        <div class="mb-5">
+          <label for="bio" class="block mb-2 text-sm font-medium text-gray-900">Bio</label>
+          <input type="text" id="bio" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2">
+        </div>
+        <!--Button-->
+        <button type="submit" class="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+      </form>
+    </section>
+    <!--End Form-->
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </html>
