@@ -821,6 +821,14 @@ html{
   margin-top: 2rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-top-content {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -895,6 +903,14 @@ html{
 
 .h-screen {
   height: 100vh;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .w-1\/2 {
@@ -987,6 +1003,10 @@ html{
 
 .w-screen {
   width: 100vw;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .min-w-0 {
@@ -1249,6 +1269,10 @@ html{
   border-width: 1px;
 }
 
+.border-2 {
+  border-width: 2px;
+}
+
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1267,6 +1291,10 @@ html{
 
 .border-t-0 {
   border-top-width: 0px;
+}
+
+.border-dashed {
+  border-style: dashed;
 }
 
 .bg-Onprimary {
@@ -1356,6 +1384,10 @@ html{
 
 .p-btn {
   padding: 10px 35px;
+}
+
+.p-2\.5 {
+  padding: 0.625rem;
 }
 
 .px-1 {
@@ -1460,6 +1492,10 @@ html{
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .text-left {
