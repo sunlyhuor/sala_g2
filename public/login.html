@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/output.css">
+    <link rel="stylesheet" href="../assets/css/fontawsome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="../assets/js/jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-background font-NotoSerifKhmer">
+    <header>
+        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
+              <section class="flex items-center gap-5">
+                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
+                  </a>
+                  <!-- Search Bar​ -->
+                  <div id="mainSearchBar" class="relative">
+                      <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                          <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                          </svg>   
+                      </section>  
+                      <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
+                  </div>
+                  <!--End Search Bar-->
+              </section>
+              <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
+                <!--Hambergur Icon-->
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+                </button>
+                <!--Hambergur Icon-->
+                <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
+                  <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                </a>
+              </section>
+              <!-- Link Menu-->
+              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+                <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                  <li>
+                    <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+                  </li>
+                  <li>
+                    <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                  </li>
+                  <li>
+                    <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
+                  </li>
+                  <li>
+                    <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                      <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <!--End Link Menu-->
+          </div>
+        </nav>
+      </header>
+    <main>
+        <section class="mt-top-title">
+                <div class="flex bg-card rounded-lg overflow-hidden lg:m-auto max-w-xs m-auto xl:mt-top-title lg:max-w-7xl xl:mx-64  xl:py-4 lg:mx-11 lg:mt-60 md:max-w-4xl md:mt-60  ">
+                    <div class="hidden xl:block  xl:w-1/2 lg:block lg:w-1/2 md:w-1/2 bg-cover "
+                        style="background-image:url('/assets/images/login.gif')">
+                    </div>
+                    <div class="w-full lg:w-1/2 max-w-xs m-auto">
+                        <h2 class="text-title font-semibold text-gray-700 text-center">ចូលគណនី</h2>
+                        <div class="mt-4">
+                            <label class="block text-gray-700 text-body font-bold mb-2">Email</label>
+                            <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="email" />
+                        </div>
+                        <div class="mt-4">
+                            <div class="flex justify-between">
+                                <label class="block text-gray-700 text-body font-bold mb-2">ពាក្យសម្ងាត់</label>
+                            </div>
+                            <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" />
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <p class="text-body">
+                                មិនទាន់ចុះឈ្មោះ
+                            </p>
+                           <a href="#">
+                            <p class="block text-body ">
+                                ចុះឈ្មោះឥឡូវ
+                            </p>
+                           </a>
+                        </div>
+                        <div class="mt-8 lg:w-[150px]  max-w-xs    ">
+                            <button class="bg-primary text-card font-bold p-btn  rounded hover:bg-Accent duration-500 ">ចូលគណនី</button>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="border-b w-1/5 md:w-1/4"></span>
+                            <a href="#" class="text-xs text-gray-500 uppercase">or sign up</a>
+                            <span class="border-b w-1/5 md:w-1/4"></span>
+                        </div>
+                        <div class="flex justify-center w-[40px] gap-4 m-auto py-4">
+                            <img src="/assets/Icon/facebook.svg" alt="">
+                            <img src="/assets/Icon/telegram.svg" alt="">
+                            <img src="/assets/Icon/youtube-round-2.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            
+        </section> 
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<script src="../assets/js/nav.js" ></script>
+</html>
