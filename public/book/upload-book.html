@@ -98,38 +98,113 @@
     </header>
     <!-- End Header -->
     <main>
-        <div class="flex justify-between w-9/12 mx-auto bg-white my-5 p-5">
-            <div>
+        <div
+            class="flex justify-between lg:flex-row lg:w-7/12 w-10/12 mx-auto rounded-lg flex-col bg-white lg:m-5 my-5 p-5">
+            <!-- upload book -->
+            <div class="rounded ms-5">
+                <div x-data="dataFileDnD()" class="relative flex flex-col p-4 rounded">
+                    <div x-ref="dnd"
+                        class="relative flex flex-col p-10 text-gray-400 border border-primary border-dashed rounded cursor-pointer">
+                        <input accept="*" type="file" multiple
+                            class="absolute inset-0 z-50 w-full h-full p-0 m-0 outline-none opacity-0 cursor-pointer"
+                            @change="addFiles($event)"
+                            @dragover="$refs.dnd.classList.add('border-blue-400'); $refs.dnd.classList.add('ring-4'); $refs.dnd.classList.add('ring-inset');"
+                            @dragleave="$refs.dnd.classList.remove('border-blue-400'); $refs.dnd.classList.remove('ring-4'); $refs.dnd.classList.remove('ring-inset');"
+                            @drop="$refs.dnd.classList.remove('border-blue-400'); $refs.dnd.classList.remove('ring-4'); $refs.dnd.classList.remove('ring-inset');"
+                            title="" />
 
-                <div class="flex items-center justify-center w-full">
-                    <label for="dropzone-file"
-                        class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                        <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                            <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                            </svg>
-                            <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click
-                                    to upload</span> or drag and drop</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)
-                            </p>
+                        <div class="flex flex-col items-center justify-center py-10 text-center">
+                            <i class="fa-solid fa-arrow-up-from-bracket text-5xl text-primary"></i>
+                            <button​ class="bg-primary text-Onprimary py-2 px-5 mt-7 rounded-lg">
+                                បញ្ជូលសៀវភៅជា​ Pdf
+                            </button​>
                         </div>
-                        <input id="dropzone-file" type="file" class="hidden" />
-                    </label>
-                </div>
-
-            </div>
-            <div>
-                <form class="max-w-sm mx-auto">
-                    <div>
-                        <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Small input</label>
-                        <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
-                  </form>
+
+                    <template x-if="files.length > 0">
+                        <div class="grid lg:grid-cols-3 gap-4 mt-4 grid-cols-2" @drop.prevent="drop($event)"
+                            @dragover.prevent="$event.dataTransfer.dropEffect = 'move'">
+                            <template x-for="(_, index) in Array.from({ length: files.length })">
+                                <div class="relative flex flex-col items-center overflow-hidden text-center bg-gray-100 border rounded cursor-move select-none"
+                                    style="padding-top: 100%;" @dragstart="dragstart($event)"
+                                    @dragend="fileDragging = null" :class="{'border-blue-600': fileDragging == index}"
+                                    draggable="true" :data-index="index">
+                                    <button
+                                        class="absolute top-0 right-0 z-50 p-1 bg-white rounded-bl focus:outline-none"
+                                        type="button" @click="remove(index)">
+                                        <svg class="w-4 h-4 text-gray-700" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                        </svg>
+                                    </button>
+                                    <template x-if="files[index].type.includes('audio/')">
+                                        <svg class="absolute w-12 h-12 text-gray-400 transform top-1/2 -translate-y-2/3"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                        </svg>
+                                    </template>
+                                    <template
+                                        x-if="files[index].type.includes('application/') || files[index].type === ''">
+                                        <svg class="absolute w-12 h-12 text-gray-400 transform top-1/2 -translate-y-2/3"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                        </svg>
+                                    </template>
+                                    <template x-if="files[index].type.includes('image/')">
+                                        <img class="absolute inset-0 z-0 object-cover w-full h-full border-4 border-white preview"
+                                            x-bind:src="loadFile(files[index])" />
+                                    </template>
+                                    <template x-if="files[index].type.includes('video/')">
+                                        <video
+                                            class="absolute inset-0 object-cover w-full h-full border-4 border-white pointer-events-none preview">
+                                            <fileDragging x-bind:src="loadFile(files[index])" type="video/mp4">
+                                        </video>
+                                    </template>
+
+                                    <div
+                                        class="absolute bottom-0 left-0 right-0 flex flex-col p-2 text-xs bg-white bg-opacity-50">
+                                        <span class="w-full font-bold text-gray-900 truncate"
+                                            x-text="files[index].name">Loading</span>
+                                        <span class="text-xs text-gray-900"
+                                            x-text="humanFileSize(files[index].size)">...</span>
+                                    </div>
+
+                                    <div class="absolute inset-0 z-40 transition-colors duration-300"
+                                        @dragenter="dragenter($event)" @dragleave="fileDropping = null"
+                                        :class="{'bg-blue-200 bg-opacity-80': fileDropping == index && fileDragging != index}">
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <!-- end of upload book -->
+            <div>
+                <!-- form -->
+                <form class="lg:w-96 w-full me-5 mx-auto">
+                    <div>
+                        <label for="បញ្ជូលជាសៀវភៅ"
+                            class="block mb-5 text-miniTitle text-gray-900 dark:text-white text-center">បញ្ជូលជាសៀវភៅ</label>
+                        <input type="text" id="small-input" placeholder="បញ្ចូលចំណងជើងសៀវភៅ"
+                            class="block w-full p-2 text-primary border border-primary rounded-lg bg-white sm:text-sm">
+                    </div>
+                    <div class="mb-5 mt-top-title">
+                        <textarea type="text" id="name" class="bg-white border border-primary text-gray-900 sm:text-sm rounded-lg h-40 focus:ring-blue-500 focus:border-blue-500 block w-full p-2" placeholder="ពណ៌នាពីសៀវភៅរបស់នាក់"></textarea>
+                    </div>
+                </form>
                 </form>
             </div>
+            <!-- end of form -->
+           
+        </div>
+        <div class="flex justify-center cursor-pointer">
+            <button​ class="bg-primary text-Onprimary py-2 px-5 mb-5 rounded-lg">បញ្ជូល</button​>
         </div>
     </main>
     <!--Footer-->
@@ -241,5 +316,70 @@
     <!-- End Footer-->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://unpkg.com/create-file-list"></script>
+<script>
+    function dataFileDnD() {
+        return {
+            files: [],
+            fileDragging: null,
+            fileDropping: null,
+            humanFileSize(size) {
+                const i = Math.floor(Math.log(size) / Math.log(1024));
+                return (
+                    (size / Math.pow(1024, i)).toFixed(2) * 1 +
+                    " " +
+                    ["B", "kB", "MB", "GB", "TB"][i]
+                );
+            },
+            remove(index) {
+                let files = [...this.files];
+                files.splice(index, 1);
+
+                this.files = createFileList(files);
+            },
+            drop(e) {
+                let removed, add;
+                let files = [...this.files];
+
+                removed = files.splice(this.fileDragging, 1);
+                files.splice(this.fileDropping, 0, ...removed);
+
+                this.files = createFileList(files);
+
+                this.fileDropping = null;
+                this.fileDragging = null;
+            },
+            dragenter(e) {
+                let targetElem = e.target.closest("[draggable]");
+
+                this.fileDropping = targetElem.getAttribute("data-index");
+            },
+            dragstart(e) {
+                this.fileDragging = e.target
+                    .closest("[draggable]")
+                    .getAttribute("data-index");
+                e.dataTransfer.effectAllowed = "move";
+            },
+            loadFile(file) {
+                const preview = document.querySelectorAll(".preview");
+                const blobUrl = URL.createObjectURL(file);
+
+                preview.forEach(elem => {
+                    elem.onload = () => {
+                        URL.revokeObjectURL(elem.src); // free memory
+                    };
+                });
+
+                return blobUrl;
+            },
+            addFiles(e) {
+                const files = createFileList([...this.files], [...e.target.files]);
+                this.files = files;
+                this.form.formData.files = [...files];
+            }
+        };
+    }
+</script>
 
 </html>
