@@ -7,62 +7,102 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
      <!-- link cdn tailwind css -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="../assets/js/jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/output.css">
     <!-- link flowbite -->
     <link rel="stylesheet" href="">
     <title>School</title>
 </head>
-<body class="bg-background">
+<body class="bg-background font-s">
     <header>
-        <nav class="bg-primary p-3 text-Onprimary text-nav">
-            <div class="container mx-auto flex justify-between items-center">
-              <!-- Logo or Brand -->
-              <a href="#" class="text-white text-lg font-bold">
-                <img src="../assets/images/Sala-Logo.png" alt="" class="w-[70px] h-[70px]">
-              </a>
-              <!-- Navbar Links -->
-              <div class="space-x-4">
-                <a href="#" class="text-white">សាលារៀន</a>
-                <a href="#" class="text-white">បណ្ណាល័យ</a>
-                <a href="#" class="text-white">មេរៀន</a>
-                <a href="#" class="text-white">អត្ថបទ</a>
-                <a href="#" class="text-white">អំពីយើង</a>
-                <a href="#" class="text-white">
-                    <img src="../assets/" alt="">
+        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
+              <section class="flex items-center gap-5">
+                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
                   </a>
-                </div>
-            </div>
+                  <!-- Search Bar​ -->
+                  <div id="mainSearchBar" class="relative">
+                      <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                          <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                          </svg>   
+                      </section>  
+                      <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
+                  </div>
+                  <!--End Search Bar-->
+              </section>
+              <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
+                <!--Hambergur Icon-->
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+                </button>
+                <!--Hambergur Icon-->
+                <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
+                  <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                </a>
+              </section>
+              <!-- Link Menu-->
+              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+                <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                  <li>
+                    <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+                  </li>
+                  <li>
+                    <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                  </li>
+                  <li>
+                    <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
+                  </li>
+                  <li>
+                    <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                      <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                    </a>
+                  </li>
+                </ul>
+              </section>
+              <!--End Link Menu-->
+          </div>
         </nav>
-        <section>
-            
-        </section>
     </header>
     <!-- main of page school -->
-    <main class="container w-screen h-screen m-auto mt-top-title">
-        <h1​ class="text-title">សាលារៀនផ្សេង</h1​>
+    <main class="container w-full h-screen m-auto mt-top-title">
+        <h1​ class="text-nav mx-top-title xl:px-28 lg:px-44 md:px-20">សាលារៀនផ្សេង</h1​>
         <!-- section card school -->
-        <section class=" w-full flex flex-wrap mt-top-title gap-4">
+        <section class="w-5/6 flex flex-wrap m-auto
+          mt-top-title gap-4 ">
             <div class="max-w-md mx-auto bg-card rounded-xl  overflow-hidden md:max-w-2xl">
-                <div class="md:flex">
+                <div class="md:flex ">
                     <div class="md:shrink-0">
                         <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://loremflickr.com/g/320/240/team">
                     </div>
-                    <div class="p-8">
-                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                            <h3​ class="text-miniTitle mt-top-title">jomNum-ជុំនំទិច</h3​>
+                    <div class="p-7 text-body">
+                        <div class="uppercase tracking-wide text-sm  font-semibold">
+                            <h3​ class="text-miniTitle mt-3 px-3">jomNum-ជុំនំទិច</h3​>
                         </div>
-                        <div​ class="max-w-full flex  mt-top-title">
+                        <div​ class="max-w-full flex  mt-3">
                             <div class="w-24 flex justify-around">
                                 <span class="material-symbols-outlined text-icon">
                                     location_on
                                     </span>
                                     <p>ទីតាំង:</p>
                             </div>
-                            <div>
+                            <div class="">
                                 <p>ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
-                            </div>
+                            </div> 
                        </div​>
-                       <div​ class="max-w-full flex mt-top-title">
+                       <div​ class="max-w-full flex mt-3">
                             <div class="w-24 flex justify-around">
                                 <span class="material-symbols-outlined">
                                     mail
@@ -73,7 +113,7 @@
                                 chheangphektra@gmail.com
                             </div>
                        </div​>
-                       <div​ class="max-w-full flex  mt-top-title">
+                       <div​ class="max-w-full flex mt-3">
                             <div class="w-[180px] flex justify-around ">
                                 <span class="material-symbols-outlined">
                                     call
@@ -84,15 +124,15 @@
                                 093 567 234
                             </div>
                        </div​>
-                       <div class="flex">
+                       <div class="flex mt-4">
                         <div class="flex justify-evenly w-1/2">
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 mt-">
                                 <img src="../assets/Icon/facebook.svg" alt="">
                             </div>
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 ">
                                 <img src="../assets/Icon/telegram.svg" alt="">
                             </div>
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 ">
                                 <img src="../assets/Icon/youtube-round-2.svg" alt="">
                             </div>
                         </div>     
@@ -101,26 +141,26 @@
                 </div>
             </div>
             <div class="max-w-md mx-auto bg-card rounded-xl  overflow-hidden md:max-w-2xl">
-                <div class="md:flex">
+                <div class="md:flex ">
                     <div class="md:shrink-0">
                         <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://loremflickr.com/g/320/240/team">
                     </div>
-                    <div class="p-8">
-                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                            <h3​ class="text-miniTitle mt-top-title">jomNum-ជុំនំទិច</h3​>
+                    <div class="p-7 text-body">
+                        <div class="uppercase tracking-wide text-sm  font-semibold">
+                            <h3​ class="text-miniTitle mt-3 px-3">jomNum-ជុំនំទិច</h3​>
                         </div>
-                        <div​ class="max-w-full flex  mt-top-title">
+                        <div​ class="max-w-full flex  mt-3">
                             <div class="w-24 flex justify-around">
                                 <span class="material-symbols-outlined text-icon">
                                     location_on
                                     </span>
                                     <p>ទីតាំង:</p>
                             </div>
-                            <div>
+                            <div class="">
                                 <p>ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
-                            </div>
+                            </div> 
                        </div​>
-                       <div​ class="max-w-full flex mt-top-title">
+                       <div​ class="max-w-full flex mt-3">
                             <div class="w-24 flex justify-around">
                                 <span class="material-symbols-outlined">
                                     mail
@@ -131,7 +171,7 @@
                                 chheangphektra@gmail.com
                             </div>
                        </div​>
-                       <div​ class="max-w-full flex  mt-top-title">
+                       <div​ class="max-w-full flex mt-3">
                             <div class="w-[180px] flex justify-around ">
                                 <span class="material-symbols-outlined">
                                     call
@@ -142,15 +182,15 @@
                                 093 567 234
                             </div>
                        </div​>
-                       <div class="flex">
+                       <div class="flex mt-4">
                         <div class="flex justify-evenly w-1/2">
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 mt-">
                                 <img src="../assets/Icon/facebook.svg" alt="">
                             </div>
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 ">
                                 <img src="../assets/Icon/telegram.svg" alt="">
                             </div>
-                            <div class="w-9 mt-top-title">
+                            <div class="w-9 ">
                                 <img src="../assets/Icon/youtube-round-2.svg" alt="">
                             </div>
                         </div>     
@@ -159,10 +199,134 @@
                 </div>
             </div>
         </section>
+        <section class="w-5/6 flex flex-wrap m-auto
+          mt-top-title gap-4 ">
+            <div class="max-w-md mx-auto bg-card rounded-xl  overflow-hidden md:max-w-2xl">
+                <div class="md:flex ">
+                    <div class="md:shrink-0">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://loremflickr.com/g/320/240/team">
+                    </div>
+                    <div class="p-7 text-body">
+                        <div class="uppercase tracking-wide text-sm  font-semibold">
+                            <h3​ class="text-miniTitle mt-3 px-3">jomNum-ជុំនំទិច</h3​>
+                        </div>
+                        <div​ class="max-w-full flex  mt-3">
+                            <div class="w-24 flex justify-around">
+                                <span class="material-symbols-outlined text-icon">
+                                    location_on
+                                    </span>
+                                    <p>ទីតាំង:</p>
+                            </div>
+                            <div class="">
+                                <p>ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
+                            </div> 
+                       </div​>
+                       <div​ class="max-w-full flex mt-3">
+                            <div class="w-24 flex justify-around">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                    </span>
+                                    <p>Email:</p>
+                            </div>
+                            <div>
+                                chheangphektra@gmail.com
+                            </div>
+                       </div​>
+                       <div​ class="max-w-full flex mt-3">
+                            <div class="w-[180px] flex justify-around ">
+                                <span class="material-symbols-outlined">
+                                    call
+                                    </span> 
+                                    <p>លេខទូរស័ព្ទ(+855):</p>
+                            </div>
+                            <div class="">
+                                093 567 234
+                            </div>
+                       </div​>
+                       <div class="flex mt-4">
+                        <div class="flex justify-evenly w-1/2">
+                            <div class="w-9 mt-">
+                                <img src="../assets/Icon/facebook.svg" alt="">
+                            </div>
+                            <div class="w-9 ">
+                                <img src="../assets/Icon/telegram.svg" alt="">
+                            </div>
+                            <div class="w-9 ">
+                                <img src="../assets/Icon/youtube-round-2.svg" alt="">
+                            </div>
+                        </div>     
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-md mx-auto bg-card rounded-xl  overflow-hidden md:max-w-2xl">
+                <div class="md:flex ">
+                    <div class="md:shrink-0">
+                        <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://loremflickr.com/g/320/240/team">
+                    </div>
+                    <div class="p-7 text-body">
+                        <div class="uppercase tracking-wide text-sm  font-semibold">
+                            <h3​ class="text-miniTitle mt-3 px-3">jomNum-ជុំនំទិច</h3​>
+                        </div>
+                        <div​ class="max-w-full flex  mt-3">
+                            <div class="w-24 flex justify-around">
+                                <span class="material-symbols-outlined text-icon">
+                                    location_on
+                                    </span>
+                                    <p>ទីតាំង:</p>
+                            </div>
+                            <div class="">
+                                <p>ខណ្ឌទួលគោក រាជធានីភ្នំពេញ</p>
+                            </div> 
+                       </div​>
+                       <div​ class="max-w-full flex mt-3">
+                            <div class="w-24 flex justify-around">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                    </span>
+                                    <p>Email:</p>
+                            </div>
+                            <div>
+                                chheangphektra@gmail.com
+                            </div>
+                       </div​>
+                       <div​ class="max-w-full flex mt-3">
+                            <div class="w-[180px] flex justify-around ">
+                                <span class="material-symbols-outlined">
+                                    call
+                                    </span> 
+                                    <p>លេខទូរស័ព្ទ(+855):</p>
+                            </div>
+                            <div class="">
+                                093 567 234
+                            </div>
+                       </div​>
+                       <div class="flex mt-4">
+                        <div class="flex justify-evenly w-1/2">
+                            <div class="w-9 mt-">
+                                <img src="../assets/Icon/facebook.svg" alt="">
+                            </div>
+                            <div class="w-9 ">
+                                <img src="../assets/Icon/telegram.svg" alt="">
+                            </div>
+                            <div class="w-9 ">
+                                <img src="../assets/Icon/youtube-round-2.svg" alt="">
+                            </div>
+                        </div>     
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pagination -->
+        
+  <!-- End Pagination -->
     </main>
     <footer>
 
     </footer>
 </body>
  <!-- cdn flowbite javascript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<script src="../assets/js/nav.js" ></script>
 </html>
