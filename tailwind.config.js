@@ -1,22 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["public/**/*.{html,js}"],
+  content: [
+    "public/**/*.{html,js}"
+  ],
   theme: {
-    screens:{
-      sm:'640px',
-      md:'768px',
-      lg:'976px',
-      xl:'1280px'
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       'primary': '#0f172a',
       'secondary': '#facc15',
-      'Onsecondary':'#fef08a',
+      'Onsecondary':'#01122E',
       'Onprimary':'#f4f4f5',
       'Accent':'#7dd3fc',
       'background':'#f5f5f4',
+      'card':'#FFFFFF'
     },
     fontSize:{
       'header1': ['96px', {
@@ -71,7 +68,7 @@ module.exports = {
     extend: {
       padding:{
         'btn':[
-          '55px 20px'
+          '10px 35px'
         ]
       },
       width:{
@@ -82,10 +79,11 @@ module.exports = {
         'card':'320px'
       },
       fontFamily:{
-        'Noto Serif Khmer':['Noto serif khmer']
+        'NotoSerifKhmer':['Noto serif khmer']
       },
       borderRadius:{
-        'radius':'15px' 
+        'radius':'15px' ,
+        'sm-radius':'5px'
       },
       margin:{
         'top-content':'6rem',
@@ -93,5 +91,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+   
+  ],
 }
