@@ -13,7 +13,8 @@ module.exports = {
       'Onprimary':'#f4f4f5',
       'Accent':'#7dd3fc',
       'background':'#f5f5f4',
-      'card':'#FFFFFF'
+      'card':'#FFFFFF',
+      'des' : '#5E6A82',
     },
     fontSize:{
       'header1': ['96px', {
