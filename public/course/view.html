@@ -15,12 +15,19 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 </head>
 </head>
-
+<style>
+  .desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+</style>
 <body class="bg-background font-NotoSerifKhmer">
 
   <!-- Header -->
   <header>
-    <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
+    <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full sticky top-0 left-0 z-50">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
         <section class="flex items-center gap-5">
           <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -96,13 +103,13 @@
   </header>
   <!-- End Header -->
 
-  <main class="mt-top-content mb-top-title">
+  <main class="lg:mt-[30px] mb-top-title">
     <section class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-12 gap-4">
-        <div class="col-start-1 col-span-8" id="full-screen">
+        <div class="col-start-1 col-span-12 lg:col-start-1 lg:col-span-8" id="full-screen">
           <!--main image of blog view-->
           <div>
-            <img src="https://jooinn.com/images/city-view-1.jpg" alt="img" class="w-full h-[400px] mb-5">
+            <img src="https://appmaster.io/api/_files/hRaLG2N4DVjRZJQzCpN2zJ/download/" alt="img" class="w-full mb-5">
           </div>
           <!--end main image of blog view-->
 
@@ -112,7 +119,7 @@
               <img class="rounded-full w-9 h-9"
                 src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
                 alt="profile picture">
-              <div class="w-full flex justify-between">
+              <div class="w-full flex justify-between items-center">
                 <div class="text-center text-black text-sm tracking-tight ps-3">
                   <div>KOOMPI STEM</div>
                   <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight pe-5">
@@ -134,19 +141,19 @@
                   <li class="me-2" role="presentation">
                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
                       data-tabs-target="#profile" type="button" role="tab" aria-controls="profile"
-                      aria-selected="false"><i class="fa-solid fa-info bg-primary text-white rounded-full w-6 h-6 me-2 pt-1"></i>About Course</button>
+                      aria-selected="false">About Course</button>
                   </li>
                   <li class="me-2" role="presentation">
                     <button
                       class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                       id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings"
-                      aria-selected="false"><i class="fa-solid fa-question  bg-primary text-white rounded-full w-6 h-6 me-2 pt-1"></i>Comment</button>
+                      aria-selected="false">Comment</button>
                   </li>
                   <li role="presentation">
                     <button
                       class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                       id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
-                      aria-selected="false"><i class="fa-solid fa-star bg-primary text-white rounded-full w-6 h-6 me-2 pt-1"></i>Rating</button>
+                      aria-selected="false">Rating</button>
                   </li>
                 </ul>
               </div>
@@ -187,40 +194,52 @@
 
 
         <!--Relate blog card-->
-        <div class="col-start-9 col-span-12 overflow-auto h-[400px] bg-card rounded-sm-radius">
-          <h1 class="text-nav p-3">អត្ថបទទាក់ទង</h1>
+        <div class="col-start-1 col-span-12 lg:col-start-9 lg:col-span-12 overflow-auto h-[400px] bg-card rounded-sm-radius">
+          <h1 class="text-nav ps-3 pt-3">Title Lesson</h1>
+          <p class="ps-3 pb-3 text-body">Total Viewer - Date post video</p>
           <!--Card-->
           <div class="p-3">
             <a href="#"
               class="flex bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
-              <img class="object-cover w-[8rem] h-[10rem] md:h-[8rem] md:w-[10rem] rounded-xl"
-                src="https://www.trurocomputerservices.co.uk/wp-content/uploads/2021/03/gaming-pc-truro.jpg" alt="">
+              <img class="object-cover w-[9rem] md:w-[10rem] rounded-xl"
+                src="https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language.jpg" alt="">
               <div class="flex flex-col p-2">
-                <h1 class="text-xl">ហេតុអ្វីបានជាកុំព្យូទ័រមិនដូចទូរស័ព្ទ</h1>
-                <span class="text-body text-gray-400 mt-2">០៨ មករា ២០២២ - ចំនួនដង៖ ១.៥ពាន់​​</span>
+                <h1 class="text-xl">Lesson 1 Java Syntax</h1>
+                <span class="text-body mt-2 text-des desc">Java Syntax,Naming rule,Detail about java </span>
+                <div class="flex text-des">
+                  <i class="fa-regular fa-calendar mt-2"></i>
+                  <p class="mt-1 ps-2">Jan 23, 2022</p>
+                </div>
               </div>
             </a>
           </div>
           <div class="p-3">
             <a href="#"
               class="flex bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
-              <img class="object-cover w-[8rem]  h-[10rem] md:h-[8rem] md:w-[10rem] rounded-xl"
-                src="https://fruitboxco.com/cdn/shop/products/asset_2_grande.jpg?v=1571839043" alt="">
+              <img class="object-cover w-[9rem] md:w-[10rem] rounded-xl"
+                src="https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language.jpg" alt="">
               <div class="flex flex-col p-2">
-                <h1 class="text-xl">ហេតុអ្វីបានជាកុំព្យូទ័រមិនដូចទូរស័ព្ទ</h1>
-                <span class="text-body text-gray-400 mt-2">០៨ មករា ២០២២ - ចំនួនដង៖ ១.៥ពាន់​​</span>
+                <h1 class="text-xl">Lesson 2 Java Syntax</h1>
+                <span class="text-body mt-2 text-des desc">Java Syntax,Naming rule,Detail about java </span>
+                <div class="flex text-des">
+                  <i class="fa-regular fa-calendar mt-2"></i>
+                  <p class="mt-1 ps-2">Jan 23, 2022</p>
+                </div>
               </div>
             </a>
           </div>
           <div class="p-3">
             <a href="#"
               class="flex bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
-              <img class="object-cover w-[8rem]  h-[10rem] md:h-[8rem] md:w-[10rem] rounded-xl"
-                src="https://www.albawaba.com/sites/default/files/styles/d08_standard/public/im_new/Sama%20al%20Kurdi/8SmartphonesYouCanBuyForLessThan300-shutterstock-20Feb22.jpg"
-                alt="">
+              <img class="object-cover w-[9rem] md:w-[10rem] rounded-xl"
+                src="https://www.finoit.com/wp-content/uploads/2022/11/future-of-java-programming-language.jpg" alt="">
               <div class="flex flex-col p-2">
-                <h1 class="text-xl">ហេតុអ្វីបានជាកុំព្យូទ័រមិនដូចទូរស័ព្ទ</h1>
-                <span class="text-body text-gray-400 mt-2">០៨ មករា ២០២២ - ចំនួនដង៖ ១.៥ពាន់​​</span>
+                <h1 class="text-xl">Lesson 3 Java Syntax</h1>
+                <span class="text-body mt-2 text-des desc">Java Syntax,Naming rule,Detail about java </span>
+                <div class="flex text-des">
+                  <i class="fa-regular fa-calendar mt-2"></i>
+                  <p class="mt-1 ps-2">Jan 23, 2022</p>
+                </div>
               </div>
             </a>
           </div>
