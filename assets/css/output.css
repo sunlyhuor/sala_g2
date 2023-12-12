@@ -772,16 +772,8 @@ html{
   grid-column: span 2 / span 2;
 }
 
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-
 .col-start-1 {
   grid-column-start: 1;
-}
-
-.col-start-9 {
-  grid-column-start: 9;
 }
 
 .float-left {
@@ -956,6 +948,10 @@ html{
   margin-inline-start: 1rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -992,20 +988,8 @@ html{
   margin-top: 7rem;
 }
 
-.mt-top-content {
-  margin-top: 6rem;
-}
-
 .mt-top-title {
   margin-top: 2rem;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .block {
@@ -1166,10 +1150,6 @@ html{
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[200px\] {
-  height: 200px;
 }
 
 .min-h-screen {
@@ -1340,16 +1320,16 @@ html{
   width: 8rem;
 }
 
+.w-\[9rem\] {
+  width: 9rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[9rem\] {
-  width: 9rem;
 }
 
 .min-w-0 {
@@ -1779,11 +1759,6 @@ html{
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
-.bg-des {
-  --tw-bg-opacity: 1;
-  background-color: rgb(94 106 130 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1942,6 +1917,10 @@ html{
   padding-bottom: 2.5rem;
 }
 
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1966,6 +1945,10 @@ html{
   padding-inline-start: 2.5rem;
 }
 
+.ps-2 {
+  padding-inline-start: 0.5rem;
+}
+
 .ps-3 {
   padding-inline-start: 0.75rem;
 }
@@ -1974,24 +1957,16 @@ html{
   padding-inline-start: 1.25rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
-.ps-2 {
-  padding-inline-start: 0.5rem;
 }
 
 .text-left {
@@ -2460,10 +2435,6 @@ html{
     margin-top: 6rem;
   }
 
-  .md\:mt-\[60px\] {
-    margin-top: 60px;
-  }
-
   .md\:block {
     display: block;
   }
@@ -2730,22 +2701,6 @@ html{
 
   .lg\:mt-60 {
     margin-top: 15rem;
-  }
-
-  .lg\:mt-\[60px\] {
-    margin-top: 60px;
-  }
-
-  .lg\:mt-\[\] {
-    margin-top: ;
-  }
-
-  .lg\:mt-\[10rem\] {
-    margin-top: 10rem;
-  }
-
-  .lg\:mt-\[2rem\] {
-    margin-top: 2rem;
   }
 
   .lg\:mt-\[30px\] {
