@@ -11,12 +11,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-    <script src="../assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-
-
 </head>
-<body class="bg-background">
+<style>
+  .desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+</style>
+<body class="bg-background font-NotoSerifKhmer">
      <!-- Header -->
      <header>
         <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
@@ -80,100 +86,155 @@
       </header>
       <!-- End Header -->
 
-    <main class="container mx-auto py-5">
+      <section class="container flex justify-between mx-auto pt-5">
+          <div class="flex gap-5 px-3 md:px-5 lg:px-0">
+                    <!-- Search Bar​ -->
+                  <div id="mainSearchBar" class="relative">
+                    <div id="btnSearch" class="absolute inset-y-0 start-0 flex items-center"></div>  
+                    <input type="search" id="default-search" class="md:block p-2 md:p-2 ps-5 text-sm md:w-96 lg:w-[600px] text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Enter Keyword..." required>
+                </div>
+                <button class="flex items-center bg-Onsecondary px-5 rounded-lg">
+                  <svg class="w-4 h-4 text-Onprimary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                </svg>   
+                </button>
+                <!--End Search Bar-->
+          </div>
+          <div>
+          
+          <!-- Filter -->
+          <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-primary bg-card focus:ring-4 focus:outline-none focus:ring-card font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-card dark:hover:bg-card dark:focus:ring-card" type="button">
+              <span class="lg:flex items-center hidden" >
+                Categories<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                  </svg>
+              </span>  
+              <span class="lg:hidden block" >
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M3.9 54.9C10.5 40.9 24.5 32 40 32H472c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9V448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6V320.9L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/></svg>
+              </span>
+          </button>
+  
+          <!-- Category menu -->
+          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                </li>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                </li>
+              </ul>
+          </div>
+  
+          </div>
+      </section>
+
+    <main class="container mx-auto py-5 px-3 md:px-5 lg:px-0">
       <p class="text-title font-NotoSerifKhmer">មេរៀន</p>
         <!-- card -->
-        <section class="flex flex-wrap justify-center gap-5 py-5">
-            <div class="max-w-[19rem] bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
-                <a href="view.html">
-                    <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="view.html">
-                        <h5 class="mb-2 text-black text-2xl font-medium font-['Noto Serif Khmer'] tracking-tight">C++ Programming</h5>
-                    </a>
-                    <p class="mb-3 text-black text-base font-normal font-['Noto Serif Khmer'] tracking-tight">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-                    <div class="flex items-center ">
-                        <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                        <div class="w-full flex justify-between items-center">
-                            <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                                <div>KOOMPI STEM</div>
-                                <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                            </div>
-                            <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                        </div>
-                    </div>
+        <section class="flex flex-wrap justify-center">
+            <!--Add Book card-->
+      <section class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
+          <div class="max-w-sm bg-white rounded-lg">
+            <a href="/public/book/view.html">
+              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
+            </a>
+            <div class="p-5">
+              <a href="/public/book/view.html">
+                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
+              </a>
+              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+              <div class="flex items-center ">
+                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="w-full flex justify-between items-center">
+                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
+                          <div>KOOMPI STEM</div>
+                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                 </div>
-            </div>
-            <div class="max-w-[19rem] bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
-                <a href="view.html">
-                    <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="view.html">
-                        <h5 class="mb-2 text-black text-2xl font-medium font-['Noto Serif Khmer'] tracking-tight">C++ Programming</h5>
-                    </a>
-                    <p class="mb-3 text-black text-base font-normal font-['Noto Serif Khmer'] tracking-tight">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-                    <div class="flex items-center ">
-                        <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                        <div class="w-full flex justify-between items-center">
-                            <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                                <div>KOOMPI STEM</div>
-                                <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                            </div>
-                            <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                        </div>
-                    </div>
+                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
                 </div>
+              </div>
             </div>
-            <div class="max-w-[19rem] bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
-                <a href="view.html">
-                    <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="view.html">
-                        <h5 class="mb-2 text-black text-2xl font-medium font-['Noto Serif Khmer'] tracking-tight">C++ Programming</h5>
-                    </a>
-                    <p class="mb-3 text-black text-base font-normal font-['Noto Serif Khmer'] tracking-tight">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-                    <div class="flex items-center ">
-                        <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                        <div class="w-full flex justify-between items-center">
-                            <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                                <div>KOOMPI STEM</div>
-                                <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                            </div>
-                            <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                        </div>
-                    </div>
+          </div>
+          <div class="max-w-sm bg-white rounded-lg">
+            <a href="/public/book/view.html">
+              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
+            </a>
+            <div class="p-5">
+              <a href="/public/book/view.html">
+                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
+              </a>
+              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+              <div class="flex items-center ">
+                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="w-full flex justify-between items-center">
+                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
+                          <div>KOOMPI STEM</div>
+                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                 </div>
-            </div>
-            <div class="max-w-[19rem] bg-white rounded-lg dark:bg-gray-800 dark:border-gray-700">
-                <a href="view.html">
-                    <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="view.html">
-                        <h5 class="mb-2 text-black text-2xl font-medium font-['Noto Serif Khmer'] tracking-tight">C++ Programming</h5>
-                    </a>
-                    <p class="mb-3 text-black text-base font-normal font-['Noto Serif Khmer'] tracking-tight">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-                    <div class="flex items-center ">
-                        <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                        <div class="w-full flex justify-between items-center">
-                            <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                                <div>KOOMPI STEM</div>
-                                <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                            </div>
-                            <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                        </div>
-                    </div>
+                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="max-w-sm bg-white rounded-lg">
+            <a href="/public/book/view.html">
+              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
+            </a>
+            <div class="p-5">
+              <a href="/public/book/view.html">
+                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
+              </a>
+              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+              <div class="flex items-center ">
+                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="w-full flex justify-between items-center">
+                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
+                          <div>KOOMPI STEM</div>
+                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
+                </div>
+                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="max-w-sm bg-white rounded-lg">
+            <a href="/public/book/view.html">
+              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
+            </a>
+            <div class="p-5">
+              <a href="/public/book/view.html">
+                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
+              </a>
+              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
+              <div class="flex items-center ">
+                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="w-full flex justify-between items-center">
+                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
+                          <div>KOOMPI STEM</div>
+                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
+                </div>
+                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End Add Book card-->
         </section>
         <!-- end of card -->
 
         <!-- pagination -->
         <section>
-              <nav aria-label="Page navigation example " class="container flex justify-end md:justify-center">
+              <nav aria-label="Page navigation example " class="container flex justify-center">
                 <ul class="inline-flex -space-x-px text-base h-10">
                   <li>
                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white rounded">ទំព័រមុន</a>
@@ -194,7 +255,7 @@
                     <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">5</a>
                   </li>
                   <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">ទំព័របន្ទាប់</a>
+                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white rounded">ទំព័របន្ទាប់</a>
                   </li>
                 </ul>
               </nav>
@@ -294,4 +355,5 @@
     <!-- End Footer-->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<script src="/assets/js/nav.js" ></script>
 </html>
