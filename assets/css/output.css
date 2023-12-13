@@ -622,27 +622,12 @@ html{
   bottom: 0px;
 }
 
-<<<<<<< HEAD
 .bottom-2 {
   bottom: 0.5rem;
-=======
-.bottom-10 {
-  bottom: 2.5rem;
 }
 
-.inset-x-40 {
-  left: 10rem;
-  right: 10rem;
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
-}
-
-.inset-x-60 {
-  left: 15rem;
-  right: 15rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
+.bottom-40 {
+  bottom: 10rem;
 }
 
 .bottom-5 {
@@ -697,30 +682,6 @@ html{
   top: 7rem;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
-.bottom-1 {
-  bottom: 0.25rem;
-}
-
-.top-\[2px\] {
-  top: 2px;
-}
-
-.top-\[320px\] {
-  top: 320px;
-}
-
-.top-\[400px\] {
-  top: 400px;
-}
-
-.top-\[96px\] {
-  top: 96px;
-}
-
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .z-0 {
   z-index: 0;
 }
@@ -753,24 +714,8 @@ html{
   grid-column: span 2 / span 2;
 }
 
-.col-span-8 {
-  grid-column: span 8 / span 8;
-}
-
-.col-span-9 {
-  grid-column: span 9 / span 9;
-}
-
 .col-start-1 {
   grid-column-start: 1;
-}
-
-.col-start-9 {
-  grid-column-start: 9;
-}
-
-.float-right {
-  float: right;
 }
 
 .float-left {
@@ -1012,6 +957,10 @@ html{
   display: none;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1076,13 +1025,10 @@ html{
   height: 10rem;
 }
 
-<<<<<<< HEAD
 .h-\[140px\] {
   height: 140px;
 }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .h-\[25vh\] {
   height: 25vh;
 }
@@ -1099,28 +1045,12 @@ html{
   height: 100vh;
 }
 
-<<<<<<< HEAD
 .min-h-screen {
   min-height: 100vh;
-=======
-<<<<<<<<< Temporary merge branch 1
-.h-6 {
-  height: 1.5rem;
 }
 
-.h-\[3rem\] {
-  height: 3rem;
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
-}
-
-.h-\[10rem\] {
-  height: 10rem;
-}
-
-=========
->>>>>>>>> Temporary merge branch 2
-.w-1\/2 {
-  width: 50%;
+.w-0 {
+  width: 0px;
 }
 
 .w-1\/5 {
@@ -1183,14 +1113,6 @@ html{
   width: 14rem;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
-.w-6\/12 {
-  width: 50%;
-}
-
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .w-64 {
   width: 16rem;
 }
@@ -1219,40 +1141,24 @@ html{
   width: 40px;
 }
 
-<<<<<<< HEAD
 .w-\[532\.86px\] {
   width: 532.86px;
 }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .w-\[8rem\] {
   width: 8rem;
 }
 
-<<<<<<< HEAD
 .w-\[9rem\] {
   width: 9rem;
 }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
-}
-
-.w-6\/12 {
-  width: 50%;
-=========
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 }
 
 .min-w-0 {
@@ -1518,15 +1424,9 @@ html{
   border-radius: 0.75rem;
 }
 
-<<<<<<< HEAD
 .rounded-e {
   border-start-end-radius: 0.25rem;
   border-end-end-radius: 0.25rem;
-=======
-<<<<<<<<< Temporary merge branch 1
-.rounded-3xl {
-  border-radius: 1.5rem;
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 }
 
 .rounded-r-2xl {
@@ -1539,16 +1439,9 @@ html{
   border-end-start-radius: 0.25rem;
 }
 
-<<<<<<< HEAD
 .rounded-s-lg {
   border-start-start-radius: 0.5rem;
   border-end-start-radius: 0.5rem;
-=======
-.rounded-t-\[15px\] {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 }
 
 .rounded-t-lg {
@@ -1821,7 +1714,6 @@ html{
   padding-bottom: 1.5rem;
 }
 
-<<<<<<< HEAD
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1830,8 +1722,6 @@ html{
   padding-bottom: 1.25rem;
 }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1864,13 +1754,8 @@ html{
   padding-inline-start: 1.25rem;
 }
 
-<<<<<<< HEAD
 .pt-3 {
   padding-top: 0.75rem;
-=======
-.pt-1 {
-  padding-top: 0.25rem;
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 }
 
 .pt-4 {
@@ -1881,17 +1766,6 @@ html{
   padding-top: 1.25rem;
 }
 
-<<<<<<< HEAD
-=======
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .text-left {
   text-align: left;
 }
@@ -2023,21 +1897,12 @@ html{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
-=========
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-<<<<<<< HEAD
-=======
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -2378,23 +2243,10 @@ html{
     display: none;
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
-=========
-  .md\:h-\[100px\] {
-    height: 100px;
-  }
-
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .md\:h-\[14rem\] {
     height: 14rem;
   }
 
-<<<<<<< HEAD
-=======
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .md\:h-\[40vh\] {
     height: 40vh;
   }
@@ -2419,35 +2271,12 @@ html{
     width: 25%;
   }
 
-<<<<<<< HEAD
   .md\:w-96 {
     width: 24rem;
   }
 
   .md\:w-\[10rem\] {
     width: 10rem;
-=======
-  .md\:w-48 {
-    width: 12rem;
-  }
-
-  .md\:w-\[100px\] {
-    width: 100px;
-  }
-
-  .md\:w-\[3rem\] {
-    width: 3rem;
-  }
-
-<<<<<<<<< Temporary merge branch 1
-=========
-  .md\:w-\[16rem\] {
-    width: 16rem;
-  }
-
-  .md\:w-full {
-    width: 100%;
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   }
 
   .md\:w-\[16rem\] {
@@ -2547,10 +2376,6 @@ html{
 
   .md\:p-14 {
     padding: 3.5rem;
-=========
-  .md\:p-16 {
-    padding: 4rem;
->>>>>>>>> Temporary merge branch 2
   }
 
   .md\:p-16 {
@@ -2565,21 +2390,6 @@ html{
     padding: 0.75rem;
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  .md\:px-\[10rem\] {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
-  .md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-<<<<<<<<< Temporary merge branch 1
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
@@ -2631,23 +2441,14 @@ html{
     top: 18rem;
   }
 
-<<<<<<<<< Temporary merge branch 1
-  .lg\:m-5 {
-    margin: 1.25rem;
+  .lg\:col-span-12 {
+    grid-column: span 12 / span 12;
   }
 
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
   }
 
-=========
->>>>>>>>> Temporary merge branch 2
-  .lg\:col-span-12 {
-    grid-column: span 12 / span 12;
-  }
-
-<<<<<<<<< Temporary merge branch 1
-=========
   .lg\:col-span-9 {
     grid-column: span 9 / span 9;
   }
@@ -2656,7 +2457,6 @@ html{
     grid-column-start: 1;
   }
 
-<<<<<<< HEAD
   .lg\:col-start-10 {
     grid-column-start: 10;
   }
@@ -2667,15 +2467,6 @@ html{
 
   .lg\:m-5 {
     margin: 1.25rem;
-=======
-<<<<<<<<< Temporary merge branch 1
-  .lg\:col-start-9 {
-    grid-column-start: 9;
-=========
-  .lg\:col-start-10 {
-    grid-column-start: 10;
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   }
 
   .lg\:m-auto {
@@ -2793,13 +2584,10 @@ html{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-<<<<<<< HEAD
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2822,7 +2610,6 @@ html{
     border-radius: 0px;
   }
 
-<<<<<<< HEAD
   .lg\:rounded-s-lg {
     border-start-start-radius: 0.5rem;
     border-end-start-radius: 0.5rem;
@@ -2832,42 +2619,20 @@ html{
     border-width: 0px;
   }
 
-=======
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .lg\:p-0 {
     padding: 0px;
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<<<< Temporary merge branch 1
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-<<<<<<< HEAD
-=======
-=========
->>>>>>>>> Temporary merge branch 2
-  .lg\:px-44 {
-    padding-left: 11rem;
-    padding-right: 11rem;
-  }
-
-<<<<<<<<< Temporary merge branch 1
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .lg\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
   }
 
-<<<<<<< HEAD
-=======
-=========
->>>>>>>>> Temporary merge branch 2
->>>>>>> 0775276b9401d5ef540e966f30faab37b1e56dfb
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
