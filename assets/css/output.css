@@ -764,6 +764,11 @@ html{
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -829,6 +834,10 @@ html{
   margin-left: 0.25rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -839,6 +848,10 @@ html{
 
 .mr-1 {
   margin-right: 0.25rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
 }
 
 .mr-2 {
@@ -917,6 +930,10 @@ html{
   margin-top: 80px;
 }
 
+.mt-top-content {
+  margin-top: 6rem;
+}
+
 .mt-top-title {
   margin-top: 2rem;
 }
@@ -979,6 +996,10 @@ html{
 
 .h-3 {
   height: 0.75rem;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .h-4 {
@@ -1075,6 +1096,10 @@ html{
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-32 {
+  width: 8rem;
 }
 
 .w-4 {
@@ -1280,6 +1305,10 @@ html{
   flex-wrap: wrap;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -1302,6 +1331,10 @@ html{
 
 .gap-10 {
   gap: 2.5rem;
+}
+
+.gap-14 {
+  gap: 3.5rem;
 }
 
 .gap-2 {
@@ -1364,6 +1397,14 @@ html{
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .truncate {
@@ -1552,6 +1593,10 @@ html{
   --tw-bg-opacity: 0.5;
 }
 
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
+}
+
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
@@ -1627,6 +1672,11 @@ html{
   padding-right: 0.25rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1682,6 +1732,11 @@ html{
   padding-bottom: 0.625rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1700,6 +1755,10 @@ html{
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .pb-3 {
@@ -1768,6 +1827,10 @@ html{
 
 .font-NotoSerifKhmer {
   font-family: Noto serif khmer;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .text-\[64px\] {
@@ -1871,6 +1934,11 @@ html{
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -1878,6 +1946,12 @@ html{
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1948,6 +2022,10 @@ html{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 .hover\:border:hover {
   border-width: 1px;
 }
@@ -1996,6 +2074,10 @@ html{
 .focus\:ring-card:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-offset-2:focus {
+  --tw-ring-offset-width: 2px;
 }
 
 .group[open] .group-open\:rotate-180 {
@@ -2073,6 +2155,10 @@ html{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
   .sm\:justify-center {
     justify-content: center;
   }
@@ -2111,6 +2197,11 @@ html{
   .sm\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .sm\:text-center {
@@ -2154,11 +2245,6 @@ html{
   .md\:mx-\[1\.5rem\] {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-  }
-
-  .md\:mx-\[4rem\] {
-    margin-left: 4rem;
-    margin-right: 4rem;
   }
 
   .md\:-ml-64 {
@@ -2313,6 +2399,10 @@ html{
     gap: 0.5rem;
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -2392,6 +2482,14 @@ html{
     padding-bottom: 2.5rem;
   }
 
+  .md\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .md\:text-\[32px\] {
+    font-size: 32px;
+  }
+
   .md\:text-nav {
     font-size: 24px;
     line-height: 36px;
@@ -2419,6 +2517,14 @@ html{
     grid-column: span 12 / span 12;
   }
 
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .lg\:col-span-8 {
     grid-column: span 8 / span 8;
   }
@@ -2433,6 +2539,10 @@ html{
 
   .lg\:col-start-10 {
     grid-column-start: 10;
+  }
+
+  .lg\:col-start-7 {
+    grid-column-start: 7;
   }
 
   .lg\:col-start-9 {
@@ -2452,9 +2562,8 @@ html{
     margin-right: 2.75rem;
   }
 
-  .lg\:mx-\[2\.5rem\] {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+  .lg\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .lg\:ms-5 {
@@ -2481,6 +2590,10 @@ html{
     margin-top: 30px;
   }
 
+  .lg\:mt-top-content {
+    margin-top: 6rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2491,6 +2604,14 @@ html{
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:h-\[10rem\] {
+    height: 10rem;
+  }
+
+  .lg\:h-\[500px\] {
+    height: 500px;
   }
 
   .lg\:h-\[60vh\] {
@@ -2537,6 +2658,10 @@ html{
     width: 60px;
   }
 
+  .lg\:w-\[8rem\] {
+    width: 8rem;
+  }
+
   .lg\:w-auto {
     width: auto;
   }
@@ -2577,6 +2702,10 @@ html{
     justify-content: space-between;
   }
 
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
   .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2615,8 +2744,24 @@ html{
     padding-bottom: 2rem;
   }
 
+  .lg\:pe-6 {
+    padding-inline-end: 1.5rem;
+  }
+
   .lg\:text-center {
     text-align: center;
+  }
+
+  .lg\:text-\[24px\] {
+    font-size: 24px;
+  }
+
+  .lg\:text-\[48px\] {
+    font-size: 48px;
+  }
+
+  .lg\:text-\[64px\] {
+    font-size: 64px;
   }
 
   .lg\:text-Onprimary {
