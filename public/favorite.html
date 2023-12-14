@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favorite page</title>
+    <link rel="shortcut icon" href="/assets/images/Sala-Logo.png">
     <link rel="stylesheet" href="../assets/css/output.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/fontawsome.css">
@@ -13,10 +14,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     
 </head>
-<body >
+<style>
+  .desTwoLine{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+</style>
+<body class="font-NotoSerifKhmer">
     <!-- Header -->
     <header>
-        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
+        <nav class="bg-primary border-gray-200 lg:text-Onprimary w-full">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
               <section class="flex items-center gap-5">
                   <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -80,7 +89,7 @@
     <!--Add Book card-->
     <main>
       <div class=" relative h-22 w-0 m-1 md:w-1/2 mb-8 md:mb-4" >
-        <h1 class=" w-[532.86px] text-center text-slate-900 text-[64px]  font-bold text-5xl leading-tight mb-6 
+        <h1 class=" w-[532.86px] text-center text-slate-900 text-[64px] text-5xl leading-tight mb-6 
                 font-bold font-['Noto Serif Khmer'] tracking-wide absolute inset-x-0 top-10 h-0 ">
                 Course
         </h1>
@@ -103,7 +112,9 @@
                                 <div>KOOMPI STEM</div>
                                 <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                       </div>
-                          <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                          <a href="#"><button id="addtoFav">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                         </button></a>
                       </div>
                     </div>
                   </div>
@@ -234,6 +245,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/book.js"></script>
 </html>
 
 
