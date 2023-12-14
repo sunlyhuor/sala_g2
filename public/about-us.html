@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about us</title>
+    <title>About us</title>
     <link rel="stylesheet" href="../assets/css/output.css">
     <link rel="stylesheet" href="../assets/css/input.css">
     <link rel="stylesheet" href="../assets/css/fontawsome.css">
+    <link rel="shortcut icon" href="../assets/images/Sala-Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <script src="../assets/js/jquery.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 </head>
 <style>
   .hide-scroll-bar {
@@ -20,340 +20,397 @@
   .hide-scroll-bar::-webkit-scrollbar {
     display: none;
   }
+  
   </style>
-<body>
-    <!-- Header -->
-    <header>
-      <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
-            <section class="flex items-center gap-5">
-                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                  <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
-                </a>
-                <!-- Search Bar​ -->
-                <div id="mainSearchBar" class="relative">
-                    <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
-                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>   
-                    </section>  
-                    <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
-                </div>
-                <!--End Search Bar-->
-            </section>
-            <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
-              <!--Hambergur Icon-->
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-              </button>
-              <!--Hambergur Icon-->
-              <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
-                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-              </a>
-            </section>
-            <!-- Link Menu-->
-            <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-              <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
-                <li>
-                  <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
-                </li>
-                <li>
-                  <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
-                </li>
-                <li>
-                  <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
-                </li>
-                <li>
-                  <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
-                </li>
-                <li>
-                  <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
-                </li>
-                <li>
-                  <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
-                    <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-                  </a>
-                </li>
-              </ul>
-            </section>
-            <!--End Link Menu-->
-        </div>
-      </nav>
-    </header>
-    <!-- End Header -->
+<body class="bg-background font-NotoSerifKhmer">
+  
+  <!-- Header -->
+  <header>
+    <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 w-full">
+          <section class="flex items-center gap-5">
+            <!--Logo-->
+            <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="/assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
+            </a>
+            <!--End Logo-->
 
-  <main >
-    <div class="container mx-auto px-4 font-NotoSerifKhmer">
-      <div  role="status" class="space-y-8  md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
-        <div class="md:w1/2">
-          <img  class="w-[605px] h-[464px] h-auto max-w-md" 
-            src="https://s3-alpha-sig.figma.com/img/a615/69b1/28df53b16fb347374a4bf47ee9ef6217?Expires=1702252800&Signature=BhjFJEhUVrDIbtQOQOqLOAQ5BCDCW4PGc0kEd0k6nhTE9bQZhZdQt6zuApt95CDWCpDHipngRkNHx09neB8l3erU9CwTBxvPdumHFliBh9-4svstgJq79kgmzDUi9MznZcivIJhmA9VU9askqHpHbgV3c-z5vIWZOqBevS6xMTuRcxOoMI3vTfDw04zzJaR-f2MES7iiRBnJeLFm44WV5SJlEp3A1x7CTXSTmH2GgmoqDwUGdWMrCa58WD698aPNU2C2McmjDgsGjtJwptm5ER8GMm~mmyJ86mR8ylWfKUF~OD2PdhRT4ktYWR1uTDzt7qhdwzfdYo4TjnUzHumFvA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" 
-          alt="">
-        </div>    
-        <div class="w-[1497px] h-[400px] relative h-22 w-0 m-1 md:w-1/2 mb-8 md:mb-4" >
-          <h1 class=" w-[532.86px] text-center text-slate-900 text-[64px]  font-bold text-5xl leading-tight mb-6 
-                  font-bold font-['Noto Serif Khmer'] tracking-wide absolute inset-x-20 top-10 h-16 ">
-                  About Teams
-          </h1>
-            <p class="  text-xl mb-8 w-[650px] text-slate-900 text-4xl font-normal font-['Noto Serif Khmer       SemiCondensed'] leading-[34px] absolute inset-x-0 bottom-0 h-60 text-center ">
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-              The point of using Lorem Ipsum is that it has a more-or-less.</p>
-        </div>
-      </div>
-    </div>
-    <section >
-      <div class="mx-auto w-[286px] text-center text-slate-900 text-[64px] font-bold font-['Noto Serif Khmer'] tracking-wide " >
-        Mentor 
-      </div>
-      <div class="container mx-auto px-1 font-NotoSerifKhmer">
-        
-        <div  role="status" class="space-y-8  md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center"> 
-          <div class="md:w1/2 m-20 ">
-            <img class="w-[605px] h-[505px] rounded-[15px] h-auto max-w-md" 
-             src="/assets/images/photo_2022-08-24_18-25-34.jpg" />
-          </div>
-          <div class="w-[1497px] h-[400px] relative h-22 w-0 m-1 md:w-1/2 mb-8 md:mb-0" >
-            <h1 class=" w-[430.86px] text-center text-slate-900 text-[50px]  font-bold text-5xl leading-tight mb-6
-                font-bold font-['Noto Serif Khmer'] tracking-wide absolute inset-x-10 top-0 h-10 ">
-                Reksmey Mom
-              </h1>
-            <p class="text-xl mb-8 w-[350px] text-slate-900 text-4xl font-normal font-['Noto Serif Khmer SemiCondensed'] leading-[34px] absolute inset-x-20 bottom-10 h-60 text-center ">
-              It is a long established fact that a reader will be distracted by the readable content of a page when 
-              looking at its layout. 
-              The point of using Lorem Ipsum is that it has a more-or-less.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container mx-auto px-1 font-NotoSerifKhmer">
-        
-        <div  role="status" class="space-x-8  md:space-y-0 md:space-x-18 rtl:space-y-reverse md:flex md:items-center"> 
-          <div class="w-[1497px] h-[400px] relative h-22 w-0 m-20 md:w-1/2 mb-8 md:mb-0 " >
-            <h1 class=" w-[430.86px] text-center text-slate-900 text-[50px]  font-bold text-5xl leading-tight mb-6 float-left
-                font-bold font-['Noto Serif Khmer'] tracking-wide ">
-                Kay keo
-              </h1>
-            <p class="text-xl mb-8 w-[350px] text-slate-900 text-4xl font-normal font-['Noto Serif Khmer SemiCondensed'] leading-[34px] absolute inset-x-20 bottom-10 h-60 text-center ">
-              It is a long established fact that a reader will be distracted by the readable content of a page when 
-              looking at its layout. 
-              The point of using Lorem Ipsum is that it has a more-or-less.
-            </p>
-          </div>
-          <div class="md:w1/2 m-20 ">
-            <img class="w-[605px] h-[505px] rounded-[15px] h-auto max-w-md " 
-             src="/assets/images/teacher keo.jpg" />
-          </div>
-        </div>
-      </div>
-      
-  </section>
-  </main>
-  <section>
-    <div class="mx-auto w-[286px] text-center text-slate-900 text-[64px] font-bold font-['Noto Serif Khmer'] tracking-wide">
-      Members 
-    </div>
-    <!-- component -->
-    <div class="flex flex-col bg-white m-auto p-auto  font-NotoSerifKhmer ">
-            <div class="flex overflow-x-scroll pb-10 hide-scroll-bar ">
-              <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">  
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[225px] h-[225px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/helen.JPG" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Leang Helen</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['noto khmer serif'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[225px] h-[225px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/neat.JPG" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Chhorn Sreyneat</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['noto khmer serif'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[228px] h-[228px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/pheaktra.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Chheang pheakra</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[220px] h-[230px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/pheakey.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Pheakey</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[200px] h-[230px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[228px] h-[228px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/Thyda.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Tha Thyda</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[220px] h-[230px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/Davann.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Ing davann</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[200px] h-[230px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[228px] h-[228px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/Lyhuor.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Sun lyhuor</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[230px] h-[230px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/vanndeth.jpg" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Vanndeth</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
-                <div class="inline-block px-3  ">
-                  <div class="w-[504px] h-[498px] relative ">
-                    <div class="w-[480px] h-[494px] left-0 top-[2px]  ">
-                        <div class="w-[480px] h-[398px] left-0 top-[96px] absolute bg-white rounded-[15px] shadow"></div>
-                        <img class="w-[228px] h-[228px] left-[126px] top-0 absolute rounded-[228px]" src="/assets/images/sarady.JPG" />
-                        <div class="p-2.5 left-[100px] top-[249px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-slate-900 text-4xl font-bold font-['Noto Serif Khmer'] tracking-wide">Vuth Sarandy</div>
-                        </div>
-                        <div class="p-2.5 left-[104px] top-[320px] absolute justify-center items-center gap-2.5 inline-flex">
-                            <div class="text-black text-2xl font-normal font-['Noto Serif Khmer'] tracking-tight">ស្នេហា គឺជាការបោកប្រាស់</div>
-                        </div>
-                        <div class="w-12 h-12 left-[221px] top-[400px] absolute">
-                        </div>
-                        <div class="w-12 h-12 left-[315px] top-[400px] absolute">
-                            <div class="w-[21.25px] h-6 left-[13.44px] top-[12.05px] absolute">
-                            </div>
-                        </div>
-                    </div>
-                  
-                  </div>
-                
-                </div>
+            <!-- Search Bar​ -->
+            <div id="mainSearchBar" class="relative">
+                <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>   
+                </section>  
+                <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
             </div>
+            <!--End Search Bar-->
+          </section>
+
+          <!--Hamberber Icon-->
+          <section id="mainHamberger" class="flex items-center gap-5 flex-row-reverse">
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center text-sm text-gray-500 rounded-lg lg:hidden" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+            </button>
+            <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
+              <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+            </a>
+          </section>
+          <!--End Hamberber Icon-->
+
+          <!-- Link Menu-->
+          <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+            <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+              <li>
+                <a href="school.html" class="block py-2 px-3 text-md md:bg-transparent text-Onprimary md:p-1 hover:text-secondary">សាលារៀន</a>
+              </li>
+              <li>
+                <a href="/public/book/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+              </li>
+              <li>
+                <a href="course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+              </li>
+              <li>
+                <a href="blog/index.html" class="block py-2 px-3 md:p-1 text-Onprimary hover:text-secondary">អត្ថបទ</a>
+              </li>
+              <li>
+                <a href="#" class="text-secondary block py-2 px-3 md:p-1">អំពីយើង</a>
+              </li>
+              <li>
+                <a href="login.html" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                  <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <!--End Link Menu-->
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <main class="mt-top-content md:mt-top-content mb-top-title p-3">
+
+    <!--About Team-->
+    <section class="mx-auto w-full max-w-screen-xl">
+      <section class="grid grid-cols-12">
+        <div class="col-start-1 col-span-12 lg:col-start-1 lg:col-span-6">
+          <img 
+            src="https://s3-alpha-sig.figma.com/img/a615/69b1/28df53b16fb347374a4bf47ee9ef6217?Expires=1703462400&Signature=ZOdAzhb3aBIGiDEMRnNEuUIBjAIZtD0RWoc7tHt9S~BH85fQE5LcpvgZJl1TbmTshySChqrBuqpC6cWwgjQi2DGqrITnQsgVEXOH6pHbsFqHMWNtIjJHGp9B5sq9I3vYnLjTOjMWHQNIsTWabZtg1eVKoGwah~TQpRN9shWv3mKi8ni7UDisq~ZSdIaBCV3NjBT16QXKg4C8jdZIsCuS-8EZkmj7YulqArwibRZWn6VRnHcOJ7rC2nMcjosJCaVAiuG7cRSPNe6RD3Hmvw1l-6CYCgFlk8-YphVxNIub8avF-70ayrhP2BPO8i04OBkqg9iJLTRzKFwzsFoOXM~ghw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" 
+            alt="" class="w-full">
+        </div>
+
+        <div class="col-start-1 col-span-12 lg:col-start-7 lg:col-span-12 px-6">
+          <h1 class="text-[24px] md:text-[32px] lg:text-[64px] font-bold text-center">About Teams</h1>
+          <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using Lorem Ipsum is that it has a more-or-less.
+          </p>
+        </div>
+      </section>   
+    </section>
+    <!--End About Team-->
+
+    <section class="mx-auto w-full max-w-screen-xl mt-top-title lg:mt-top-content">
+      <h1 class="text-[24px] md:text-[32px] lg:text-[64px] font-bold text-center">Mentors</h1>
+
+      <!--Mentor One-->
+      <section class="grid grid-cols-12 mt-top-title lg:mt-top-content">
+        <div class="col-start-1 col-span-12 lg:col-start-1 lg:col-span-6">
+          <img src="/assets/images/teacher Smey.jpg" alt="montor" class="w-full rounded-lg object-cover lg:h-[500px]">
+        </div>
+
+        <div class="col-start-1 col-span-12 lg:col-start-7 lg:col-span-12 px-6 mt-top-title lg:mt-0">
+          <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">MOM Reksmey</h1>
+
+          <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using Lorem Ipsum is that it has a more-or-less.
+          </p>
+        </div>
+      </section>
+      <!--End Mentor One-->
+
+      
+      <!--Mentor Two-->
+      <section class="grid grid-cols-12 mt-top-title lg:mt-top-content">
+
+        <div class="col-start-1 col-span-12 lg:col-start-1 lg:col-span-6 mt-top-title lg:mt-0 mb-top-title lg:mb-0 lg:hidden">
+          <img src="/assets/images/teacher keo.jpg" alt="montor" class="w-full rounded-lg object-cover lg:h-[500px]">
+        </div>
+
+        <!--Text-->
+        <div class="col-start-1 col-span-12 lg:col-start-7 lg:col-span-12 px-6 lg:pe-6 lg:hidden">
+          <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">KAY Keo</h1>
+
+          <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using Lorem Ipsum is that it has a more-or-less.
+          </p>
+        </div>
+        <!--End text-->
+
+        <!--text-->
+        <div class="col-start-1 col-span-12 lg:col-start-1 lg:col-span-6 px-6 lg:pe-6 hidden lg:block">
+          <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">KAY Keo</h1>
+
+          <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+            The point of using Lorem Ipsum is that it has a more-or-less.
+          </p>
+        </div>
+        <!--End text-->
+
+        <!--Hidden when small screen-->
+        <div class="col-start-1 col-span-12 lg:col-start-7 lg:col-span-12 mt-top-title lg:mt-0 hidden lg:block">
+          <img src="/assets/images/teacher keo.jpg" alt="montor" class="w-full rounded-lg object-cover lg:h-[500px]">
+        </div>
+        <!--End Hidden when small screen-->
+        
+      </section>
+      
+    </section>
+  </main>
+
+  <!--Carousle Member-->
+  <section class="mt-top-content md:mt-top-content mb-top-title p-3">
+    <h1 class="text-[24px] md:text-[32px] lg:text-[64px] font-bold text-center">Members</h1>
+
+    <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
+      <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+      <div class="w-full relative flex items-center justify-center">
+        <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
+          <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1L1 7L7 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
+          <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Davann.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">អ៊ីង ដាវ៉ាន់</h1>
+                <h2 class="font-body text-slate-300">UI/UX Designer</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  មានការចាប់ផ្តើម មានការរីកចម្រើន
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="https://www.linkedin.com/in/ing-davann-0617b32a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="https://github.com/ingdavann">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+            
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheakey.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ផលភា ភក្តី</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/helen.JPG" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">លាង ហេលេន</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/neat.JPG" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឆន​ ស្រីនាត</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Lyhuor.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ស៊ុន លីហួរ</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Thyda.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ថា ធីតា</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/vanndeth.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">អាត វណ្ណដេត</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+
+            <!-- Card -->
+            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/sarady.JPG" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">វុធ សារ៉ាន់ឌី</h1>
+                <h2 class="font-body text-slate-300">CEO</h2>
+                <p class="mt-8 text-sm font-normal text-slate-800">
+                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                </p>
+                <span class="flex justify-center gap-3 mt-3">
+                  <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
+                  <a href="#">
+                    <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <!-- /Card -->
+            
+
+          </div>
+        </div>
+
+        <button aria-label="slide forward" class="absolute z-30 right-0 mr-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" id="next">
+          <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L1 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
+  <!--End Carousle Member-->
     
   <!--Footer-->
   <footer class="bg-primary font-NotoSerifKhmer">
@@ -448,4 +505,5 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="../assets/js/nav.js" ></script>
+<script src="../assets/js/carousel.js"></script>
 </html>
