@@ -622,10 +622,6 @@ html{
   bottom: 0px;
 }
 
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
 .bottom-40 {
   bottom: 10rem;
 }
@@ -650,10 +646,6 @@ html{
   right: 0px;
 }
 
-.right-2 {
-  right: 0.5rem;
-}
-
 .start-0 {
   inset-inline-start: 0px;
 }
@@ -670,8 +662,8 @@ html{
   top: 2.5rem;
 }
 
-.top-36 {
-  top: 9rem;
+.top-12 {
+  top: 3rem;
 }
 
 .z-0 {
@@ -708,10 +700,6 @@ html{
 
 .col-start-1 {
   grid-column-start: 1;
-}
-
-.float-left {
-  float: left;
 }
 
 .m-0 {
@@ -1314,10 +1302,6 @@ html{
   justify-content: space-between;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-14 {
   gap: 3.5rem;
 }
@@ -1532,11 +1516,6 @@ html{
 .border-primary {
   --tw-border-opacity: 1;
   border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
-.bg-Onprimary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(244 244 245 / var(--tw-bg-opacity));
 }
 
 .bg-Onsecondary {
@@ -2112,10 +2091,6 @@ html{
     max-width: 42rem;
   }
 
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -2126,10 +2101,6 @@ html{
 
   .sm\:rounded-lg {
     border-radius: 0.5rem;
-  }
-
-  .sm\:p-10 {
-    padding: 2.5rem;
   }
 
   .sm\:p-5 {
@@ -2249,8 +2220,8 @@ html{
     margin-top: 0.5rem;
   }
 
-  .md\:mt-28 {
-    margin-top: 7rem;
+  .md\:mt-32 {
+    margin-top: 8rem;
   }
 
   .md\:mt-top-content {
@@ -2406,10 +2377,6 @@ html{
 
   .md\:p-14 {
     padding: 3.5rem;
-  }
-
-  .md\:p-16 {
-    padding: 4rem;
   }
 
   .md\:p-2 {
@@ -2715,10 +2682,6 @@ html{
 }
 
 @media (min-width: 1280px) {
-  .xl\:top-96 {
-    top: 24rem;
-  }
-
   .xl\:col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -2735,32 +2698,8 @@ html{
     margin: 6rem;
   }
 
-  .xl\:m-2 {
-    margin: 0.5rem;
-  }
-
   .xl\:m-28 {
     margin: 7rem;
-  }
-
-  .xl\:m-32 {
-    margin: 8rem;
-  }
-
-  .xl\:m-36 {
-    margin: 9rem;
-  }
-
-  .xl\:m-4 {
-    margin: 1rem;
-  }
-
-  .xl\:m-40 {
-    margin: 10rem;
-  }
-
-  .xl\:m-20 {
-    margin: 5rem;
   }
 
   .xl\:mx-64 {
@@ -2777,8 +2716,8 @@ html{
     margin-top: 0.5rem;
   }
 
-  .xl\:mt-80 {
-    margin-top: 20rem;
+  .xl\:mt-72 {
+    margin-top: 18rem;
   }
 
   .xl\:mt-top-content {

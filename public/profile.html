@@ -4,82 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/output.css">
-    <script src="../assets/js/jquery.js"></script>
+    <link rel="stylesheet" href="../assets/css/fontawsome.css">
+    <script src="/assets/js/jquery.js"></script>
     <title>profile</title>
 </head>
 <body class="bg-background font-NotoSerifKhmer"> 
     <!-- Header -->
     <header>
-        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
-          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
+        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
+          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 w-full">
               <section class="flex items-center gap-5">
-                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
-                  </a>
-                  <!-- Search Bar​ -->
-                  <div id="mainSearchBar" class="relative">
-                      <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
-                          <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                          </svg>   
-                      </section>  
-                      <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
-                  </div>
-                  <!--End Search Bar-->
+                <!--Logo-->
+                <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                  <img src="/assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
+                </a>
+                <!--End Logo-->
+
+                <!-- Search Bar​ -->
+                <div id="mainSearchBar" class="relative">
+                    <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>   
+                    </section>  
+                    <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
+                </div>
+                <!--End Search Bar-->
               </section>
-              <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
-                <!--Hambergur Icon-->
-                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
+
+              <!--Hamberber Icon-->
+              <section id="mainHamberger" class="flex items-center gap-5 flex-row-reverse">
+                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center text-sm text-gray-500 rounded-lg lg:hidden" aria-controls="navbar-default" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
                   <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                   </svg>
                 </button>
-                <!--Hambergur Icon-->
                 <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
                   <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
                 </a>
               </section>
+              <!--End Hamberber Icon-->
+
               <!-- Link Menu-->
-              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-                <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
-                  <li>
-                    <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
-                  </li>
-                  <li>
-                    <a href="book/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
-                  </li>
-                  <li>
-                    <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
-                  </li>
-                  <li>
-                    <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
-                  </li>
-                  <li>
-                    <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
-                  </li>
-                  <li>
-                    <a href="log" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
-                      <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-              <!--End Link Menu-->
+            <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+              <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                <li>
+                  <a href="school.html" class="block py-2 px-3 text-md md:bg-transparent text-Onprimary hover:text-secondary md:p-1">សាលារៀន</a>
+                </li>
+                <li>
+                  <a href="/public/book/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+                </li>
+                <li>
+                  <a href="course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                </li>
+                <li>
+                  <a href="blog/index.html" class="block py-2 px-3 md:p-1 text-Onprimary hover:text-secondary">អត្ថបទ</a>
+                </li>
+                <li>
+                  <a href="about-us.html" class="text-Onprimary block py-2 px-3 md:p-1">អំពីយើង</a>
+                </li>
+                <li>
+                  <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                    <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                  </a>
+                </li>
+              </ul>
+          </section>
+          <!--End Link Menu-->
           </div>
         </nav>
       </header>
       <!-- End Header -->
-    <main class="mx-auto w-full max-w-screen-xl mt-top-title">
+    <main class="mx-auto w-full max-w-screen-xl mt-top-content relative">
         <!--Cover and Profile-->
-        <section class>
+        <section class="">
             <div class="w-full mx-auto">
                 <img class="w-5/6 mx-auto rounded-lg relative" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJl5qopbkq1h1cT2QtY8D-muH-9w0wCvn_6Q&usqp=CAU">
-                <img class="mx-32 top-36 absolute w-[130px] h-[130px] rounded-[140px] xl:mt-80 xl:mx-64 lg:mt-48 md:mt-28 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UehSbAlRhTn9UeQf8bOSoC-Df35a5Ip3jPKFzft_JREaaGI7Oh5sxqRRr-g1L8kxtcY&usqp=CAU" alt="">
+                <img class="mx-32 top-12 absolute w-[130px] h-[130px] rounded-[140px] xl:mt-72 xl:mx-64 lg:mt-48 md:mt-32 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UehSbAlRhTn9UeQf8bOSoC-Df35a5Ip3jPKFzft_JREaaGI7Oh5sxqRRr-g1L8kxtcY&usqp=CAU" alt="">
             </div>
             <!--Info-->
-            <div class="mt-14 w-full  text-center xl:mt-2 lg:mt-2 md:mt-2">
+            <div class="mt-14 w-full  text-center xl:mt-2 lg:mt-2 md:mt-2 ">
                 <div class=" xl:w-3/5 mx-28 xl:float-right xl:flex xl:justify-between lg:justify-between  md:block lg:text-center  ">
                         <div class="py-38 text-center xl:text-justify">
                             <h3​ class="text-miniTitle mt-top-title w-full">jomNum-ជុំនំទិច</h3​>
@@ -97,16 +104,16 @@
             <!--Info-->
         </section>
         <!-- End Cover and Profile-->
-        <section class="float-left w-full mt-4 xl:top-96 lg:top-72 md:top-56">
+        <section class=" flex w-full mt-4 lg:top-72 md:top-56">
             <div class="w-5/6 mx-auto xl:mt-top-content">
                 <div class="flex rounded-radius border-gray-300 bg-primary text-Onprimary ">
                     <button
-                        class="w-72 py-4 text-center font-medium text-gray-700 bg-gray-100 rounded-tl-lg focus:outline-none active:bg-gray-200"
+                        class="w-72 py-4 text-center font-medium text-Onprimary rounded-tl-lg focus:outline-none active:bg-gray-200"
                         onclick="openTab(event, 'tab1')">មេរៀន</button>
-                    <button class=" text-center font-medium text-gray-700 bg-gray-100 rounded-tr-lg focus:outline-none"
+                    <button class=" text-center font-medium text-Onprimaryrounded-tr-lg focus:outline-none"
                         onclick="openTab(event, 'tab2')">បណ្ណាល័យ
                     </button>
-                    <button class="w-72 text-center font-medium text-gray-700 bg-gray-100 rounded-tr-lg focus:outline-none"
+                    <button class="w-72 text-center font-medium text-Onprimary  rounded-tr-lg focus:outline-none"
                         onclick="openTab(event, 'tab3')">អត្ថបទ
                     </button>
                 </div>
@@ -212,10 +219,9 @@
             
         </section>
     </main>
-
-    <!--Footer-->
-    <!-- <footer class="bg-primary">
-        <div class="mx-auto w-full max-w-screen-xl">
+     <!--Footer-->
+    <footer class=" font-NotoSerifKhmer bg-primary mt-top-title">
+        <div class="mx-auto w-full max-w-screen-xl ">
           <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
             <div>
                 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -225,6 +231,7 @@
                 <h2 class="mt-2 text-body text-gray-500">
                   A plateform for our future with many resources to explore. 
                 </h2>
+                
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-Onprimary uppercase">Learn More</h2>
@@ -299,11 +306,10 @@
               </div>
           </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- End Footer-->
-    
 </body>
 <script src="/assets/js/tab.js"></script>
-<!-- <script src="/assets/components/component.js"></script> -->
 <script src="/assets/js/nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 </html>
