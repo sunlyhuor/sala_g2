@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>create sala</title>
+    <link rel="shortcut icon" href="/assets/images/Sala-Logo.png">
     <link rel="stylesheet" href="../assets/css/output.css">
-    <link rel="stylesheet" href="../assets/css/output.css">
-    <link rel="stylesheet" href="../assets/css/create-sala.css">
+    <link rel="stylesheet" href="../assets/css/input.css">
+    <link rel="stylesheet" href="../assets/css/fontawsome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-
-    
-    <script src="/assets/js/jquery.js" ></script>
+    <script src="../assets/js/jquery.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <style>
+      .desTwoLine{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-background font-NotoSerifKhmer">
     <!-- Header -->
     <header>
       <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
@@ -81,55 +87,70 @@
     <!-- End Header -->
  
     <div class="flex items-center justify-center min-h-screen bg-gray-100">
-      <div
-        class="relative flex flex-col m-6 space-y-8 bg-white rounded-2xl md:flex-row md:space-y-0"
-      >
+      <div class="relative flex flex-col m-6 space-y-8 bg-white rounded-2xl md:flex-row md:space-y-0">
         <!-- left side -->
-        <div class="flex flex-col justify-center p-8 md:p-14">
+        <div class="flex flex-col justify-center p-18 md:p-14">
           <span class="mb-3 text-4xl font-bold">បង្កើតសាលារបស់អ្នក</span>
           <span class="font-light text-gray-400 mb-8">
             Welcom back! Please enter your details
           </span>
-               <!-- form upload -->
-               <div class="hero ">
-                <label for="input-file" id="drop-area">
-                  <input type="file" accept="image/*" id="input-file" onchange="uploadImageCover(event)" hidden />
-                  <div id="img-view" class= "bg-[#5a5a5a] border border-1 border-[#5a5a5a]" >
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <p>
-                      Drag and drop or click here <br />
-                      to upload image
-                    </p>
-                  </div>
-                </label>
-              </div>
- 
-    <div class="user-img justify-center flex border-solid border-gray-300 -mt-16">
-      <img src="../assets/images/user_icon_149851.png" id="photo" alt="img">
-      <input type="file" accept="image/jpg" id="file" onchange="uploadImage(event)">
-      <label for="file" id="uploadbtn"><i class="fa-solid fa-camera"></i></label>
-    </div>
-
-
-
+          <!-- form upload -->
+          <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
+            <!-- Photo File Input -->
+            <input type="file" class="hidden" x-ref="photo" x-on:change="
+                                photoName = $refs.photo.files[0].name;
+                                const reader = new FileReader();
+                                reader.onload = (e) => {
+                                    photoPreview = e.target.result;
+                                };
+                                reader.readAsDataURL($refs.photo.files[0]);
+            ">
+            <div class="text-center">
+                <!-- Current Profile Photo -->
+                <div class="mt-0" x-show="! photoPreview">
+                    <img src="https://images.unsplash.com/photo-1531316282956-d38457be0993?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" class="w-40 h-40 m-auto rounded-full shadow">
+                </div>
+                <!-- New Profile Photo Preview -->
+                <div class="mt-2" x-show="photoPreview" style="display: none;">
+                    <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
+                    </span>
+                </div>
+                <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
+                     New Photo
+                </button>
+            </div>
+        </div>
           <!-- end form upload -->
           
-             <!--field  -->
-             <input type="email" id="helper-text" aria-describedby="helper-text-explanation" class="mt-4 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលឈ្មោះសាលា">
-             <input type="email" id="helper-text" aria-describedby="helper-text-explanation" class="mt-4 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលលេខទូរស័ព្ទ">
-             <input type="email" id="helper-text" aria-describedby="helper-text-explanation" class="mt-4 bg-gray-50 border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលទីតាំងសាលា">
+             <!--form  -->
+            <div>
+              <form class="max-w-sm mx-auto ">
+                <div class="mb-5">
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                  <input type="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលឈ្មោះសាលា" required>
+                </div>
+                <div class="mb-5">
+                  <label for="numbers" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                  <input type="numbers" id="numbers" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលលេខទូរស័ព" required>
+  
+                </div>
+                <div class="mb-5">
+                  <label for="location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+                  <input type="location" id="location" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="បញ្ចូលទីតាំងសាលា" required>
+                  
+                </div>
+                <div class="mb-5">
+                  <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bio</label>
+                  <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=" comment..."></textarea>
+                </div>
+                <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">បញ្ចូល</button>
+              </form>
+              
+            </div>
 
-             <!-- end field -->
-         
-         
+
+             <!-- end form -->
             
-            <textarea id="message" rows="4" class="mt-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
-
-          <button
-            class="mt-4 bg-primary text-white p-2 rounded-lg mb-6 hover:bg-gray-600 hover:text-white hover:border"
-          >
-            បញ្ចូល
-          </button>
         </div>
         <!-- {/* right side */} -->
         <div class="relative">
@@ -238,4 +259,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="../assets/js/nav.js" ></script>
   <script src="https://kit.fontawesome.com/4ed16d83e4.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
 </html>
