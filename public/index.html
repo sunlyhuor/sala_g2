@@ -11,7 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <script src="../assets/js/jquery.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
-
+    <link rel="shortcut icon" href="/assets/images/Sala-Logo.png" type="image/x-icon">
     <style>
       .desTwoLine{
         overflow: hidden;
@@ -19,6 +19,16 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
+
+      .rel{
+      position: absolute;
+      top: 45%;
+    }
+    .relUtube{
+      position: absolute;
+      top: 20%;
+      right: 45%;
+    }
     </style>
 </head>
     <body class="bg-background font-NotoSerifKhmer">
@@ -57,10 +67,11 @@
                 <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
                   <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
                 </a>
+                
               </section>
               <!--End Hamberber Icon-->
 
-              <!-- Link Menu-->
+            <!-- Link Menu-->
             <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
               <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
                 <li>
@@ -70,7 +81,7 @@
                   <a href="/public/book/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
                 </li>
                 <li>
-                  <a href="course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                  <a href="/public/course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
                 </li>
                 <li>
                   <a href="blog/index.html" class="block py-2 px-3 md:p-1 text-Onprimary hover:text-secondary">អត្ថបទ</a>
@@ -79,13 +90,139 @@
                   <a href="about-us.html" class="text-Onprimary block py-2 px-3 md:p-1">អំពីយើង</a>
                 </li>
                 <li>
-                  <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                  <a href="login.html" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
                     <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
                   </a>
                 </li>
+                <li>
+                  <button data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example" class="py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1">
+                    <img src="/assets/images/Davann.jpg" alt="" class="rounded-sm-radius h-12 w-12"> 
+                    
+                  </button>
+
+                  <!-- drawer component -->
+                 
+                  <div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 bg-background ease-in-out duration-300" tabindex="-1" aria-labelledby="drawer-right-label">
+                    
+                      <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400  rounded-lg p-1.5 absolute top-2.5 end-2.5 inline-flex items-center">
+                          <i class="fa-solid fa-xmark text-nav"></i>
+                          <span class="sr-only">Close menu</span>
+                      </button>
+
+                      <div class="flex text-primary">
+                        <img src="/assets/images/Davann.jpg" alt="" class="rounded-sm-radius h-16 w-16"> 
+                        <div>
+                          <h1 class="ms-3 text-miniTitle">លោក អ៊ីង ដាវ៉ាន់</h1>
+                          <h2 class="ms-3 text-body">ingdavann@gmail.com</h2>
+                        </div>
+                      </div>
+
+                      <div class="py-4 overflow-y-auto text-miniTitle">
+                        <ul class="space-y-2 font-body">
+                          <li>
+                              <a href="create-sala.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                                <i class="fa-solid fa-graduation-cap w-8 h-8"></i>
+                                <span class="flex-1 ms-3">បង្កើតសាលា</span>
+                              </a>
+                          </li>
+                          <li>
+                            <a href="setting.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                              <i class="fa-solid fa-gear w-8 h-8"></i>
+                              <span class="flex-1 ms-3">កំណត់</span>
+                            </a>
+                          </li>
+                        <li>
+                          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-file-import w-8 h-8"></i>
+                            <span class="flex-1 ms-3"><button data-modal-target="select-modal" data-modal-toggle="select-modal">បញ្ជូលមាតិកា</button></span>
+                          </a>
+                          <!-- Main modal -->
+                            <div id="select-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                              <div class="relative p-4 w-full max-w-md max-h-full">
+                                  <!-- Modal content -->
+                                  <div class="relative bg-white rounded-lg shadow">
+                                      <!-- Modal header -->
+                                      <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                                          <h3 class="text-lg font-semibold text-gray-900">
+                                            បញ្ចូលមតិកា
+                                          </h3>
+                                          <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="select-modal">
+                                              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                              </svg>
+                                              <span class="sr-only">Close modal</span>
+                                          </button>
+                                      </div>
+                                      <!-- Modal body -->
+                                      <div class="p-4 md:p-5">
+                                          <p class="text-gray-500 dark:text-gray-400 mb-4">ជ្រើសរើសប្រភេទមាតិកា</p>
+                                          <ul class="space-y-4 mb-4">
+                                              <li>
+                                                  <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                                    <a href="/public/course/upload-video.html" class="flex gap-5 items-center">
+                                                      <i class="fa-solid fa-video"></i>
+                                                    <div class="w-full text-lg font-semibold">បញ្ជូលជាមេរៀន(វីឌីអូ)</div>
+                                                    </a>
+                                                  </label>
+                                              </li>
+                                              <li>
+                                                <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                                  <a href="/public/book/upload-book.html" class="flex gap-5 items-center">
+                                                    <i class="fa-solid fa-book"></i>
+                                                    <div class="block w-full text-lg font-semibold">បញ្ជូលជាសៀវភៅ</div>
+                                                  </a>   
+                                                </label>
+                                              </li>
+                                              <li>
+                                                <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 "> 
+                                                  <a href="/public/blog/upload-blog.html" class="flex gap-5 items-center">
+                                                    <i class="fa-solid fa-file-lines"></i>
+                                                    <div class="w-full text-lg font-semibold">បញ្ជូលជាអត្ថបទ(Blog)</div>
+                                                  </a>
+                                                </label>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div> 
+                        </li>
+
+                        <li>
+                          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-right-from-bracket w-8 h-8"></i>
+                            <span class="flex-1 ms-3"><button data-modal-target="popup-modal" data-modal-toggle="popup-modal">ចាកចេញ</button></span>
+                          </a>
+                          <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative p-4 w-full max-w-md max-h-full">
+                                <div class="relative bg-white rounded-lg">
+                                    <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                    <div class="p-4 md:p-5 text-center">
+                                        <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                        </svg>
+                                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">តើអ្នកចង់ចាកចេញពីគណនីមែនទេ?</h3>
+                                        <button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                                            ចាកចេញ
+                                        </button>
+                                        <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">មិនយល់ព្រម</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        </ul>
+                      </div>
+                  </div>
+                </li>
               </ul>
-          </section>
-          <!--End Link Menu-->
+            </section>
+            <!--End Link Menu-->
           </div>
         </nav>
       </header>
@@ -152,11 +289,11 @@
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
           
           <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
+            <a href="../public/book/view.html">
               <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
             </a>
             <div class="p-5">
-              <a href="/public/book/view.html">
+              <a href="../public/book/view.html">
                 <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
               </a>
               <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
@@ -167,18 +304,22 @@
                           <div>KOOMPI STEM</div>
                           <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                 </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                
+                  <button id="addtoFav">
+                     <i class="fa-regular fa-heart text-2xl"></i>
+                  </button>
+                
                 </div>
               </div>
             </div>
           </div>
 
           <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
+            <a href="../public/book/view.html">
               <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
             </a>
             <div class="p-5">
-              <a href="/public/book/view.html">
+              <a href="../public/book/view.html">
                 <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
               </a>
               <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
@@ -189,18 +330,22 @@
                           <div>KOOMPI STEM</div>
                           <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                 </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                <a href="#" >
+                  <button id="addtoFav">
+                     <i class="fa-regular fa-heart text-2xl"></i>
+                  </button>
+                </a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
+            <a href="../public/book/view.html">
               <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
             </a>
             <div class="p-5">
-              <a href="/public/book/view.html">
+              <a href="../public/book/view.html">
                 <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
               </a>
               <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
@@ -211,80 +356,169 @@
                           <div>KOOMPI STEM</div>
                           <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
                 </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
+                <a href="#" >
+                  <button id="addtoFav">
+                     <i class="fa-regular fa-heart text-2xl"></i>
+                  </button>
+                </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                    <a href="#"><i class="fa-regular fa-heart text-2xl"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
       <!--End Add Book card-->
+
+      <!--Add Course card-->
+      <section class="mt-top-title mx-auto w-full max-w-screen-xl">
+        <h1 class="text-nav mx-[1.5rem] md:mx-[1.5rem]">មេរៀនថ្មីៗ</h1>
+        <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 p-5 gap-5">
+          
+          <div class="max-w-sm bg-card rounded-lg relative">
+            <a href="/public/course/upload-video.html">
+              <img class="rounded-t-lg" src="https://scratch.mit.edu/images/scratch-og.png" alt="thumbnail">
+            </a>
+            <div class="relUtube">
+              <i class="fa-solid fa-play w-9 h-9 bg-red-600 flex justify-center items-center rounded-full"></i>
+            </div>
+            <div class="w-full flex items-end justify-between text-xs rel px-3">
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">10 នាទី</p>
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">អ្នកមើល ១ពាន់ នាក់</p>
+            </div>
+            <div class="p-5"> 
+              <!-- profile -->
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <img class="rounded-full w-9 h-9"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                        alt="profile picture">
+                </div>
+                <div class="flex-1 ms-4">
+                  <p class="text-sm font-medium text-Onsecondary truncate">
+                      KOOMPI STEM
+                  </p>
+                  <p class="text-xs text-des truncate">
+                      ១ពាន់ នាក់ 11/20/2023
+                  </p>
+                </div>
+              </div>
+              <!-- end of profile -->
+              <a href="/public/course/upload-video.html">
+                <h5 class="my-2 text-black text-xl tracking-tight">រៀន scratch ជា ភាសាខ្មែរ</h5>
+              </a>
+            </div>
+          </div>
+
+          <div class="max-w-sm bg-card rounded-lg relative">
+            <a href="/public/course/upload-video.html">
+              <img class="rounded-t-lg" src="https://scratch.mit.edu/images/scratch-og.png" alt="thumbnail">
+            </a>
+            <div class="relUtube">
+              <i class="fa-solid fa-play w-9 h-9 bg-red-600 flex justify-center items-center rounded-full"></i>
+            </div>
+            <div class="w-full flex items-end justify-between text-xs rel px-3">
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">10 នាទី</p>
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">អ្នកមើល ១ពាន់ នាក់</p>
+            </div>
+            <div class="p-5"> 
+              <!-- profile -->
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <img class="rounded-full w-9 h-9"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                        alt="profile picture">
+                </div>
+                <div class="flex-1 ms-4">
+                  <p class="text-sm font-medium text-Onsecondary truncate">
+                      KOOMPI STEM
+                  </p>
+                  <p class="text-xs text-des truncate">
+                      ១ពាន់ នាក់ 11/20/2023
+                  </p>
+                </div>
+              </div>
+              <!-- end of profile -->
+              <a href="/public/course/upload-video.html">
+                <h5 class="my-2 text-black text-xl tracking-tight">រៀន scratch ជា ភាសាខ្មែរ</h5>
+              </a>
+            </div>
+          </div>
+          
+          <div class="max-w-sm bg-card rounded-lg relative">
+            <a href="/public/course/upload-video.html">
+              <img class="rounded-t-lg" src="https://scratch.mit.edu/images/scratch-og.png" alt="thumbnail">
+            </a>
+            <div class="relUtube">
+              <i class="fa-solid fa-play w-9 h-9 bg-red-600 flex justify-center items-center rounded-full"></i>
+            </div>
+            <div class="w-full flex items-end justify-between text-xs rel px-3">
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">10 នាទី</p>
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">អ្នកមើល ១ពាន់ នាក់</p>
+            </div>
+            <div class="p-5"> 
+              <!-- profile -->
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <img class="rounded-full w-9 h-9"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                        alt="profile picture">
+                </div>
+                <div class="flex-1 ms-4">
+                  <p class="text-sm font-medium text-Onsecondary truncate">
+                      KOOMPI STEM
+                  </p>
+                  <p class="text-xs text-des truncate">
+                      ១ពាន់ នាក់ 11/20/2023
+                  </p>
+                </div>
+              </div>
+              <!-- end of profile -->
+              <a href="/public/course/upload-video.html">
+                <h5 class="my-2 text-black text-xl tracking-tight">រៀន scratch ជា ភាសាខ្មែរ</h5>
+              </a>
+            </div>
+          </div>
+
+          <div class="max-w-sm bg-card rounded-lg relative">
+            <a href="/public/course/upload-video.html">
+              <img class="rounded-t-lg" src="https://scratch.mit.edu/images/scratch-og.png" alt="thumbnail">
+            </a>
+            <div class="relUtube">
+              <i class="fa-solid fa-play w-9 h-9 bg-red-600 flex justify-center items-center rounded-full"></i>
+            </div>
+            <div class="w-full flex items-end justify-between text-xs rel px-3">
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">10 នាទី</p>
+              <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75">អ្នកមើល ១ពាន់ នាក់</p>
+            </div>
+            <div class="p-5"> 
+              <!-- profile -->
+              <div class="flex items-center">
+                <div class="flex-shrink-0">
+                  <img class="rounded-full w-9 h-9"
+                        src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
+                        alt="profile picture">
+                </div>
+                <div class="flex-1 ms-4">
+                  <p class="text-sm font-medium text-Onsecondary truncate">
+                      KOOMPI STEM
+                  </p>
+                  <p class="text-xs text-des truncate">
+                      ១ពាន់ នាក់ 11/20/2023
+                  </p>
+                </div>
+              </div>
+              <!-- end of profile -->
+              <a href="/public/course/upload-video.html">
+                <h5 class="my-2 text-black text-xl tracking-tight">រៀន scratch ជា ភាសាខ្មែរ</h5>
+              </a>
+            </div>
+          </div>
+
+        </section>
+      </section>
+      <!--End Add Course card-->
 
       <!--Add sala card-->
       <section class="mt-top-title mx-auto w-full max-w-screen-xl">
@@ -464,4 +698,6 @@
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
     <script src="../assets/js/nav.js"></script>
+    <script src="/assets/js/testing.js" ></script>
+    <script src="/assets/js/book.js"></script>
 </html>
