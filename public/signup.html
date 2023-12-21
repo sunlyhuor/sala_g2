@@ -93,36 +93,32 @@
                     <div class="hidden xl:block xl:w-1/2 lg:block lg:w-1/2  bg-cover "
                         style="background-image:url('/assets/images/login.gif')">
                     </div>
-                    <div class="w-full text-sm xl:w-1/2 xl:m-16 lg:w-1/2 max-w-xs m-auto">
+                    <form class="w-full text-sm xl:w-1/2 xl:m-16 lg:w-1/2 max-w-xs m-auto">
                         <h2 class="text-title font-semibold  text-center">ចុះឈ្មោះ</h2>
                         <div class="mt-4">
                             <label class="block text-gray-700 text-body font-bold mb-2">បញ្ជូលឈ្មោះរបស់អ្នក</label>
-                            <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" />
+                            <input id="textUsername" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="text" />
                         </div>
                         <div class="mt-4">
                             <label class="block text-gray-700 text-body font-bold mb-2">Email</label>
-                            <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="email" />
+                            <input id="textEmail" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="email" />
                         </div>
                         <div class="mt-4">
                             <div class="flex justify-between">
                                 <label class="block text-gray-700 text-body font-bold mb-2">ពាក្យសម្ងាត់</label>
                             </div>
-                            <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" />
+                            <input id="textPassword" class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" type="password" />
                         </div>
                         <div class="mt-8 lg:w-[150px]  max-w-xs    ">
-                            <button class="bg-primary text-card font-bold p-btn text-body  rounded hover:bg-Accent duration-500 ">ចុះឈ្មោះ</button>
+                            <button id="btnSubmit" class="bg-primary text-card font-bold p-btn text-body  rounded hover:bg-Accent duration-500 ">ចុះឈ្មោះ</button>
                         </div>
                         <div class="mt-4 flex items-center justify-between">
                             <span class="border-b w-1/5 md:w-1/4"></span>
                             <a href="#" class="text-body text-gray-500 uppercase">or sign in</a>
                             <span class="border-b w-1/5 md:w-1/4"></span>
                         </div>
-                        <div class="flex justify-center w-[40px] gap-4 m-auto py-4">
-                            <img src="/assets/Icon/facebook.svg" alt="">
-                            <img src="/assets/Icon/telegram.svg" alt="">
-                            <img src="/assets/Icon/youtube-round-2.svg" alt="">
-                        </div>
-                    </div>
+                       
+                    </form>
                 </div>
             
         </section> 
@@ -130,4 +126,5 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="../assets/js/nav.js" ></script>
+<script src="/assets/js/signup.js" ></script>
 </html>
