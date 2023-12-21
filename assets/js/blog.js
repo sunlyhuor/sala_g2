@@ -8,7 +8,7 @@ const Blockrender = (posts) => {
     output += `
         <div class="p-3 max-w-full flex shadow-sm">
         <a href="/public/blog/view.html"
-            class="flex bg-white rounded-lg flex-col md:flex-row md:max-w-2xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
+            class="flex bg-white rounded-lg flex-col md:flex-row md:max-w-2xl hover:bg-gray-100 ease-in duration-300">
             <img class="object-cover w-[12rem] h-[12rem] lg:w-[12rem] lg:h-[10rem] md:h-[10rem] md:w-[12rem] md:rounded-none md:rounded-s-lg rounded"
                 src="https://cms.istad.co${post.attributes.thumbnail.data.attributes.url}" alt="https://cms.istad.co${post.attributes.thumbnail}">
             <div class="flex flex-col p-3 leading-relaxed">
