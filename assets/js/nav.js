@@ -4,6 +4,8 @@ $("#btnHamberger").on("click", ()=> {
 const btnLogout = document.getElementById('logoutButton');
 const user = document.getElementById('username')
 const email = document.getElementById('email')
+// const userNameSetting = document.getElementById('userNameSetting')
+// const emailSetting = document.getElementById('emailSetting')
 
 function getCookie(name){
     const cDecoded = decodeURIComponent(document.cookie);
@@ -21,6 +23,8 @@ function getCookie(name){
 if( getCookie("token")){
     user.textContent = getCookie("username")
     email.textContent = getCookie("email")
+    // userNameSetting.textContent = getCookie("username")
+    // emailSetting.textContent = getCookie("email")
 }
 
 if(getCookie("token") != null){

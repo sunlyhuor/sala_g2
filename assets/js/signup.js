@@ -15,7 +15,6 @@ function setCookie(name, value, daysToLive){
 
 btnSubmit.addEventListener("click", async (e)=> {
     e.preventDefault()
-    
     try{
         const res = await fetch(apiSigup, {
             method:"POST",
