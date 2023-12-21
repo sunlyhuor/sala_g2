@@ -1,6 +1,7 @@
 $("#btnHamberger").on("click", ()=> {
     $("#hambergerLists").toggleClass("hidden flex absolute top-[78px] flex-col w-10/12 left-1/2 transform -translate-x-1/2 gap-[16px] p-2")
 } )
+const btnLogout = document.getElementById('logoutButton');
 const user = document.getElementById('username')
 const email = document.getElementById('email')
 
@@ -43,6 +44,15 @@ if(getCookie("token") != null){
         document.getElementById('btnNoProfile1').style.display = "none";
       }
 }
+
+ //logout 
+ btnLogout.addEventListener('click', (e)=> {
+    e.preventDefault
+    deleteCookie("token");
+    deleteCookie("username");
+    deleteCookie("email");
+    window.location.replace("/public/index.html");
+});
 
 $("#btnSearch").on("click", ()=> {
     $("#mainHamberger").toggleClass("hidden")

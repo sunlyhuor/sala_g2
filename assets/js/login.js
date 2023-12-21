@@ -1,7 +1,6 @@
 const emailLogin = document.getElementById('email');
 const password = document.getElementById('password');
 const btnLogin= document.getElementById('btnLogin');
-const btnLogout = document.getElementById('logoutButton');
 const apiLogin = `https://cms.istad.co/api/auth/local`
 
     function setCookie(name, value, daysToLive){
@@ -34,8 +33,10 @@ const apiLogin = `https://cms.istad.co/api/auth/local`
                         "Content-Type": "application/json"
                     }
                 })
-                setCookie("token", await ( await res.json() ).jwt, 365)
-                setCookie("username", emailLogin.value, 365)
+                const respo = await res.json()
+                setCookie("token", respo.jwt, 365)
+                setCookie("username", respo.user.username , 365)
+                setCookie("email", respo.user.email , 365)
                 window.location.replace("/public")
             }
             catch(e){
@@ -57,11 +58,5 @@ const apiLogin = `https://cms.istad.co/api/auth/local`
         return result;
     }
 
-    //logout 
-    btnLogout.addEventListener('click', (e)=> {
-        e.preventDefault
-        alert(1)
-        // deleteCookie("token");
-        // window.location.replace("/public/index.html");
-    });
+   
   
