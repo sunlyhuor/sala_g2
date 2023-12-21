@@ -64,19 +64,19 @@
             <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
               <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
                 <li>
-                  <a href="school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
+                  <a href="/public/school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
                 </li>
                 <li>
-                  <a href="book/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
+                  <a href="/public/book/index.html" class="block py-2 px-3 bg-Onsecondary md:bg-transparent md:p-1 text-secondary">​បណ្ណាល័យ</a>
                 </li>
                 <li>
-                  <a href="course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                  <a href="/public/course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
                 </li>
                 <li>
-                  <a href="blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
+                  <a href="/public/blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
                 </li>
                 <li>
-                  <a href="about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
+                  <a href="/public/about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
                 </li>
                 <li>
                   <a href="log" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
@@ -91,7 +91,7 @@
     </header>
     <!-- End Header -->
 
-      <section class="mt-top-title mx-auto w-full max-w-screen-xl flex">
+      <section class="mt-[120px] mx-auto w-full max-w-screen-xl flex">
           <div class="flex gap-5 px-3 md:px-5 lg:px-0">
                     <!-- Search Bar​ -->
                   <div id="mainSearchBar" class="relative">
@@ -143,32 +143,7 @@
       <!--Add Book card-->
       <section class="mt-top-title mx-auto w-full max-w-screen-xl">
         <h1 class="text-nav mx-[1.5rem] md:mx-[1.5rem] ">មេរៀន</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                <a href="#">
-                  <button id="addtoFav">
-                     <i class="fa-regular fa-heart text-2xl"></i>
-                  </button>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="display" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">  
         </div>
         <!-- pagination -->
         <section class="mx-auto w-full max-w-screen-xl p-5 flex justify-end">
@@ -220,19 +195,19 @@
               <h2 class="mb-6 text-sm font-semibold text-Onprimary uppercase">Learn More</h2>
               <ul class="text-gray-500 font-body">
                   <li class="mb-4">
-                      <a href="school.html" class=" hover:underline">សាលារៀន</a>
+                      <a href="/public/school.html" class=" hover:underline">សាលារៀន</a>
                   </li>
                   <li class="mb-4">
                       <a href="#" class="hover:underline">បណ្ណាល័យ</a>
                   </li>
                   <li class="mb-4">
-                      <a href="course/index.html" class="hover:underline">មេរៀន</a>
+                      <a href="/public/course/index.html" class="hover:underline">មេរៀន</a>
                   </li>
                   <li class="mb-4">
-                      <a href="blog/index.html" class="hover:underline">អត្ថបទ</a>
+                      <a href="/public/blog/index.html" class="hover:underline">អត្ថបទ</a>
                   </li>
                   <li class="mb-4">
-                    <a href="about-us.html" class="hover:underline">អំពីយើង</a>
+                    <a href="/public/about-us.html" class="hover:underline">អំពីយើង</a>
                 </li>
               </ul>
           </div>
@@ -291,7 +266,6 @@
         </div>
       </footer>
     <!-- End Footer-->
-    
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <script src="/assets/js/nav.js" ></script>
