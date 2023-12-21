@@ -2045,6 +2045,10 @@ html{
   color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -2154,6 +2158,11 @@ html{
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-des:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(94 106 130 / var(--tw-bg-opacity));
 }
 
 .hover\:text-secondary:hover {
@@ -2765,6 +2774,10 @@ html{
     height: 100%;
   }
 
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -2815,6 +2828,10 @@ html{
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-12 {
+    width: 3rem;
   }
 
   .lg\:max-w-2xl {
@@ -2874,6 +2891,10 @@ html{
 
   .lg\:border-0 {
     border-width: 0px;
+  }
+
+  .lg\:border-hidden {
+    border-style: hidden;
   }
 
   .lg\:p-0 {
