@@ -2,6 +2,9 @@
 const school=document.getElementById('school');
 const url= "https://cms.istad.co/api/sala-schools?populate=profile%2Ccover";
 let display= " ";
+
+
+//Get data from api
 const sala=(post)=>{
     post.forEach(ps=>{
         display+=`
@@ -54,3 +57,4 @@ fetch(url)
 .then((salaresult)=>{
    sala(salaresult.data)
 })
+

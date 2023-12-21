@@ -1,9 +1,9 @@
 "use strict";
-const blog = document.getElementById("blog");
+
+const blog = document.querySelector('#blog');
 let output = " ";
 const url = "https://cms.istad.co/api/sala-blogs?populate=thumbnail%2Ctag";
-let date= new Date().getDate    ;
-const Blockrender = (posts) => {
+const Blockrender=(posts) => {
   posts.forEach((post) => {
     output += `
         <div class="p-3 max-w-full flex shadow-sm">
@@ -26,8 +26,5 @@ const Blockrender = (posts) => {
 fetch(url)
   .then((res) => res.json())
   .then((jsonResult) => {
-    Blockrender(jsonResult.data);
-    jsonResult.data.map((d) => {
-      console.log(d.attributes);
-    });
+    Blockrender(jsonResult.data)
   });
