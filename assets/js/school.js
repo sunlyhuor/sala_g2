@@ -9,7 +9,7 @@ const sala=(post)=>{
     post.forEach(ps=>{
         display+=`
         <div href="#" class="flex flex-col items-center bg-white rounded-lg lg:flex-row lg:max-w-2xl hover:bg-gray-100">
-        <img class="object-cover w-full h-full rounded-t-lg md:h-full md:w-full lg:h-full lg:w-48 lg:rounded-none lg:rounded-s-lg" src="https://cms.istad.co${ps.attributes.cover.data.attributes.url}" alt="">
+        <img class="object-cover w-full h-full rounded-t-lg md:h-full md:w-full lg:h-full lg:w-48 lg:rounded-none lg:rounded-s-lg" src="https://cms.istad.co${ps.attributes.profile.data ?.attributes.url}" alt="">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <a href="/public/profile.html">
                 <h5 class="mb-2 text-black text-2xl tracking-tight">${ps.attributes.name}</h5>
@@ -51,10 +51,15 @@ const sala=(post)=>{
 
     school.innerHTML=display;
 }
+ const requestOptions = {
+    method: 'GET',
+    body:JSON.stringify(),
+    redirect: 'follow'
+  };
 
-fetch(url)
+fetch(url,requestOptions)
 .then(res=>res.json())
 .then((salaresult)=>{
-   sala(salaresult.data)
+  sala(salaresult.data)
 })
 
