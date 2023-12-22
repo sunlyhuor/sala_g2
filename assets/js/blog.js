@@ -10,7 +10,7 @@ const Blockrender = (posts) => {
         <a href="/public/blog/view.html"
             class="flex bg-white rounded-lg flex-col md:flex-row md:max-w-2xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
             <img class="object-cover w-[12rem] h-[12rem] lg:w-[12rem] lg:h-[10rem] md:h-[10rem] md:w-[12rem] md:rounded-none md:rounded-s-lg rounded"
-                src="https://cms.istad.co${post.attributes.thumbnail.data.attributes.url}" alt="https://cms.istad.co${post.attributes.thumbnail}">
+                src="https://cms.istad.co${post.attributes.thumbnail?.data?.attributes?.url}" alt="https://cms.istad.co${post.attributes.thumbnail}">
             <div class="flex flex-col p-3 leading-relaxed">
                 <p class="w-24 overflow-hidden rounded-full text-primary bg-secondary text-center px-2 py-1 md:px-4 md:py-2"> LifeStyle </p>
                 <h1 class="text-xl mt-3 w-full desc">${post.attributes.title}</h1>
@@ -26,8 +26,6 @@ const Blockrender = (posts) => {
 fetch(url)
   .then((res) => res.json())
   .then((jsonResult) => {
-    Blockrender(jsonResult.data);
-    jsonResult.data.map((d) => {
-      console.log(d.attributes);
-    });
+    let result = jsonResult.data;
+    Blockrender(result);
   });
