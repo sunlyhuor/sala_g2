@@ -39,6 +39,7 @@ function uploadImageCover(event) {
 //Create sala
 const fileInput = document.getElementById("file");
 const nameEle = document.querySelector("#name");
+const Email=document.querySelector("#email");
 const phoneEle = document.querySelector("#numbers");
 const locationEle = document.querySelector("#location");
 const messageEle = document.querySelector("#message");
@@ -51,19 +52,16 @@ btnSubmit.addEventListener("click", async function (e) {
 
   e.preventDefault();
   const name = nameEle.value;
+  const email=Email.value;
   const phone = phoneEle.value;
-  //const imageUrl = await uplodeImage(imageProfile);
-  // console.log(imageUrl)
   const address = locationEle.value;
   const message = messageEle.value;
   const school = {
       name: name,
       description: message,
-      e: "string",
+      e: email,
       address: address,
       phoneNumber: phone,
-      // profile: imageUrl,
-      // cover: imageUrl,
       view: 0,
       facebookUrl: "",
       linkedInUrl: "",
@@ -72,39 +70,6 @@ btnSubmit.addEventListener("click", async function (e) {
     
   };
 
-  // let formdata = new FormData();
-  // formdata.append("data.name", name);
-  // formdata.append("data.description", message);
-  // formdata.append("data.address", address);
-  // formdata.append("data.phoneNumber", phone);
-  // formdata.append("data.profile", imageUrl);
-  // formdata.append("data.view", 0);
-
-
-  // async function uplodeImage(file) {
-  //   const formData = new FormData();
-  //   formData.append("files", file);
-  
-  //   // sent request ot server
-  //   const res = await fetch("https://cms.istad.co/api/upload", {
-  //     method: "POST",
-  //     body: formData,
-  //   });
-  //   const jsonRepso = await res.json();
-  //  jsonRepso[0].id;
-  //  return  fetch("https://cms.istad.co/api/sala-schools", {
-  //   method: "POST",
-  //   body: JSON.stringify(school),
-  // })
-  //   .then((res) => console.log(res))
-  // }
-
-  // const formdata = new FormData();
-  // formdata.append("files", imageElement.files[0], "/path/to/file");
-
-  // const requestOptions = {
-  //   method: "POST",
-  //   body: formdata,
   const formdata = new FormData();
   formdata.append("files", fileInput.files[0], "/path/to/file");
   const requestOptions = {
@@ -114,26 +79,27 @@ btnSubmit.addEventListener("click", async function (e) {
   };
   
 
-fetch("https://cms.istad.co/api/upload", requestOptions)
-.then((response) => response.json())
-.then((result) => {
-  const imageId = result[0].id; // Assuming the image ID is in the first element of the array
-  // Add image ID to the product data
-  school.profile = imageId;
+  fetch("https://cms.istad.co/api/upload", requestOptions)
+  .then((response) => response.json())
+  .then((result) => {
+    const imageId = result[0].id; // Assuming the image ID is in the first element of the array
+    // Add image ID to the product data
+    school.profile = imageId;
 
-  // Create product after uploading the image
-  fetch("https://cms.istad.co/api/sala-schools?populate=profile%2Ccover", {
-    method: "POST",
-    headers: myHeaders,
-    body: JSON.stringify({ data: school }),
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      result.data
+    // Create product after uploading the image
+    fetch("https://cms.istad.co/api/sala-schools?populate=profile%2Ccover", {
+      method: "POST",
+      headers: myHeaders,
+      body: JSON.stringify({ data: school }),
     })
-    .catch((error) => console.log("error", error));
-})
-.catch((error) => console.log("error", error));
+      .then((response) => response.json())
+      .then((result) => {
+        result.data;
+        window.location.reload();
+      })
+      .catch((error) => console.log("error", error));
+  })
+  .catch((error) => console.log("error", error));
 
 
 });
