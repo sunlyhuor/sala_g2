@@ -26,7 +26,7 @@ const blockRender = (posts) => {
       <div class="flex items-center">
         <div class="flex-shrink-0">
             <img class="rounded-full w-9 h-9"
-                src="${profileurl }"
+                src="${profileurl}"
                 alt="profile picture">
         </div>
           <div class="flex-1 ms-4">
