@@ -48,11 +48,9 @@ $(document).on("click", "#addtoFav", function () {
                 <div>${username}</div>
                 <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">${fellower} ${post_date}</div>
               </div>
-              <a href="#">
                 <button id="addtoFav">
                   <i class="fa-regular fa-heart text-2xl"></i>
                 </button>
-              </a>
             </div>
           </div>
         </div>
