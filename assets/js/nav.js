@@ -2,10 +2,8 @@ $("#btnHamberger").on("click", ()=> {
     $("#hambergerLists").toggleClass("hidden flex absolute top-[78px] flex-col w-10/12 left-1/2 transform -translate-x-1/2 gap-[16px] p-2")
 } )
 const btnLogout = document.getElementById('logoutButton');
-const user = document.getElementById('username')
-const email = document.getElementById('email')
-// const userNameSetting = document.getElementById('userNameSetting')
-// const emailSetting = document.getElementById('emailSetting')
+const user = document.getElementById('usernameSideBar')
+const email = document.getElementById('emailSideBar')
 
 function getCookie(name){
     const cDecoded = decodeURIComponent(document.cookie);
@@ -20,37 +18,39 @@ function getCookie(name){
     return result;
 }
 
-if( getCookie("token")){
-    user.textContent = getCookie("username")
-    email.textContent = getCookie("email")
-    // userNameSetting.textContent = getCookie("username")
-    // emailSetting.textContent = getCookie("email")
+// if( getCookie("token") && getCookie("email") && getCookie("username") ){
+//     user.textContent = getCookie("username")
+//     email.textContent = getCookie("email")
+// }
+function repsonsivePage(){
+    const btnProfile2 = document.getElementById('btnProfile2')
+    const btnNoProfile2 = document.getElementById('btnNoProfile2')
+    const btnProfile1 = document.getElementById('btnProfile1')
+    const btnNoProfile1 = document.getElementById('btnNoProfile1')
+    if (window.innerWidth <= 600) {
+        // Small screen
+        btnProfile2.style.display = "none";
+        btnNoProfile2.style.display = "none";
+        btnProfile1.style.display = "block";
+        btnNoProfile1.style.display = "none";
+    } else if (window.innerWidth <= 1200) {
+        // Medium screen
+        btnProfile2.style.display = "none";
+        btnNoProfile2.style.display = "none";
+        btnProfile1.style.display = "block";
+        btnNoProfile1.style.display = "none";
+    } 
+    else {
+    // Large screen
+        btnProfile2.style.display = "block";
+        btnNoProfile2.style.display = "none";
+        btnProfile1.style.display = "none";
+        btnNoProfile1.style.display = "none";
+    }
 }
 if(getCookie("token") != null){
     repsonsivePage()
 }
-function repsonsivePage(){
-    if (window.innerWidth <= 600) {
-        // Small screen
-        document.getElementById('btnProfile2').style.display = "none";
-        document.getElementById('btnNoProfile2').style.display = "none";
-        document.getElementById('btnProfile1').style.display = "block";
-        document.getElementById('btnNoProfile1').style.display = "none";
-    } else if (window.innerWidth <= 1200) {
-    // Medium screen
-    document.getElementById('btnProfile2').style.display = "none";
-    document.getElementById('btnNoProfile2').style.display = "none";
-    document.getElementById('btnProfile1').style.display = "block";
-    document.getElementById('btnNoProfile1').style.display = "none";
-    } else {
-    // Large screen
-    document.getElementById('btnProfile2').style.display = "block";
-    document.getElementById('btnNoProfile2').style.display = "none";
-    document.getElementById('btnProfile1').style.display = "none";
-    document.getElementById('btnNoProfile1').style.display = "none";
-    }
-}
-
 
  //logout 
  btnLogout.addEventListener('click', (e)=> {
