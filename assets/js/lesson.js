@@ -6,6 +6,7 @@ let date= new Date().getDate    ;
 const blockRender = (posts) => {
   posts.map((post) => {
   let thumbnailUrl = `${post.snippet.thumbnails.medium.url}`;
+  console.log(post.id)
   output += `
     <div class="max-w-sm bg-white rounded-lg relative">
     <div class ="h-40" >
