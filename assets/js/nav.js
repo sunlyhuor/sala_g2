@@ -2,8 +2,11 @@ $("#btnHamberger").on("click", ()=> {
     $("#hambergerLists").toggleClass("hidden flex absolute top-[78px] flex-col w-10/12 left-1/2 transform -translate-x-1/2 gap-[16px] p-2")
 } )
 const btnLogout = document.getElementById('logoutButton');
-const user = document.getElementById('usernameSideBar')
-const email = document.getElementById('emailSideBar')
+const usernameSidebar = $("#usernameSidebar")
+const usernameSidebarLarge = $("#usernameSidebarLarge")
+const emailSidebar = $("#emailSidebar")
+const emailSidebarLarge = $("#emailSidebarLarge")
+
 
 function getCookie(name){
     const cDecoded = decodeURIComponent(document.cookie);
@@ -18,10 +21,12 @@ function getCookie(name){
     return result;
 }
 
-// if( getCookie("token") && getCookie("email") && getCookie("username") ){
-//     user.textContent = getCookie("username")
-//     email.textContent = getCookie("email")
-// }
+if( getCookie("token") && getCookie("username") && getCookie("email")){
+    usernameSidebar.html(getCookie("username"))
+    usernameSidebarLarge.html(getCookie("username"))
+    emailSidebar.html(getCookie("email"))
+    emailSidebarLarge.html(getCookie("email"))
+}
 function repsonsivePage(){
     const btnProfile2 = document.getElementById('btnProfile2')
     const btnNoProfile2 = document.getElementById('btnNoProfile2')
