@@ -1,8 +1,8 @@
-const emailLogin = document.getElementById('email');
-const password = document.getElementById('password');
-const btnLogin= document.getElementById('btnLogin');
-const btnLogout = document.getElementById('logoutButton');
-const apiLogin = `https://cms.istad.co/api/auth/local`
+"use strict";
+const usernameLogin = $('#usernameLogin');
+const passwordLogin = $('#passwordLogin');
+const btnLogin = $('#btnLogin');
+// const apiLogin = `https://cms.istad.co/api/auth/local`
 
     function setCookie(name, value, daysToLive){
         const date = new Date();
@@ -14,39 +14,9 @@ const apiLogin = `https://cms.istad.co/api/auth/local`
     function deleteCookie(name){
         setCookie(name, null, null);
     }
-
-    btnLogin.addEventListener('click' , async (e)=> {
-        e.preventDefault();
-        if(email.value == '' || password.value == ''){
-            alert('Please Enter Username or Password')
-        }
-        else{
-            try{
-                const res = await fetch(apiLogin, {
-                    method:"POST",
-                    body: JSON.stringify((
-                        {
-                            "identifier": emailLogin.value,
-                            "password": password.value
-                        }
-                    )),
-                    headers:{
-                        "Content-Type": "application/json"
-                    }
-                })
-                setCookie("token", await ( await res.json() ).jwt, 365)
-                setCookie("username", emailLogin.value, 365)
-                window.location.replace("/public")
-            }
-            catch(e){
-                console.log(e)
-                alert("Invalid credentials. Please try again.")
-            }
-        }  
-    })
     function getCookie(name){
         const cDecoded = decodeURIComponent(document.cookie);
-        const cArray = cDecoded.split("; ");
+        const cArray = cDecoded.split("; ");    
         let result = null;
     
         cArray.forEach(element => {
@@ -56,12 +26,73 @@ const apiLogin = `https://cms.istad.co/api/auth/local`
         })
         return result;
     }
+    btnLogin.on("click", (e)=> {    
+        e.preventDefault();
+        if(usernameLogin.val() == ''){
+            alert('Please Enter Username')
+        }
+        else if(passwordLogin.val() == ''){
+            alert('Please Enter Password')
+        }
+        else{
+            $.ajax({
+                type: "POST",
+                url: "https://cms.istad.co/api/auth/local",
+                data: JSON.stringify({
+                    "identifier": usernameLogin.val(),
+                    "password": passwordLogin.val()
+                  }),
+                dataType: "json",
+                success: function (response) {
+                    console.log(response)
+                    if( !response ){
+                        alert("Invalid credentials")
+                    }
+                    else{
+                        console.log(response)
+                        // setCookie("token", response.jwt, 1)
+                        // setCookie("username", response.user.username, 1)    
+                        // setCookie("email", response.user.email, 1)
+                        // window.location.replace("/public")  
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log( thrownError)
+                }
+            });
+            // try{
+            //     const res = await fetch(apiLogin, {
+            //         method:"POST",
+            //         body: JSON.stringify(
+            //             {
+            //                 "identifier": emailLogin.value,
+            //                 "password": passwordLogin.value
+            //             }
+            //         ),
+            //         headers:{
+            //             "Content-Type": "application/json",
+            //             "Accept": "application/json",
+            //         }
+            //     })
+            //     const respo = await res.json()
+            //     if( !respo.ok ){
+            //         alert("Invalid credentials")
+            //     }
+            //     else{
+            //         // console.log(res)
+            //         setCookie("token", respo.jwt, 365)
+            //         setCookie("username", respo.user.username , 365)    
+            //         setCookie("email", respo.user.email , 365)
+            //         window.location.replace("/public")  
+            //     }
+            // }
+            // catch(e){
+            //     console.log(e)
+            //     alert("Invalid credentials. Please try again.")
+            // }
+        }  
+    })
+    
 
-    //logout 
-    btnLogout.addEventListener('click', (e)=> {
-        e.preventDefault
-        alert(1)
-        // deleteCookie("token");
-        // window.location.replace("/public/index.html");
-    });
+   
   
