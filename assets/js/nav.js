@@ -6,8 +6,10 @@ const usernameSidebar = $("#usernameSidebar")
 const usernameSidebarLarge = $("#usernameSidebarLarge")
 const emailSidebar = $("#emailSidebar")
 const emailSidebarLarge = $("#emailSidebarLarge")
+const emailSetting = $("#emailSetting")
+const userNameSetting = $("#userNameSetting")
 
-
+ 
 function getCookie(name){
     const cDecoded = decodeURIComponent(document.cookie);
     const cArray = cDecoded.split("; ");
@@ -26,6 +28,8 @@ if( getCookie("token") && getCookie("username") && getCookie("email")){
     usernameSidebarLarge.html(getCookie("username"))
     emailSidebar.html(getCookie("email"))
     emailSidebarLarge.html(getCookie("email"))
+    emailSetting.html(getCookie("email"))
+    userNameSetting.html(getCookie("username"))
 }
 function repsonsivePage(){
     const btnProfile2 = document.getElementById('btnProfile2')
