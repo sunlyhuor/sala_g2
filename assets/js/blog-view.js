@@ -51,7 +51,7 @@ function getQueryParams() {
         <a href="/public/blog/view.html?id=${id}" class="flex bg-white rounded-lg md:flex-row md:max-w-xl hover:bg-gray-100 ease-in duration-300 shadow-sm">
         <img class="object-cover w-[8rem] h-[10rem] md:h-[8rem] md:w-[10rem] md:rounded-none rounded-s-lg md:rounded-s-lg" src="https://cms.istad.co${thumbnail}" alt="${thumbnail}">
         <div class="flex flex-col p-2">
-            <h1 class="text-xl">${title}</h1>
+            <h1 class="text-xl desc">${title}</h1>
             <span class="text-body text-gray-400 mt-2"> ${created} - ចំនួនដង៖ ${view}</span>
         </div>
         </a>
