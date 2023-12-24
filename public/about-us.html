@@ -24,10 +24,11 @@
   </style>
 <body class="bg-background font-NotoSerifKhmer">
   
-  <!-- Header -->
-  <header>
+   <!-- Header -->
+   <header>
     <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 w-full">
+
           <section class="flex items-center gap-5">
             <!--Logo-->
             <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -55,9 +56,135 @@
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
             </button>
-            <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
-              <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-            </a>
+            <!--Profile when  small screen-->
+            <div>
+              <a href="/public/login.html" id="btnNoProfile1" class="py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0 block lg:hidden">
+                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+              </a>
+              <button id="btnProfile1" data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example" data-drawer-placement="right" aria-controls="drawer-right-example" class="hidden lg:border-hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1">
+                  <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" alt="" class="rounded-sm-radius h-8 w-8 lg:h-12 lg:w-12"> 
+              </button>
+              <!-- drawer component -->
+              <div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 bg-background ease-in-out duration-300" tabindex="-1" aria-labelledby="drawer-right-label">
+                
+                <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400  rounded-lg p-1.5 absolute top-2.5 end-2.5 inline-flex items-center">
+                    <i class="fa-solid fa-xmark text-nav"></i>
+                    <span class="sr-only">Close menu</span>
+                </button>
+
+                <div class="flex text-primary">
+                  <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" alt="" class="rounded-sm-radius h-16 w-16"> 
+                  <div>
+                    <h1 id="username" class="ms-3 text-miniTitle"></h1>
+                    <h2 id="email" class="ms-3 text-body"></h2>
+                  </div>
+                </div>
+
+                <div class="py-4 overflow-y-auto text-miniTitle">
+                  <ul class="space-y-2 font-body">
+                    <li>
+                        <a href="create-sala.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                          <i class="fa-solid fa-graduation-cap w-8 h-8"></i>
+                          <span class="flex-1 ms-3">បង្កើតសាលា</span>
+                        </a>
+                    </li>
+                    <li>
+                      <a href="setting.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                        <i class="fa-solid fa-gear w-8 h-8"></i>
+                        <span class="flex-1 ms-3">កំណត់</span>
+                      </a>
+                    </li>
+                  <li>
+                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                      <i class="fa-solid fa-file-import w-8 h-8"></i>
+                      <span class="flex-1 ms-3">
+                        <button data-modal-target="select-modal" data-modal-toggle="select-modal">បញ្ជូលមាតិកា</button>
+                      </span>
+                    </a>
+                    <!-- Main modal -->
+                      <div id="select-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                                <!-- Modal header -->
+                                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                                    <h3 class="text-lg font-semibold text-gray-900">
+                                      បញ្ចូលមតិកា
+                                    </h3>
+                                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="select-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-4 md:p-5">
+                                    <p class="text-gray-500 dark:text-gray-400 mb-4">ជ្រើសរើសប្រភេទមាតិកា</p>
+                                    <ul class="space-y-4 mb-4">
+                                        <li>
+                                            <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                              <a href="/public/course/upload-video.html" class="flex gap-5 items-center">
+                                                <i class="fa-solid fa-video"></i>
+                                              <div class="w-full text-lg font-semibold">បញ្ជូលជាមេរៀន(វីឌីអូ)</div>
+                                              </a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                          <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                            <a href="/public/book/upload-book.html" class="flex gap-5 items-center">
+                                              <i class="fa-solid fa-book"></i>
+                                              <div class="block w-full text-lg font-semibold">បញ្ជូលជាសៀវភៅ</div>
+                                            </a>   
+                                          </label>
+                                        </li>
+                                        <li>
+                                          <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 "> 
+                                            <a href="/public/blog/upload-blog.html" class="flex gap-5 items-center">
+                                              <i class="fa-solid fa-file-lines"></i>
+                                              <div class="w-full text-lg font-semibold">បញ្ជូលជាអត្ថបទ(Blog)</div>
+                                            </a>
+                                          </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                      </div> 
+                  </li>
+                  <li>
+                    <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                      <i class="fa-solid fa-right-from-bracket w-8 h-8"></i>
+                      <span class="flex-1 ms-3"><button data-modal-target="popup-modal" data-modal-toggle="popup-modal">ចាកចេញ</button>
+                      </span>
+                    </a>
+                    <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                      <div class="relative p-4 w-full max-w-md max-h-full">
+                          <div class="relative bg-white rounded-lg">
+                              <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+                                  <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                  </svg>
+                                  <span class="sr-only">Close modal</span>
+                              </button>
+                              <div class="p-4 md:p-5 text-center">
+                                  <svg class="mx-auto mb-4 text-gray-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                  </svg>
+                                  <h3 class="mb-5 text-lg font-normal text-gray-500">តើអ្នកចង់ចាកចេញពីគណនីមែនទេ?</h3>
+                                  <button id="logoutButton" data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                                      ចាកចេញ
+                                  </button>
+                                  <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">មិនយល់ព្រម</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </section>
           <!--End Hamberber Icon-->
 
@@ -65,24 +192,148 @@
           <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
             <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
               <li>
-                <a href="school.html" class="block py-2 px-3 text-md md:bg-transparent text-Onprimary md:p-1 hover:text-secondary">សាលារៀន</a>
+                <a href="school.html" class="block py-2 px-3 text-md md:bg-transparent text-Onprimary hover:text-secondary md:p-1">សាលារៀន</a>
               </li>
               <li>
                 <a href="/public/book/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
               </li>
               <li>
-                <a href="course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                <a href="/public/course/index.html" class="block py-2 px-3 text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
               </li>
               <li>
                 <a href="blog/index.html" class="block py-2 px-3 md:p-1 text-Onprimary hover:text-secondary">អត្ថបទ</a>
               </li>
               <li>
-                <a href="#" class="text-secondary block py-2 px-3 md:p-1">អំពីយើង</a>
+                <a href="about-us.html" class="text-secondary block py-2 px-3 md:p-1">អំពីយើង</a>
               </li>
               <li>
-                <a href="login.html" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                <a href="login.html" id="btnNoProfile2" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
                   <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
                 </a>
+                <button id="btnProfile2" data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example"
+                data-drawer-placement="right" aria-controls="drawer-right-example" class="hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1">
+                  <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" alt="" class="rounded-sm-radius h-8 w-8 lg:h-12 lg:w-12"> 
+                </button>
+
+                <!-- drawer component -->
+                <div id="drawer-right-example" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 bg-background ease-in-out duration-300" tabindex="-1" aria-labelledby="drawer-right-label">
+                  
+                    <button type="button" data-drawer-hide="drawer-right-example" aria-controls="drawer-right-example" class="text-gray-400  rounded-lg p-1.5 absolute top-2.5 end-2.5 inline-flex items-center">
+                        <i class="fa-solid fa-xmark text-nav"></i>
+                        <span class="sr-only">Close menu</span>
+                    </button>
+
+                    <div class="flex text-primary">
+                      <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133351928-stock-illustration-default-placeholder-man-and-woman.jpg" alt="" class="rounded-sm-radius h-16 w-16"> 
+                      <div>
+                        <h1 id="username" class="ms-3 text-miniTitle"></h1>
+                        <h2 id="email" class="ms-3 text-body"></h2>
+                      </div>
+                    </div>
+
+                    <div class="py-4 overflow-y-auto text-miniTitle">
+                      <ul class="space-y-2 font-body">
+                        <li>
+                          <a href="create-sala.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-graduation-cap w-8 h-8"></i>
+                            <span class="flex-1 ms-3">បង្កើតសាលា</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="setting.html" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-gear w-8 h-8"></i>
+                            <span class="flex-1 ms-3">កំណត់</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                            <i class="fa-solid fa-file-import w-8 h-8"></i>
+                            <span class="flex-1 ms-3"><button data-modal-target="select-modal" data-modal-toggle="select-modal">បញ្ជូលមាតិកា</button></span>
+                          </a>
+                          <!-- Main modal -->
+                            <div id="select-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                              <div class="relative p-4 w-full max-w-md max-h-full">
+                                  <!-- Modal content -->
+                                  <div class="relative bg-white rounded-lg shadow">
+                                      <!-- Modal header -->
+                                      <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                                          <h3 class="text-lg font-semibold text-gray-900">
+                                            បញ្ចូលមតិកា
+                                          </h3>
+                                          <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="select-modal">
+                                              <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                              </svg>
+                                              <span class="sr-only">Close modal</span>
+                                          </button>
+                                      </div>
+                                      <!-- Modal body -->
+                                      <div class="p-4 md:p-5">
+                                          <p class="text-gray-500 dark:text-gray-400 mb-4">ជ្រើសរើសប្រភេទមាតិកា</p>
+                                          <ul class="space-y-4 mb-4">
+                                              <li>
+                                                  <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                                    <a href="/public/course/upload-video.html" class="flex gap-5 items-center">
+                                                      <i class="fa-solid fa-video"></i>
+                                                    <div class="w-full text-lg font-semibold">បញ្ជូលជាមេរៀន(វីឌីអូ)</div>
+                                                    </a>
+                                                  </label>
+                                              </li>
+                                              <li>
+                                                <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 ">                      
+                                                  <a href="/public/book/upload-book.html" class="flex gap-5 items-center">
+                                                    <i class="fa-solid fa-book"></i>
+                                                    <div class="block w-full text-lg font-semibold">បញ្ជូលជាសៀវភៅ</div>
+                                                  </a>   
+                                                </label>
+                                              </li>
+                                              <li>
+                                                <label for="job-1" class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 "> 
+                                                  <a href="/public/blog/upload-blog.html" class="flex gap-5 items-center">
+                                                    <i class="fa-solid fa-file-lines"></i>
+                                                    <div class="w-full text-lg font-semibold">បញ្ជូលជាអត្ថបទ(Blog)</div>
+                                                  </a>
+                                                </label>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div> 
+                        </li>
+                        <li class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                          
+                            <i class="fa-solid fa-right-from-bracket w-8 h-8"></i>
+                            <span class="flex-1 ms-3">
+                              <button data-modal-target="popup-modal" data-modal-toggle="popup-modal">ចាកចេញ</button>
+                            </span>
+                          
+                          <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative p-4 w-full max-w-md max-h-full">
+                                <div class="relative bg-white rounded-lg">
+                                    <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="popup-modal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                    <div class="p-4 md:p-5 text-center">
+                                        <svg class="mx-auto mb-4 text-gray-400 w-12 h-12" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                        </svg>
+                                        <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">តើអ្នកចង់ចាកចេញពីគណនីមែនទេ?</h3>
+                                        <button id="logoutButton" data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                                            ចាកចេញ
+                                        </button>
+                                        <button data-modal-hide="popup-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">មិនយល់ព្រម</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
               </li>
             </ul>
           </section>
@@ -127,8 +378,7 @@
           <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">MOM Reksmey</h1>
 
           <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-            The point of using Lorem Ipsum is that it has a more-or-less.
+            Sharing is my happiness
           </p>
         </div>
       </section>
@@ -147,8 +397,7 @@
           <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">KAY Keo</h1>
 
           <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-            The point of using Lorem Ipsum is that it has a more-or-less.
+            Every bug I faced makes me stronger. At this rate, I'll soon be invincible!
           </p>
         </div>
         <!--End text-->
@@ -158,8 +407,7 @@
           <h1 class="text-[24px] md:text-[32px] lg:text-[48px] font-bold text-center">KAY Keo</h1>
 
           <p class="text-[24px] md:text-[24px] lg:text-[24px] mt-top-title">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-            The point of using Lorem Ipsum is that it has a more-or-less.
+            Every bug I faced makes me stronger. At this rate, I'll soon be invincible!
           </p>
         </div>
         <!--End text-->
@@ -180,7 +428,7 @@
     <h1 class="text-[24px] md:text-[32px] lg:text-[64px] font-bold text-center">Members</h1>
 
     <div class="flex items-center justify-center w-full h-full py-24 sm:py-8 px-4">
-      <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+      
       <div class="w-full relative flex items-center justify-center">
         <button aria-label="slide backward" class="absolute z-30 left-0 ml-10 focus:outline-none focus:bg-gray-400 focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 cursor-pointer" id="prev">
           <svg class="dark:text-gray-900" width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,16 +440,18 @@
           <div id="slider" class="h-full flex lg:gap-2 md:gap-2 gap-3 items-center justify-start transition ease-out duration-700">
 
             <!-- Card -->
-            <div class="flex flex-shrink-1 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-full md:w-64">
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
                 <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Davann.jpg" alt="profile picture"/>
                 <h1 class="text-xl font-semibold text-slate-800">អ៊ីង ដាវ៉ាន់</h1>
-                <h2 class="font-body text-slate-300">UI/UX Designer</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  មានការចាប់ផ្តើម មានការរីកចម្រើន
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  There is beginning, there is progress
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
-                  <a href="https://www.linkedin.com/in/ing-davann-0617b32a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
+                <span class="flex justify-center gap-3 mt-5">
+                  <a href="
+                  https://www.linkedin.com/in/ing-davann-0617b32a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+                  "><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="https://github.com/ingdavann">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
@@ -215,15 +465,15 @@
             <!-- /Card -->
             
             <!-- Card -->
-            <div class="flex flex-shrink-1 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-full md:w-64">
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
                 <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheakey.jpg" alt="profile picture"/>
                 <h1 class="text-xl font-semibold text-slate-800">ផលភា ភក្តី</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
@@ -238,15 +488,15 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-full md:w-6">
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
                 <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
                 <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
@@ -261,22 +511,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/helen.JPG" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">លាង ហេលេន</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -284,22 +534,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/neat.JPG" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">ឆន​ ស្រីនាត</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -307,22 +557,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Lyhuor.jpg" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">ស៊ុន លីហួរ</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -330,22 +580,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/Thyda.jpg" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">ថា ធីតា</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -353,22 +603,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/vanndeth.jpg" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">អាត វណ្ណដេត</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -376,22 +626,22 @@
             <!-- /Card -->
 
             <!-- Card -->
-            <div class="flex flex-shrink-0 relative w-full sm:w-auto">
-              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center shadow-lg">
-                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/sarady.JPG" alt="profile picture"/>
-                <h1 class="text-xl font-semibold text-slate-800">វុធ សារ៉ាន់ឌី</h1>
-                <h2 class="font-body text-slate-300">CEO</h2>
-                <p class="mt-8 text-sm font-normal text-slate-800">
-                  សាកកញ្ចប់ថ្មី ទើបដឹងថាខ្លាំង
+            <div class="flex flex-shrink-0 relative">
+              <div class="max-w-xs rounded-2xl border bg-white p-10 text-center w-64">
+                <img class="mx-auto mb-4 h-32 w-32 rounded-full shadow-lg" src="/assets/images/pheaktra.jpg" alt="profile picture"/>
+                <h1 class="text-xl font-semibold text-slate-800">ឈាង ភក្រ្តា</h1>
+                <!-- <h2 class="font-body text-slate-300">CEO</h2> -->
+                <p class="mt-5 text-sm font-normal text-slate-800 h-12">
+                  Begin the journey of today, by letting go of yesterday
                 </p>
-                <span class="flex justify-center gap-3 mt-3">
+                <span class="flex justify-center gap-3 mt-5">
                   <a href="#"><i class="fa-brands fa-linkedin text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#"><i class="fa-brands fa-twitter text-slate-500 hover:text-slate-800"></i></a>
                   <a href="#">
                     <i class="fa-brands fa-github text-slate-500 hover:text-slate-800"></i>
                   </a>
                   <a href="#">
-                    <i class="fa-brands fa-facebook text-slate-500   hover:text-slate-800"></i>
+                    <i class="fa-brands fa-facebook text-slate-500 hover:text-slate-800"></i>
                   </a>
                 </span>
               </div>
@@ -417,7 +667,7 @@
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="../assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
               <h2 class="text-nav text-Onprimary uppercase">sala</h2>
             </a>

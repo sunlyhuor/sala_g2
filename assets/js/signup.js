@@ -15,13 +15,12 @@ function setCookie(name, value, daysToLive){
 
 btnSubmit.addEventListener("click", async (e)=> {
     e.preventDefault()
-    
     try{
         const res = await fetch(apiSigup, {
             method:"POST",
             body: JSON.stringify((
                 {
-                    "username": textUsername.value,
+                    "username": textUsername.value, 
                     "email": textEmail.value,
                     "password": textPassword.value
                 }
@@ -32,7 +31,7 @@ btnSubmit.addEventListener("click", async (e)=> {
         })
         setCookie("token", await ( await res.json() ).jwt, 365 )
         setCookie("username", textUsername.value, 365 )
-        setCookie("email", textUsername.value, 365 )
+        setCookie("email", textEmail.value, 365 )
         window.location.replace("/public")
     }catch(e){
         console.log(e)
