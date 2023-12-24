@@ -999,6 +999,10 @@ html{
   margin-top: 240px;
 }
 
+.mt-\[50px\] {
+  margin-top: 50px;
+}
+
 .block {
   display: block;
 }
@@ -2719,6 +2723,10 @@ html{
 
   .lg\:mt-72 {
     margin-top: 18rem;
+  }
+
+  .lg\:mt-\[120px\] {
+    margin-top: 120px;
   }
 
   .lg\:block {
