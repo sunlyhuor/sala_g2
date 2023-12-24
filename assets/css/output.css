@@ -673,14 +673,6 @@ html{
   top: 0.75rem;
 }
 
-.left-10 {
-  left: 2.5rem;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
 .z-0 {
   z-index: 0;
 }
@@ -946,6 +938,10 @@ html{
   margin-top: 120px;
 }
 
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
 .mt-\[60px\] {
   margin-top: 60px;
 }
@@ -964,10 +960,6 @@ html{
 
 .mt-top-title {
   margin-top: 2rem;
-}
-
-.mt-\[150px\] {
-  margin-top: 150px;
 }
 
 .block {
