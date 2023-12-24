@@ -2,6 +2,7 @@
 const popularBlog = document.getElementById('popularBlog');
 const url = `https://cms.istad.co/api/sala-blogs?pagination%5Blimit%5D=6&populate=thumbnail%2C%20tag`
 const urlSchool = "https://cms.istad.co/api/sala-schools?pagination%5Blimit%5D=4&populate=profile%2C%20tag"
+const urlLesson = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=8&playlistId=UU1VDpWpOf36CuP9fowyDZtQ&key=AIzaSyD5vvPK3F3OnV3z9x0alk2HtTi8UdknbXM"
 let display = ""
 let date= new Date().getDate;
 
@@ -109,3 +110,72 @@ $.ajax({
         console.log(error)
     }
 });
+
+function returnLessonCard({thumbnailUrl,channelTitle,publishedAt,title, id}){
+    return `
+    <div class="max-w-sm bg-white rounded-lg relative">
+    <div class ="h-40" >
+    <a href="/public/course/view.html?id=${id}">
+      <img class="rounded-t-lg object-contain h-full w-full " src="${thumbnailUrl}" alt="thumbnail"> 
+    </a>
+    </div>
+    <div class="relUtube">
+      <i class="fa-solid fa-play w-9 h-9 bg-red-600 flex justify-center items-center rounded-full" style="color: #ffffff;"></i>
+    </div>
+    <div class="container flex items-end justify-between  text-xs rel px-3">
+      <p class="py-1 px-2 bg-background rounded-lg bg-opacity-75 ">10 នាទី</p>
+      <p class="py-1 px-2  bg-background rounded-lg bg-opacity-75">អ្នកមើល ​១០ពាន់ នាក់</p>
+    </div>
+    <div class="p-5 mt-10"> 
+      <!-- profile -->
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+            <img class="rounded-full w-9 h-9"
+                src="https://images.unsplash.com/photo-1703027817355-e78fa9cbc1f5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="profile picture">
+        </div>
+          <div class="flex-1 ms-4">
+            <p class="text-sm font-medium text-Onsecondary truncate">
+                ${channelTitle}
+            </p>
+            <p class="text-xs text-des truncate">
+                <i class="fa-regular fa-calendar-days"></i> ${publishedAt}
+            </p>
+        </div>
+    </div>
+      <!-- end of profile -->
+      <a href="/public/course/view.html">
+        <h5 class="my-2 text-black text-xl tracking-tight desTwoLine">${title}</h5>
+      </a>
+    </div>
+  </div>
+    `
+}
+
+$.ajax({
+    type: "GET",
+    url: urlLesson,
+    // data: "data",
+    dataType: "json",
+    success: function (response) {
+        let cardLesson = ""
+        response.items.map(lesson =>{
+            cardLesson += returnLessonCard( { 
+                id: lesson.id,
+                thumbnailUrl: lesson.snippet.thumbnails?.medium.url,  
+                channelTitle: lesson.snippet.channelTitle,
+                publishedAt: new Date(lesson.snippet.publishedAt).toDateString(),
+                title: lesson.snippet.title,
+
+            } )
+            // console.log(data.snippet.title)
+            
+        })
+        $("#lessonHomepage").html(cardLesson)
+        
+    },
+    error: ( er, err, error ) => {
+        console.log(error)
+    }
+});
+
