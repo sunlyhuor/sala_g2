@@ -1,4 +1,4 @@
-  const titleEle=document.querySelector('#title');
+const titleEle=document.querySelector('#title');
   const contentEle=document.querySelector('#content');
   const fileInput = document.getElementById("file");
   const btnSubmit=document.getElementById('btnSubmit');
