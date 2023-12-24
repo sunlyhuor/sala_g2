@@ -6,10 +6,11 @@ let date= new Date().getDate    ;
 const blockRender = (posts) => {
   posts.map((post) => {
   let thumbnailUrl = `${post.snippet.thumbnails.medium.url}`;
+  console.log(post.id)
   output += `
     <div class="max-w-sm bg-white rounded-lg relative">
     <div class ="h-40" >
-    <a href="/public/course/view.html">
+    <a href="/public/course/view.html?id=${ post.id }">
       <img class="rounded-t-lg object-contain h-full w-full " src=" ${thumbnailUrl}" alt="thumbnail"> 
     </a>
     </div>
@@ -29,7 +30,7 @@ const blockRender = (posts) => {
                 alt="profile picture">
         </div>
           <div class="flex-1 ms-4">
-            <p class="text-sm font-medium text-Onsecondary truncate">
+            <p class="text-sm font-medium text-Onsecondary truncate desc">
                 ${post.snippet.channelTitle}
             </p>
             <p class="text-xs text-des truncate">
@@ -39,7 +40,7 @@ const blockRender = (posts) => {
     </div>
       <!-- end of profile -->
       <a href="/public/course/view.html">
-        <h5 class="my-2 text-black text-xl tracking-tight">${post.snippet.title}</h5>
+        <h5 class="my-2 text-black text-xl tracking-tight desc ">${post.snippet.title}</h5>
       </a>
     </div>
   </div>
