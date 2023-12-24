@@ -73,6 +73,26 @@ const renderCard = (itemLesson) => {
   });
   relateLesson.innerHTML = outputLesson;
 };
+const course = document.querySelector("#aboutCourse");
+let result = " ";
+const renderAboutCourse = (courseItem) => {
+  courseItem.map((items) => {
+    if (items.id == getQueryParams().id) {
+      result += `
+      <p class="text-des pt-5"><strong>ការពិពណ៌នា</strong></p>
+      <p class="text-sm text-des">${items.snippet.description}</p>
+      <p class="text-sm pt-5 text-des"><br>
+        ${new Date (items.snippet.publishedAt).toDateString()} <br>
+        <strong>${items.snippet.videoOwnerChannelTitle}</strong> <br>
+         <br>
+        Telegram: <span><a href="#">t.me/phearinhay</a></span>
+      </p>
+          `;
+     }
+    
+  });
+  course.innerHTML = result;
+};
 
 fetch(url)
   .then((res) => res.json())
@@ -86,4 +106,10 @@ fetch(url)
   .then((jsonResult) => {
     let result = jsonResult.items;
     renderCard(result);
+  });
+fetch(url)
+  .then((res) => res.json())
+  .then((jsonResult) => {
+    let result = jsonResult.items;
+    renderAboutCourse(result);
   });

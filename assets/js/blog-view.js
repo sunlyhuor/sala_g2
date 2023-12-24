@@ -42,7 +42,7 @@ function getQueryParams() {
             $("#textContent").text( response.data.attributes.content )
             $("#textTitle").text( response.data.attributes.title )
             $("#textDate").text( new Date( response.data.attributes.createdAt).toDateString() )
-            $("#textThumbnail").attr("src", "https://cms.istad.co" + response.data.attributes.thumbnail.data.attributes.url )
+            $("#textThumbnail").attr("src", "https://cms.istad.co" + response.data.attributes.thumbnail.data.attributes?.url )
         }
     });
 
