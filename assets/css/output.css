@@ -1098,6 +1098,13 @@ html{
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.w-1\/5 {
+  width: 20%;
+}
+
+>>>>>>> 929c0c72dbf1e4055366c9169506ab5c2b1c7391
 .w-10 {
   width: 2.5rem;
 }
@@ -2394,6 +2401,21 @@ html{
     height: 100vh;
   }
 
+<<<<<<< HEAD
+=======
+  .md\:w-1\/4 {
+    width: 25%;
+  }
+
+  .md\:w-6 {
+    width: 1.5rem;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
+  }
+
+>>>>>>> 929c0c72dbf1e4055366c9169506ab5c2b1c7391
   .md\:w-96 {
     width: 24rem;
   }
