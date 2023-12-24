@@ -790,6 +790,10 @@ html{
   margin-bottom: 0.25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -816,6 +820,10 @@ html{
 
 .mb-\[2rem\] {
   margin-bottom: 2rem;
+}
+
+.mb-top-content {
+  margin-bottom: 6rem;
 }
 
 .mb-top-title {
@@ -904,6 +912,10 @@ html{
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
 }
 
 .mt-3 {
@@ -1174,6 +1186,10 @@ html{
   width: 2.25rem;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[130px\] {
   width: 130px;
 }
@@ -1204,6 +1220,10 @@ html{
 
 .min-w-0 {
   min-width: 0px;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-2xl {
@@ -1436,6 +1456,10 @@ html{
   overflow: hidden;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .overflow-y-auto {
   overflow-y: auto;
 }
@@ -1451,6 +1475,10 @@ html{
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-nowrap {
   white-space: nowrap;
 }
 
@@ -1908,6 +1936,10 @@ html{
   text-transform: capitalize;
 }
 
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -1926,6 +1958,10 @@ html{
 
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .tracking-widest {
@@ -2322,12 +2358,8 @@ html{
     margin-top: 4rem;
   }
 
-  .md\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
-  .md\:mt-32 {
-    margin-top: 8rem;
+  .md\:mt-36 {
+    margin-top: 9rem;
   }
 
   .md\:mt-top-content {
@@ -2572,6 +2604,10 @@ html{
     grid-column-start: 9;
   }
 
+  .lg\:float-right {
+    float: right;
+  }
+
   .lg\:m-5 {
     margin: 1.25rem;
   }
@@ -2579,6 +2615,11 @@ html{
   .lg\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .lg\:mx-60 {
+    margin-left: 15rem;
+    margin-right: 15rem;
   }
 
   .lg\:mb-0 {
@@ -2593,12 +2634,12 @@ html{
     margin-top: 0px;
   }
 
-  .lg\:mt-2 {
-    margin-top: 0.5rem;
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
   }
 
-  .lg\:mt-48 {
-    margin-top: 12rem;
+  .lg\:mt-72 {
+    margin-top: 18rem;
   }
 
   .lg\:mt-\[100px\] {
@@ -2633,14 +2674,6 @@ html{
     height: 3rem;
   }
 
-  .lg\:h-12 {
-    height: 3rem;
-  }
-
-  .lg\:h-12 {
-    height: 3rem;
-  }
-
   .lg\:h-\[500px\] {
     height: 500px;
   }
@@ -2663,6 +2696,10 @@ html{
 
   .lg\:w-12 {
     width: 3rem;
+  }
+
+  .lg\:w-3\/5 {
+    width: 60%;
   }
 
   .lg\:w-4\/12 {
@@ -2799,6 +2836,10 @@ html{
     text-align: center;
   }
 
+  .lg\:text-justify {
+    text-align: justify;
+  }
+
   .lg\:text-\[24px\] {
     font-size: 24px;
   }
@@ -2822,10 +2863,6 @@ html{
     grid-column: span 1 / span 1;
   }
 
-  .xl\:float-right {
-    float: right;
-  }
-
   .xl\:m-16 {
     margin: 4rem;
   }
@@ -2838,22 +2875,9 @@ html{
     margin: 7rem;
   }
 
-  .xl\:mx-64 {
-    margin-left: 16rem;
-    margin-right: 16rem;
-  }
-
   .xl\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .xl\:mt-2 {
-    margin-top: 0.5rem;
-  }
-
-  .xl\:mt-72 {
-    margin-top: 18rem;
   }
 
   .xl\:mt-top-content {
@@ -2876,24 +2900,12 @@ html{
     width: 50%;
   }
 
-  .xl\:w-3\/5 {
-    width: 60%;
-  }
-
   .xl\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-  .xl\:justify-between {
-    justify-content: space-between;
   }
 
   .xl\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-  }
-
-  .xl\:text-justify {
-    text-align: justify;
   }
 }
