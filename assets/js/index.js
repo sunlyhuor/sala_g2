@@ -3,6 +3,7 @@ const popularBlog = document.getElementById('popularBlog');
 const url = `https://cms.istad.co/api/sala-blogs?pagination%5Blimit%5D=6&populate=thumbnail%2C%20tag`
 const urlSchool = "https://cms.istad.co/api/sala-schools?pagination%5Blimit%5D=4&populate=profile%2C%20tag"
 const urlLesson = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=8&playlistId=UU1VDpWpOf36CuP9fowyDZtQ&key=AIzaSyD5vvPK3F3OnV3z9x0alk2HtTi8UdknbXM"
+const urlBook = "https://cms.istad.co/api/sala-lessons?populate=thumbnail%2Cprofile"
 let display = ""
 let date= new Date().getDate;
 
@@ -172,6 +173,64 @@ $.ajax({
             
         })
         $("#lessonHomepage").html(cardLesson)
+        
+    },
+    error: ( er, err, error ) => {
+        console.log(error)
+    }
+});
+
+function returnBookCard({thumbnailBook,title,des,profile,name,follower}){
+    return `
+    <div class="max-w-sm bg-white rounded-lg">
+   <div class = "h-40"> 
+   <a href="/public/book/view.html">
+   <img class="rounded-t-lg  h-full w-full " src="https://cms.istad.co${thumbnailBook}" alt="">
+ </a>
+   </div>
+    <div class="p-5">
+      <a href="/public/book/view.html">
+        <h5 class="mb-2 text-black text-2xl tracking-tight">${title}</h5>
+      </a>
+      <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">${des}</p>
+      <div class="flex items-center">
+        <img class="rounded-full w-9 h-9" src="https://cms.istad.co${profile}" alt="profile picture">
+        <div class="w-full flex justify-between items-center">
+          <div class=" text-start text-black text-sm font-medium tracking-tight">
+            <div class="ps-3">${name}</div>
+            <div class="text-center text-black text-xs font-light tracking-tight ps-3">${follower} ពាន់នាក់</div>
+          </div>
+          <a href="#">
+            <button id="addtoFav">
+              <i class="fa-regular fa-heart text-2xl"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+    `
+}
+$.ajax({
+    type: "GET",
+    url: urlBook,
+    // data: "data",
+    dataType: "json",
+    success: function (response) {
+        let cardBook = ""
+        response.data.map(book =>{
+            cardBook += returnBookCard( { 
+                thumbnailBook: book.attributes.thumbnail?.data?.attributes?.formats?.small?.url,
+                title: book.attributes.title,
+                des: book.attributes.about,
+                profile: book.attributes.profile.data.attributes.formats.small.url,
+                name: book.attributes.name,
+                follower: book.attributes.follower,
+            } )
+            // console.log(data.snippet.title)
+            
+        })
+        $("#bookHomepage").html(cardBook)
         
     },
     error: ( er, err, error ) => {
