@@ -180,17 +180,17 @@ $.ajax({
     }
 });
 
-function returnBookCard({thumbnailBook,title,des,profile,name,follower}){
+function returnBookCard({thumbnailBook,title,des,profile,name,follower,createdAt}){
     return `
     <div class="max-w-sm bg-white rounded-lg">
    <div class = "h-40"> 
    <a href="/public/book/view.html">
-   <img class="rounded-t-lg  h-full w-full " src="https://cms.istad.co${thumbnailBook}" alt="">
+   <img class="rounded-t-lg  h-full w-full object-cover" src="https://cms.istad.co${thumbnailBook}" alt="">
  </a>
    </div>
     <div class="p-5">
       <a href="/public/book/view.html">
-        <h5 class="mb-2 text-black text-2xl tracking-tight">${title}</h5>
+        <h5 class="mb-2 text-black text-2xl tracking-tight desTwoLine">${title}</h5>
       </a>
       <p class="mb-3 text-black text-base tracking-tight text-des desTwoLine">${des}</p>
       <div class="flex items-center">
@@ -198,13 +198,11 @@ function returnBookCard({thumbnailBook,title,des,profile,name,follower}){
         <div class="w-full flex justify-between items-center">
           <div class=" text-start text-black text-sm font-medium tracking-tight">
             <div class="ps-3">${name}</div>
-            <div class="text-center text-black text-xs font-light tracking-tight ps-3">${follower} ពាន់នាក់</div>
+            <div class="text-center text-black text-xs font-light tracking-tight ps-3">${follower} ពាន់នាក់ - ${createdAt}</div>
           </div>
-          <a href="#">
             <button id="addtoFav">
               <i class="fa-regular fa-heart text-2xl"></i>
             </button>
-          </a>
         </div>
       </div>
     </div>
@@ -226,6 +224,7 @@ $.ajax({
                 profile: book.attributes.profile.data.attributes.formats.small.url,
                 name: book.attributes.name,
                 follower: book.attributes.follower,
+                createdAt: new Date(book.attributes.createdAt).toDateString(),
             } )
             // console.log(data.snippet.title)
             
@@ -237,4 +236,24 @@ $.ajax({
         console.log(error)
     }
 });
+
+$(document).on("click", "#addtoFav", function () {
+    // console.log("Add to fav clicked");
+    // Toggle the 'active' class
+    $(this).toggleClass("active");
+  
+    if ($(this).hasClass("active")) {
+      // Code to execute when the button is active (favorited)
+        $(this).html(`
+            <i class="fa-solid fa-heart text-2xl text-red-500"></i>
+        `);
+    
+    } else {
+        $(this).html(`
+            <i class="fa-regular fa-heart text-2xl"></i>
+        
+        `);
+    
+    }
+  });
 
