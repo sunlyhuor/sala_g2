@@ -954,12 +954,16 @@ html{
   margin-top: 2rem;
 }
 
-.mt-\[0px\] {
-  margin-top: 0px;
+.mt-\[10px\] {
+  margin-top: 10px;
 }
 
 .mt-\[120px\] {
   margin-top: 120px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
 }
 
 .mt-\[60px\] {
@@ -1196,10 +1200,6 @@ html{
 
 .w-9 {
   width: 2.25rem;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .w-\[130px\] {
@@ -2662,8 +2662,8 @@ html{
     margin-top: 100px;
   }
 
-  .lg\:mt-\[30px\] {
-    margin-top: 30px;
+  .lg\:mt-\[120px\] {
+    margin-top: 120px;
   }
 
   .lg\:mt-top-content {
