@@ -35,7 +35,7 @@ const blockRender = (posts) => {
   `
   <div class="max-w-sm bg-white rounded-lg">
    <div class = "h-40"> 
-   <a href="/public/book/view.html">
+   <a href="/public/book/view.html?id=${post.id}">
    <img class="rounded-t-lg  h-full w-full " src="${thumbnailUrl}" alt="">
  </a>
    </div>
