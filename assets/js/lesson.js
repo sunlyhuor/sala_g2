@@ -10,7 +10,7 @@ const blockRender = (posts) => {
   output += `
     <div class="max-w-sm bg-white rounded-lg relative">
     <div class ="h-40" >
-    <a href="/public/course/view.html?id=${ post.id }">
+    <a href="/public/course/view.html?id=${post.id}">
       <img class="rounded-t-lg object-contain h-full w-full " src=" ${thumbnailUrl}" alt="thumbnail"> 
     </a>
     </div>
@@ -39,7 +39,7 @@ const blockRender = (posts) => {
         </div>
     </div>
       <!-- end of profile -->
-      <a href="/public/course/view.html">
+      <a href="/public/course/view.html?id=${post.id}">
         <h5 class="my-2 text-black text-xl tracking-tight desc ">${post.snippet.title}</h5>
       </a>
     </div>

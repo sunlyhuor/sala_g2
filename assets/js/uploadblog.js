@@ -15,7 +15,8 @@
         title:title,
         content:content,
         view: 0,
-        tag: "string or id"
+        tag: "string or id",
+        school: "string or id"
     }
     
     const formdata = new FormData();
