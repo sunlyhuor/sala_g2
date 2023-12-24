@@ -25,68 +25,73 @@
 <body class="bg-background font-NotoSerifKhmer">
      <!-- Header -->
      <header>
-        <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full">
-          <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 w-full">
-              <section class="flex items-center gap-5">
-                  <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="/assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
-                  </a>
-                  <!-- Search Bar​ -->
-                  <div id="mainSearchBar" class="relative">
-                      <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
-                          <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                          </svg>   
-                      </section>  
-                      <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
-                  </div>
-                  <!--End Search Bar-->
-              </section>
-              <section id="mainHamberger" class="flex items-center gap-3 flex-row-reverse">
-                <!--Hambergur Icon-->
-                <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden " aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-                </button>
-                <!--Hambergur Icon-->
-                <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
-                  <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-                </a>
-              </section>
-              <!-- Link Menu-->
-              <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
-                <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
-                  <li>
-                    <a href="/public/school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
-                  </li>
-                  <li>
-                    <a href="#" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">​បណ្ណាល័យ</a>
-                  </li>
-                  <li>
-                    <a href="/public/course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
-                  </li>
-                  <li>
-                    <a href="/public/blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
-                  </li>
-                  <li>
-                    <a href="/public/about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
-                  </li>
-                  <li>
-                    <a href="#" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
-                      <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-              <!--End Link Menu-->
-          </div>
-        </nav>
-      </header>
-      <!-- End Header -->
+      <nav class="bg-primary border-gray-200 lg:text-Onprimary font-NotoSerifKhmer w-full fixed top-0 left-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3 w-full">
+            <section class="flex items-center gap-5">
+              <!--Logo-->
+              <a href="/public/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/assets/images/Sala-Logo.png" class=" w-[40px] lg:w-[60px]" alt="Logo">
+              </a>
+              <!--End Logo-->
 
-      <section class="mt-top-title mx-auto w-full max-w-screen-xl flex">
+              <!-- Search Bar​ -->
+              <div id="mainSearchBar" class="relative">
+                  <section id="btnSearch" class="absolute inset-y-0 start-0 flex items-center ps-3">
+                      <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                      </svg>   
+                  </section>  
+                  <input type="search" id="default-search" class="hidden md:block p-2 md:p-2 ps-10 text-sm md:w-full lg:w-full text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="ស្វែងរក..." required>
+              </div>
+              <!--End Search Bar-->
+            </section>
+        
+            <!--Hamberber Icon-->
+            <section id="mainHamberger" class="flex items-center gap-5 flex-row-reverse">
+              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center justify-center text-sm text-gray-500 rounded-lg lg:hidden" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+              </button>
+              <a href="#" class="lg:hidden py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-0">
+                <i class="fa-regular fa-user p-2 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+              </a>
+            </section>
+            <!--End Hamberber Icon-->
+
+            <!-- Link Menu-->
+            <section class="hidden w-full lg:block lg:w-auto" id="navbar-default">
+              <ul class="text-body md:text-nav flex flex-col lg:items-center p-4 lg:p-0 mt-4 lg:flex-row lg:space-x-2 rtl:space-x-reverse lg:mt-0 lg:border-0">
+                <li>
+                  <a href="/public/school.html" class="block py-2 px-3 text-white text-md bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary" aria-current="page">សាលារៀន</a>
+                </li>
+                <li>
+                  <a href="/public/book/index.html" class="block py-2 px-3 bg-Onsecondary md:bg-transparent md:p-1 text-secondary">​បណ្ណាល័យ</a>
+                </li>
+                <li>
+                  <a href="/public/course/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">មេរៀន</a>
+                </li>
+                <li>
+                  <a href="/public/blog/index.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អត្ថបទ</a>
+                </li>
+                <li>
+                  <a href="/public/about-us.html" class="block py-2 px-3 text-white bg-Onsecondary md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">អំពីយើង</a>
+                </li>
+                <li>
+                  <a href="log" class="hidden lg:block py-2 px-3 text-white md:bg-transparent md:text-Onprimary md:p-1 hover:text-secondary">
+                    <i class="fa-regular fa-user p-3 md:p-3 text-Onsecondary bg-secondary rounded-sm-radius"></i>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!--End Link Menu-->
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+
+      <section class="mt-[120px] mx-auto w-full max-w-screen-xl flex">
           <div class="flex gap-5 px-3 md:px-5 lg:px-0">
                     <!-- Search Bar​ -->
                   <div id="mainSearchBar" class="relative">
@@ -134,143 +139,39 @@
   
           </div>
       </section>
-
     
       <!--Add Book card-->
       <section class="mt-top-title mx-auto w-full max-w-screen-xl">
         <h1 class="text-nav mx-[1.5rem] md:mx-[1.5rem] ">មេរៀន</h1>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                <a href="#" >
-                  <button id="addtoFav">
-                     <i class="fa-regular fa-heart text-2xl"></i>
-                  </button>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                    <a href="#" >
-                      <button id="addtoFav">
-                         <i class="fa-regular fa-heart text-2xl"></i>
-                      </button>
-                    </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                <a href="#" >
-                  <button id="addtoFav">
-                     <i class="fa-regular fa-heart text-2xl"></i>
-                  </button>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-sm bg-white rounded-lg">
-            <a href="/public/book/view.html">
-              <img class="rounded-t-lg" src="https://wallpapercave.com/wp/wp4009915.jpg" alt="">
-            </a>
-            <div class="p-5">
-              <a href="/public/book/view.html">
-                <h5 class="mb-2 text-black text-2xl tracking-tight">C++ Programming</h5>
-              </a>
-              <p class="mb-3 text-black text-base tracking-tight text-des desc">C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.</p>
-              <div class="flex items-center ">
-                  <img class="rounded-full w-9 h-9" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
-                  <div class="w-full flex justify-between items-center">
-                      <div class="text-center text-black text-sm font-medium font-['Noto Serif Khmer'] tracking-tight">
-                          <div>KOOMPI STEM</div>
-                          <div class="text-center text-black text-xs font-light font-['Noto Serif Khmer'] tracking-tight ps-3">១ពាន់ នាក់ 11/20/2023</div>
-                </div>
-                <a href="#" >
-                  <button id="addtoFav">
-                     <i class="fa-regular fa-heart text-2xl"></i>
-                  </button>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="book" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">  
         </div>
         <!-- pagination -->
-        <section>
-              <nav aria-label="Page navigation example " class="container flex justify-center pb-5">
-                <ul class="inline-flex -space-x-px text-base h-10">
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white rounded">ទំព័រមុន</a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">1</a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">2</a>
-                  </li>
-                  <li>
-                    <a href="#" aria-current="page" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">3</a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">4</a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white">5</a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-Accent dark:hover:text-white rounded">ទំព័របន្ទាប់</a>
-                  </li>
-                </ul>
-              </nav>
+        <section class="mx-auto w-full max-w-screen-xl p-5 flex justify-end">
+          <nav aria-label="Page navigation example" class="pb-2">
+            <ul class="inline-flex -space-x-px text-base h-10">
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card rounded hover:bg-Accent">ទំព័រមុន</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card hover:bg-Accent">1</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card hover:bg-Accent">2</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card hover:bg-Accent">3</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card hover:bg-Accent">4</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card hover:bg-Accent">5</a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-Onsecondary bg-card rounded hover:bg-Accent">ទំព័របន្ទាប់</a>
+              </li>
+            </ul>
+          </nav>
         </section>
         <!-- end of pagination -->
       </section>
@@ -294,19 +195,19 @@
               <h2 class="mb-6 text-sm font-semibold text-Onprimary uppercase">Learn More</h2>
               <ul class="text-gray-500 font-body">
                   <li class="mb-4">
-                      <a href="school.html" class=" hover:underline">សាលារៀន</a>
+                      <a href="/public/school.html" class=" hover:underline">សាលារៀន</a>
                   </li>
                   <li class="mb-4">
                       <a href="#" class="hover:underline">បណ្ណាល័យ</a>
                   </li>
                   <li class="mb-4">
-                      <a href="course/index.html" class="hover:underline">មេរៀន</a>
+                      <a href="/public/course/index.html" class="hover:underline">មេរៀន</a>
                   </li>
                   <li class="mb-4">
-                      <a href="blog/index.html" class="hover:underline">អត្ថបទ</a>
+                      <a href="/public/blog/index.html" class="hover:underline">អត្ថបទ</a>
                   </li>
                   <li class="mb-4">
-                    <a href="about-us.html" class="hover:underline">អំពីយើង</a>
+                    <a href="/public/about-us.html" class="hover:underline">អំពីយើង</a>
                 </li>
               </ul>
           </div>
