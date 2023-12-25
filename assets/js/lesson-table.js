@@ -1,69 +1,4 @@
 
-
-
-// document.addEventListener('alpine:init', async () => {
-//     Alpine.store('usersStore',
-//         {
-//             users: [],
-//             user: {
-//                 id: () => Math.random().toString(36).substr(2, 9),
-//                 name: '',
-//                 email: '',
-//             },
-//             async addUser() {
-//                 await fetch('https://jsonplaceholder.typicode.com/users', {
-//                     method: 'POST',
-//                     body: JSON.stringify(this.user),
-//                 })
-//                     .then((response) => response.json())
-//                     .then(() => {
-//                         this.users.push(this.user);
-//                     }
-//                     );
-//             },
-//             async deleteUser(id) {
-//                 await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-//                     method: 'DELETE',
-//                 })
-//                     .then((response) => response.json())
-//                     .then(() => {
-//                         this.users = this.users.filter((user) => user.id !== id);
-//                     }
-//                     );
-//             },
-//             async updateUser(user) {
-//                 await fetch(`https://jsonplaceholder.typicode.com/users/${user.id}`, {
-//                     method: 'PUT',
-//                     body: JSON.stringify(user),
-//                     headers: {
-//                         'Content-type': 'application/json; charset=UTF-8',
-//                     },
-//                 })
-//                     .then((response) => response.json())
-//                     .then((updatedUser) => {
-//                         this.users = this.users.map((user) => {
-//                             if (user.id === updatedUser.id) {
-//                                 return updatedUser;
-//                             }
-//                             return user;
-//                         });
-//                     }
-//                     );
-//             },
-//             async load() {
-//                 await fetch('https://jsonplaceholder.typicode.com/users', {
-//                     method: 'GET',
-//                 })
-//                     .then((response) => response.json())
-//                     .then((users) => {
-//                         this.users = users;
-//                     }
-//                     );
-//             }
-
-//         });
-// })
-
 const url1='https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=UU1VDpWpOf36CuP9fowyDZtQ&key=AIzaSyD5vvPK3F3OnV3z9x0alk2HtTi8UdknbXM';
 const url3=' ';
 const tab1=document.getElementById('tabs1');
@@ -73,11 +8,11 @@ const recderTable=(posts)=>{
     posts.map((post)=>{
         let thumbnailUrl = `${post.snippet.thumbnails.medium.url}`;
         output+=`
-        <tr class="">
-        <td class="px-6 py-4 whitespace-nowrap">
+        <tr >
+        <td class="px-6 py-4 whitespace-wrap">
             <div class="flex items-center">
                 <div class="flex-shrink-0 w-[100px] h-[100px]">
-                    <img class="w-[100px]" src="${thumbnailUrl}" alt="">
+                    <img class="w-[100px] h-[100px]" src="${thumbnailUrl}" alt="">
                 </div>
             </div>
         </td>

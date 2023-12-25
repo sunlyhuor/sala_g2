@@ -701,10 +701,6 @@ html{
   grid-column: span 12 / span 12;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .col-span-6 {
   grid-column: span 6 / span 6;
 }
@@ -938,12 +934,16 @@ html{
   margin-top: 2rem;
 }
 
-.mt-\[0px\] {
-  margin-top: 0px;
+.mt-\[10px\] {
+  margin-top: 10px;
 }
 
 .mt-\[120px\] {
   margin-top: 120px;
+}
+
+.mt-\[50px\] {
+  margin-top: 50px;
 }
 
 .mt-\[60px\] {
@@ -964,14 +964,6 @@ html{
 
 .mt-top-title {
   margin-top: 2rem;
-}
-
-.mt-\[10px\] {
-  margin-top: 10px;
-}
-
-.mt-\[50px\] {
-  margin-top: 50px;
 }
 
 .block {
@@ -1190,10 +1182,6 @@ html{
   width: 2.25rem;
 }
 
-.w-\[100px\] {
-  width: 100px;
-}
-
 .w-\[130px\] {
   width: 130px;
 }
@@ -1270,10 +1258,6 @@ html{
   flex-shrink: 0;
 }
 
-.table-auto {
-  table-layout: auto;
-}
-
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1332,10 +1316,6 @@ html{
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -1478,10 +1458,6 @@ html{
   white-space: nowrap;
 }
 
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1585,16 +1561,8 @@ html{
   border-bottom-width: 1px;
 }
 
-.border-b-0 {
-  border-bottom-width: 0px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
-}
-
-.border-l-0 {
-  border-left-width: 0px;
 }
 
 .border-r {
@@ -1812,10 +1780,6 @@ html{
   padding-bottom: 0.5rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1930,10 +1894,6 @@ html{
 
 .capitalize {
   text-transform: capitalize;
-}
-
-.leading-5 {
-  line-height: 1.25rem;
 }
 
 .leading-none {
@@ -2634,8 +2594,8 @@ html{
     margin-top: 100px;
   }
 
-  .lg\:mt-\[30px\] {
-    margin-top: 30px;
+  .lg\:mt-\[120px\] {
+    margin-top: 120px;
   }
 
   .lg\:mt-top-content {
@@ -2644,10 +2604,6 @@ html{
 
   .lg\:mt-top-title {
     margin-top: 2rem;
-  }
-
-  .lg\:mt-\[120px\] {
-    margin-top: 120px;
   }
 
   .lg\:block {
@@ -2830,10 +2786,6 @@ html{
 }
 
 @media (min-width: 1280px) {
-  .xl\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
   .xl\:m-16 {
     margin: 4rem;
   }
