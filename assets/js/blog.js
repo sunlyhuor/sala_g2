@@ -2,10 +2,9 @@
 
 const blog = document.querySelector("#blog");
 let output = " ";
-const url = "https://cms.istad.co/api/sala-blogs?populate=thumbnail%2C%20tag";
+const url = "https://cms.istad.co/api/sala-blogs?populate=thumbnail%2Ctag";
 const Blockrender = (posts) => {
   posts.forEach((post) => {
-    // console.log(post.attributes.thumbnail);
     output += `
         <div class="p-3 max-w-full flex shadow-sm">
         <a href="/public/blog/view.html?id=${
@@ -16,13 +15,13 @@ const Blockrender = (posts) => {
         }" alt="">
         <div class="flex flex-col justify-between p-3 leading-relaxed">
         <p class="w-36 overflow-hidden rounded-full text-primary bg-secondary text-center px-2 py-1 md:px-4 md:py-2"> ${
-          post.attributes.tag.data.attributes.name
+          post.attributes.tag.data?.attributes?.name
         } </p>
         <h1 class="text-xl mt-3 w-full desTwoLine desc">${
-          post.attributes.title
+          post.attributes?.title
         }</h1>
         <h2 class="minititle desTwoLine text-des desc">${
-          post.attributes.content
+          post.attributes?.content
         }</h2>
         <span class="text-body text-gray-400"><i class="fa-regular fa-calendar-days"></i>
             ${new Date(post.attributes.createdAt).toDateString()} - ចំនួនដង៖ ${

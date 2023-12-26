@@ -600,10 +600,6 @@ html{
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .inset-0 {
   inset: 0px;
 }
@@ -932,6 +928,10 @@ html{
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-\[100px\] {
+  margin-top: 100px;
 }
 
 .mt-\[10px\] {

@@ -8,7 +8,7 @@ let display= " ";
 const sala=(post)=>{
     post.forEach(ps=>{
         display+=`
-        <div href="#" class="flex flex-col items-center bg-white rounded-lg lg:flex-row lg:max-w-2xl hover:bg-gray-100">
+        <div href="./public/profil/${ps.id}" class="flex flex-col items-center bg-white rounded-lg lg:flex-row lg:max-w-2xl hover:bg-gray-100">
         <img class="object-cover w-full h-full rounded-t-lg md:h-full md:w-full lg:h-full lg:w-48 lg:rounded-none lg:rounded-s-lg" src="https://cms.istad.co${ps.attributes.profile.data ?.attributes.url}" alt="">
         <div class="flex flex-col justify-between p-4 leading-normal">
             <a href="/public/profile.html">
